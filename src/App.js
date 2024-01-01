@@ -2,14 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Header/header';
 import Downloads from './Downloads';
+import AboutUs from './Aboutus';
+import ContactUs from './ContactUs';
 import './App.css';
-
 const Home = () => <div>Home Page Content</div>;
-const AboutUs = () => <div>About Us Page Content</div>;
 const Products = () => <div>Products Page Content</div>;
 const Partners = () => <div>Partners Page Content</div>;
 const Warranty = () => <div>Warranty Page Content</div>;
-const ContactUs = () => <div>Contact Us Page Content</div>;
 
 const App = () => {
   return (
