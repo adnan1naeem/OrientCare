@@ -91,12 +91,8 @@ function App() {
           <div className="cart-total">
             <h4 style={{ textAlign: "center" }}>CART TOTALS</h4>
           </div>
-
         </div>
-
       </div>
-
-
     </div>
   );
 }
