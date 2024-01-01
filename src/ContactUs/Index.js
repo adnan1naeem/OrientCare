@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import './App.css';
-import logo from './Assets/Care-logo.avif';
-import { TextField, Checkbox, Button } from "@mui/material";
+import './styles.css';
+import logo from './../assests/Care-logo.avif';
+import { TextField, Checkbox } from "@mui/material";
 
-
-function App() {
+function Index() {
     const [newsletter, setNewsletter] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -97,4 +96,4 @@ function App() {
     );
 }
 
-export default App;
+export default Index;

@@ -1,8 +1,8 @@
 import './Index.css';
-import banner from './Assets/Banner_orient.webp'
-import logo from './Assets/Care-logo.avif'
+import banner from './../assests/Banner_orient.webp'
+import logo from './../assests/Care-logo.avif'
 
-function App() {
+function Index() {
     return (
         <div className="App">
             <img src={banner} className="App-logo" />
@@ -23,4 +23,4 @@ function App() {
     );
 }
 
-export default App;
+export default Index;

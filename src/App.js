@@ -1,100 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Header/header';
+import Downloads from './Downloads';
+import AboutUs from './Aboutus';
+import ContactUs from './ContactUs';
 import './App.css';
-import logo from './Assets/Care-logo.avif';
-import { TextField, Checkbox, Button } from "@mui/material";
+const Home = () => <div>Home Page Content</div>;
+const Products = () => <div>Products Page Content</div>;
+const Partners = () => <div>Partners Page Content</div>;
+const Warranty = () => <div>Warranty Page Content</div>;
 
-
-function App() {
-  const [newsletter, setNewsletter] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData);
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      <div className="logoContainer">
-        <img src={logo} className="logo" alt="logo" />
-      </div>
-      <h1 className="logoContainer">CONTACT US</h1>
-
-      <div className="checkout-container">
-        <div className="shipping">
-          <p className='emailUs'>EMAIL US </p>
-          <form>
-            <div className="form-group">
-              <p className='perfect'>Your name</p>
-              <TextField
-                style={{ width: "80%" }}
-                id="Your name"
-                label="Your name"
-                variant="outlined"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <p className='perfect'>Your email</p>
-              <TextField
-                style={{ width: "80%" }}
-                id="Your email"
-                label="Your email"
-                variant="outlined"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <p className='perfect'>Subject</p>
-              <TextField
-                style={{ width: "80%" }}
-                id="Subject"
-                label="Subject"
-                variant="outlined"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <p className='perfect'>Your message</p>
-              <TextField
-                style={{ width: "80%" }}
-                id="Your message"
-                label="Your message"
-                variant="outlined"
-                rows={5}
-                required
-              />
-
-            </div>
-            <div className="form-group" style={{ display: "flex" }}>
-              <Checkbox
-                id="newsletter"
-                checked={newsletter}
-                onChange={(e) => setNewsletter(e.target.checked)}
-              />
-              <label style={{ marginTop: "1.5%" }} htmlFor="newsletter">
-                I consent to having this website store my submitted information so they can respond to
-                my inquiry.See our privacy policy to learn more how we use data.
-              </label>
-            </div>
-          </form>
-        </div>
-        <div className="cart" style={{ marginTop: "15%", padding: 30, borderRadius: 5 }}>
-          <div className="cart-total">
-            <h4 style={{ textAlign: "center" }}>CART TOTALS</h4>
-          </div>
-        </div>
-      </div>
+    <div className='main'>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route exact path="/about" element={<AboutUs />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/warranty" element={<Warranty />} />
+          <Route path="/downloads" element={<Downloads />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
