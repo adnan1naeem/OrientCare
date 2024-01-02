@@ -4,8 +4,6 @@ import logo from './../assests/Care-logo.avif';
 import Box from '@mui/material/Box';
 import InputFields from './inputFields';
 
-
-
 function Index() {
     const [newsletter, setNewsletter] = useState(false);
 
