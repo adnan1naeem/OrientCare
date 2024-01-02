@@ -1,4 +1,4 @@
-import './Index.css';
+import './styles.css';
 import banner from './../assests/Banner_orient.webp'
 import logo from './../assests/Care-logo.avif'
 
