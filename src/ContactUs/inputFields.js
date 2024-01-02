@@ -7,19 +7,28 @@ const InputFields = ({ title, multi }) => {
             <Typography variant='h5' sx={{
                 fontSize: '18px',
                 color: '#595959',
-                marginX: 1,
-                marginTop: '5px',
-                fontWeight: '500'
-            }}>{title}</Typography>
-            <Box sx={{ width: 500, maxWidth: '100%', }} >
 
+                marginTop: '5px',
+                fontWeight: '500',
+
+            }}>{title}</Typography>
+            <Box sx={{
+                display: 'flex',
+                alignSelf: 'center',
+                justifyContent: 'center',
+                maxWidth: {
+                    xs: '89%', sm: '90%', md: '95%', lg: '75%'
+                },
+                '& .MuiOutlinedInput-root': {
+                    borderRadius: 0,
+                },
+            }} >
                 {multi ?
                     <TextField
                         id="fullWidth"
                         multiline
                         rows={4}
                         fullWidth
-                        sx={{ minWidth: '80%' }}
                     />
                     :
                     <TextField
@@ -27,9 +36,7 @@ const InputFields = ({ title, multi }) => {
                         required
                         size={"small"}
                         fullWidth
-                        sx={{ minWidth: '80%' }}
                     />
-
                 }
             </Box>
 
