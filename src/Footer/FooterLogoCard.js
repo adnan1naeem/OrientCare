@@ -7,10 +7,11 @@ function FooterLogoCard() {
         <Box>
             <Card
                 sx={{
-                    width: { sx: "20rem", sm: '29rem', md: '12rem', lg: '14rem' },
+                    width: { sx: "20rem", sm: '29rem', md: '12rem', lg: '17rem' },
                     height: "17rem",
                     background: "none",
                     boxShadow: "none",
+                    marginLeft: '5rem'
                 }}
             >
                 <CardContent sx={{ display: "flex", flexDirection: "column" }}>
