@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Grid, Checkbox, FormControlLabel, TextField, Button } from '@mui/material';
-import logo from './../assests/Care-logo.avif';
+import logo from './../Assets/Care-logo.avif';
 import Box from '@mui/material/Box';
 import InputFields from './inputFields';
 

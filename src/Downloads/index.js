@@ -1,12 +1,14 @@
 import React from 'react';
 import './style.css';
-import videos from './../assests/videos.png';
-import blog from './../assests/blog.png';
-import certificate from './../assests/certificate.png';
-import catalouge from './../assests/catalouge.png';
-import product from './../assests/product-manual.png';
-import mobile from './../assests/mobile-app.png';
-import logo from './../assests/care-logo.png';
+import videos from './../Assets/videos.png';
+import blog from './../Assets/blog.png';
+import certificate from './../Assets/certificate.png';
+import catalouge from './../Assets/catalouge.png';
+import product from './../Assets/product-manual.png';
+import mobile from './../Assets/mobile-app.png';
+import logo from './../Assets/care-logo.png';
+import { useNavigate } from 'react-router-dom';
+import { ImageText } from './components/image-text';
 
 const products = [
   { id: 1, name: 'Product Manuals', image: product },
@@ -17,7 +19,13 @@ const products = [
   { id: 6, name: 'Mobile App', image: mobile },
 ];
 
-const Index = () => {
+const Index = ({}) => {
+  const navigate = useNavigate();
+
+  const productMunals = (product) => {
+    navigate('/productManuals',{state: product})
+  }
+
   return (
     <div>
       <div className="header">
@@ -26,9 +34,8 @@ const Index = () => {
       </div>
       <div className="grid-container">
         {products.map((product) => (
-          <div key={product.id} className="grid-item">
-            <img src={product?.image} alt={product.name} width={100} height={100} />
-            <p>{product.name}</p>
+          <div key={product.id} className="grid-item" onClick={() => productMunals(product)}>
+            <ImageText image={product?.image} text={product?.name}/>
           </div>
         ))}
       </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
-import logo from './../assests/care-logo.png';
+import logo from './../Assets/care-logo.png';
 
 function NavBar() {
     const [click, setClick] = useState(false);

@@ -1,6 +1,6 @@
 import './styles.css';
-import banner from './../assests/Banner_orient.webp'
-import logo from './../assests/Care-logo.avif'
+import banner from './../Assets/Banner_orient.webp'
+import logo from './../Assets/Care-logo.avif'
 
 function Index() {
     return (

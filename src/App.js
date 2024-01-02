@@ -5,6 +5,7 @@ import Downloads from './Downloads';
 import AboutUs from './Aboutus';
 import ContactUs from './ContactUs';
 import './App.css';
+import ProductManuals from './Downloads/Pages/product-manuals';
 const Home = () => <div>Home Page Content</div>;
 const Products = () => <div>Products Page Content</div>;
 const Partners = () => <div>Partners Page Content</div>;
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/warranty" element={<Warranty />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/productManuals" element={<ProductManuals />} />
         </Routes>
       </Router>
     </div>
