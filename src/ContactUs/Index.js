@@ -5,8 +5,6 @@ import Box from '@mui/material/Box';
 import InputFields from './inputFields';
 
 function Index() {
-    const [newsletter, setNewsletter] = useState(false);
-
     return (
         <div>
             <Grid item textAlign="center" sx={{ marginTop: '40px' }}>
