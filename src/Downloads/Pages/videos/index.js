@@ -10,33 +10,31 @@ const Videos = () => {
 
   return (
     <div>
-      <div>
-        <div className="full-image-container">
-          <img
-            className="full-image"
-            src={videoBanner}
-            alt="Banner Image"
-          />
-        </div>
-        <ImageText image={item?.image} text={item?.name} />
-        <div className="Youtube">
-          <div className="banner">
-            <iframe
-              width="100%"
-              height="415"
-              src="https://www.youtube.com/embed/uETDhITHQJ0?si=No7VDfbGqdD8RmXo"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <h4 className="text-h4">OrientCare Launch Event in Los Angeles, California</h4>
-            <a href="https://www.youtube.com/watch?v=uETDhITHQJ0">
-              <button className="button">
-                View More
-              </button>
-            </a>
-          </div>
+      <div className="full-image-container">
+        <img
+          className="full-image"
+          src={videoBanner}
+          alt="Banner Image"
+        />
+      </div>
+      <ImageText image={item?.image} text={item?.name} />
+      <div className="Youtube">
+        <div className="banner">
+          <iframe
+            width="100%"
+            height="415"
+            src="https://www.youtube.com/embed/uETDhITHQJ0?si=No7VDfbGqdD8RmXo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <h4 className="text-h4">OrientCare Launch Event in Los Angeles, California</h4>
+          <a href="https://www.youtube.com/watch?v=uETDhITHQJ0">
+            <button className="button">
+              View More
+            </button>
+          </a>
         </div>
       </div>
     </div>

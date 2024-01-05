@@ -1,18 +1,17 @@
 import React from 'react';
 import './style.css';
+import { Typography } from '@mui/material';
 
 export const ImageText = ({image, text}) => {
 
   return (
     <div className='container'>
-      <div className="top-section">
-        <img
+      <img
           src={image}
           alt="Top Image"
-          className="top-image-component"
+          style={{width: 160, height: 160,}}
         />
-        <p className='text-component'>{text}</p>
-      </div>
+      <Typography sx={{textAlign:'center',fontSize:'12px',fontWeight:'600',color:'black',marginTop:'-3%', marginBottom:'8%'}}>{text}</Typography>
     </div>
   );
 };
