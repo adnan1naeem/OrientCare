@@ -11,8 +11,8 @@ const MobileApp = () => {
   const item = location.state;
 
   const Images = [
-    { image: playstore , link:""},
-    { image: appstore , link:""}
+    { image: playstore , link:"https://play.google.com/store/apps/details?id=com.midea.aircondition&hl=en&gl=US"},
+    { image: appstore , link:"https://apps.apple.com/ca/app/nethome-plus/id1008001920"}
   ];
 
   return (
