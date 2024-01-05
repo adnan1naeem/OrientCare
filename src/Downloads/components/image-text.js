@@ -9,9 +9,9 @@ export const ImageText = ({image, text}) => {
         <img
           src={image}
           alt="Top Image"
-          className="top-image"
+          className="top-image-component"
         />
-        <p className='text'>{text}</p>
+        <p className='text-component'>{text}</p>
       </div>
     </div>
   );

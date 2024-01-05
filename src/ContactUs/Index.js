@@ -7,8 +7,6 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdAttachEmail } from "react-icons/md";
 import Footer from '../Footer';
 
-
-
 function Index() {
     return (
         <div>

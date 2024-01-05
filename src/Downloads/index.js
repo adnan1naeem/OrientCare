@@ -22,9 +22,28 @@ const products = [
 const Index = ({}) => {
   const navigate = useNavigate();
 
-  const productMunals = (product) => {
-    navigate("/productManuals", { state: product });
-  };
+  const hanldeNextClick = (product) => {
+    if(product?.id === 1){
+      navigate('/productManuals',{state: product})
+      return;
+    }
+    if(product?.id === 2){
+      navigate('/videos',{state: product})
+      return;
+    }
+    if(product?.id === 4){
+      navigate('/catalogue',{state: product})
+      return;
+    }
+    if(product?.id === 5){
+      navigate('/certifications',{state: product})
+      return;
+    }
+    if(product?.id === 6){
+      navigate('/mobileApp',{state: product})
+      return;
+    }
+  }
 
   return (
     <div>
@@ -34,12 +53,8 @@ const Index = ({}) => {
       </div>
       <div className="grid-container">
         {products.map((product) => (
-          <div
-            key={product.id}
-            className="grid-item"
-            onClick={() => productMunals(product)}
-          >
-            <ImageText image={product?.image} text={product?.name} />
+          <div key={product.id} className="grid-item" onClick={() => hanldeNextClick(product)}>
+            <ImageText image={product?.image} text={product?.name}/>
           </div>
         ))}
       </div>

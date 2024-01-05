@@ -5,6 +5,7 @@ import pdf3 from './../../../Assets/pdf/Installation_Care_Manual.pdf'
 import { ImageText } from '../../components/image-text';
 import './style.css';
 import { useLocation } from 'react-router-dom';
+import logo from './../../../Assets/care-logo.png';
 
 const ProductManuals = () => {
   const location = useLocation();
@@ -18,6 +19,9 @@ const ProductManuals = () => {
 
   return (
     <div className='container'>
+       <div className="header">
+        <img className='img' src={logo} alt="Logo" />
+      </div>
       <ImageText image={item?.image} text={item?.name} />
       <div className="pdf-container">
         {pdfFiles?.map((item, index) => (
