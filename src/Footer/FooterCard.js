@@ -5,14 +5,12 @@ function FooterCard({ title, text1, text2, text3, text4, text5 }) {
         <Box>
             <Card
                 sx={{
-
-                    height: { sx: "17rem", sm: '21rem', md: '19rem', lg: '17rem' },
-                    width: { sx: "5rem", sm: '10rem', md: '16rem', lg: '20rem' },
+                    height: { sx: "17rem", sm: '21rem', md: '13rem', lg: '10rem' },
+                    width: { sx: "5rem", sm: '10rem', md: '14rem', lg: '18rem' },
                     background: "none",
                     boxShadow: "none",
                     textAlign: 'left',
                     marginLeft: '2rem',
-
                 }}
             >
                 <CardContent sx={{ display: "flex", flexDirection: "column", }}>
@@ -21,6 +19,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5 }) {
                         sx={{
                             color: "#8a8a8a",
                             fontSize: "12px",
+                            lineHeight: '2rem'
                         }}
                     >
                         {text1}
@@ -29,7 +28,6 @@ function FooterCard({ title, text1, text2, text3, text4, text5 }) {
                         sx={{
                             color: "#8a8a8a",
                             marginTop: "10px",
-
                             fontSize: "12px",
                         }}
                     >
@@ -39,7 +37,6 @@ function FooterCard({ title, text1, text2, text3, text4, text5 }) {
                         sx={{
                             color: "#8a8a8a",
                             marginTop: "10px",
-
                             fontSize: "12px",
                         }}
                     >
