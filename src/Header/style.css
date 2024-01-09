@@ -1,27 +1,68 @@
 .logo-container {
   margin-bottom: 1%;
-  padding-left: 3%;
+  padding-left: 4%;
   box-shadow: 0 5px 5px #0000000d;
 }
 
 .main-logo {
-  width: 250px;
-  padding: 1%;
-  padding-top: 0.8%;
-  padding-bottom: 0.8%;
+  width: 245px;
+  margin: 1.25%;
 }
 
+.nav-dropdown {
+  position: relative;
+  flex-direction: column; 
+  display: inline-block;
+}
+
+.nav-links-dropDown {
+  text-decoration: none;
+  color: black;
+  text-transform:none;
+  margin-top: 10%;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.warranty-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.next-arrow {
+  color: black; /* Change the text color as needed */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 300px;
+  text-align: left;
+  background-color: green;
+  box-shadow: 0px 8px 16px 0px white;
+  z-index: 1;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  background-color: white;
+  padding: 15%;
+  box-shadow: 0 5px 5px #0000000d;
+}
 
 .navbar {
   background-color: white;
-  box-shadow: 0 5px 5px #0000000d;
-  height: 35px;
+  box-shadow: 0 7px 7px #0000000d;
+  height: 37px;
   display: flex;
   font-size: 14px;
-  font-weight: 500;
+  padding-left: 1.5%;
+  font-weight: 800;
   position: sticky;
   top: 0;
-  z-index: 20;
 }
 
 .nav-container {
@@ -63,7 +104,7 @@
 .nav-links {
   color: black;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.9rem;
   height: 100%;
   font-weight: 500;
   border-bottom: 3px solid transparent;
@@ -128,12 +169,6 @@
   .nav-item .active {
     color: black;
     border: none;
-  }
-
-  .nav-links {
-    padding: 1.5rem;
-    width: 100%;
-    display: table;
   }
 
   .nav-logo .icon {
