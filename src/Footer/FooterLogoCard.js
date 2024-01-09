@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography, Grid } from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 import logo from '../Assets/Care-logo.avif'
 import { FaFacebookF } from "react-icons/fa6";
@@ -6,8 +6,6 @@ import { FaTwitter } from "react-icons/fa6";
 import { TiSocialInstagram } from "react-icons/ti";
 import { ImYoutube2 } from "react-icons/im";
 import { LiaLinkedinIn } from "react-icons/lia";
-
-
 
 function FooterLogoCard() {
     return (

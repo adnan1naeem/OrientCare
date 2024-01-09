@@ -13,6 +13,8 @@ import Videos from './Downloads/Pages/videos';
 import Warranty from './Warranty/warranty';
 import Home from './Home';
 import Products from './Products/index'
+import SpareParts from "./SpareParts/index";
+import ProductsDetail from './Products/ProductsDetail'
 
 // const Products = () => <div>Products Page Content</div>;
 const Partners = () => <div>Partners Page Content</div>;
@@ -35,6 +37,8 @@ const App = () => {
           <Route path="/mobileApp" element={<MobileApp />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/spareParts" element={<SpareParts />} />
+          <Route path="/productsDetail" element={<ProductsDetail />} />
         </Routes>
       </Router>
     </div>

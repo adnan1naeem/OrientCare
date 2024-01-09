@@ -1,47 +1,87 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Typography, Grid } from '@mui/material';
-import AirConditions from '../Assets/AirConditions.webp'
+
 import './styles.css';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { NavLink } from 'react-router-dom';
 
-const CardComponent = () => {
+const CardComponent = ({ Array }) => {
+    const cardsPerPage = 20;
+    const [currentPage, setCurrentPage] = useState(1);
 
-    const cardData = [
-        { id: 1, title: 'Card 1', description: '36000BTU MiniSplit ME SEER18 230V (Works With Alexa)', img: AirConditions },
-        { id: 2, title: 'Card 2', description: '24000BTU MiniSplit ME SEER18.5 230V (Works With Alexa)', img: AirConditions },
-        { id: 3, title: 'Card 3', description: '18000BTU MiniSplit ME SEER19.5 230V (Works With Alexa)', img: AirConditions },
-        { id: 4, title: 'Card 2', description: '12000BTU MiniSplit ME SEER21.4 230V (Works With Alexa)', img: AirConditions },
-        { id: 5, title: 'Card 3', description: '12000BTU MiniSplit ME SEER20.8 115V (Works With Alexa)', img: AirConditions },
-    ];
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentCards = Array?.slice(indexOfFirstCard, indexOfLastCard);
+
+    const pageCount = Math.ceil(Array.length / cardsPerPage);
+
+    const handlePageChange = (event, value) => {
+        setCurrentPage(value);
+    };
 
     return (
         <>
             <Grid container spacing={1}>
-                {cardData.map((card) => (
+                {currentCards?.map((card) => (
                     <Grid item key={card.id}>
-                        <Card sx={{
-                            width: { sx: "160px", sm: '140px', md: '190px', lg: '199px' }, marginLeft: '5px', marginTop: '3rem', background: "none",
-                            boxShadow: "none",
-                        }}>
-                            <div className='ImageProducts'>
-                                <img
-                                    src={card.img}
-                                    alt=""
-                                    className='CenteredImage'
-                                />
-                            </div>
-                            <Typography sx={{ marginTop: '15px', textAlign: 'center', color: '#252614', fontSize: '14px', fontWeight: '700' }}>{card?.description}</Typography>
-                        </Card>
-
+                        <NavLink
+                            exact
+                            to="/productsDetail"
+                            style={{ textDecoration: 'none', }}
+                        >
+                            <Card
+                                sx={{
+                                    width: { sx: '160px', sm: '140px', md: '190px', lg: '199px' },
+                                    marginLeft: '5px',
+                                    marginTop: '3rem',
+                                    background: 'none',
+                                    boxShadow: 'none',
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                }}
+                            >
+                                <div className="ImageProducts">
+                                    <img src={card.img} alt="" className="CenteredImage" />
+                                </div>
+                                <Typography
+                                    sx={{
+                                        marginTop: '15px',
+                                        textAlign: 'center',
+                                        color: '#252614',
+                                        fontSize: '14px',
+                                        fontWeight: '700',
+                                    }}
+                                >
+                                    {card?.description}
+                                </Typography>
+                            </Card>
+                        </NavLink>
                     </Grid>
                 ))}
-
             </Grid>
+            {Array?.length >= 20 &&
+                <Stack
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        mt: '4rem',
+                        mb: '1rem',
+                        justifyContent: 'center',
+                        flexDirection: { xs: 'column', sm: 'row', md: 'row', lg: 'row' },
+                    }}
+                    spacing={2}
+                >
+                    <Pagination
+                        count={pageCount}
+                        variant="outlined"
+                        shape="rounded"
+                        onChange={handlePageChange}
+                    />
+                </Stack>
+            }
 
-            <Stack spacing={2}>
-                <Pagination count={2} variant="outlined" shape="rounded" />
-            </Stack>
         </>
 
     );

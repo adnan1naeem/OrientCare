@@ -42,7 +42,7 @@ const Center_Right = () => {
           pl: "2%",
           mb: "4%",
           fontFamily: "sans-serif",
-          width: "500px",
+          // width: "500px",
         }}
       >
         <br />
