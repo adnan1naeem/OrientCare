@@ -12,7 +12,7 @@ const warranty = () => {
         <img
           src={logo_one}
           alt="orient_logo"
-          style={{ width: "11%", paddingTop: "50px" }}
+          style={{ width: 160, paddingTop: "50px" }}
         />
         <h4>LIMITED WARRANTY</h4>
         <p style={{ fontSize: "15px" }}>
@@ -21,7 +21,7 @@ const warranty = () => {
       </div>
 
       <div className="div_second">
-        <img src={logo_two} width={"160px"} />
+        <img src={logo_two} width={"160px"} alt="warranty_logo"/>
         <p style={{ fontSize: "12px", fontFamily: "sans-serif" }}>
           One(1)year on all parts
         </p>
@@ -29,7 +29,6 @@ const warranty = () => {
 
       <div className="div_third">
         <Center_Left />
-
         <Center_Right />
       </div>
     </div>

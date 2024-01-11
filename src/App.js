@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Header/header';
 import Downloads from './Downloads';
-import AboutUs from './Aboutus';
+// import AboutUs from './Aboutus';
 import ContactUs from './ContactUs';
 import './App.css';
 import ProductManuals from './Downloads/Pages/product-manuals';
@@ -15,9 +15,13 @@ import Home from './Home';
 import Products from './Products/index'
 import SpareParts from "./SpareParts/index";
 import ProductsDetail from './Products/ProductsDetail'
+import BecomeaPartner from './Partners/BecomeaPartner';
+import PartnerSubPage from './PartnerSubpage/Become/index'
+import PartnerCenter from './PartnerSubpage/PartnerCenter/index'
+import WarrantyRegistration from './Warranty/WarrantyRegistration/index'
 
 // const Products = () => <div>Products Page Content</div>;
-const Partners = () => <div>Partners Page Content</div>;
+// const Partners = () r=> <div>Partners Page Content</div>;
 
 const App = () => {
   return (
@@ -26,9 +30,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route exact path="/about" element={<AboutUs />} />
+          <Route exact path="/about" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/partners" element={<Partners />} />
+          <Route path="/BecomeaPartner" element={<BecomeaPartner />} />
           <Route path="/warranty" element={<Warranty />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/contact" element={<ContactUs />} />
@@ -38,8 +42,13 @@ const App = () => {
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/spareParts" element={<SpareParts />} />
-          <Route path="/productsDetail" element={<ProductsDetail />} />
-        </Routes>
+          <Route path="/productsDetail" element={<ProductsDetail />} /> 
+          <Route path="/PartnerSubPage" element={<PartnerSubPage />} /> 
+          <Route path="/partnercenter" element={<PartnerCenter />} /> 
+          <Route path="/warrantyRegistration" element={<WarrantyRegistration />} />  
+
+
+         </Routes>
       </Router>
     </div>
   );

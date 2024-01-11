@@ -1,7 +1,7 @@
 import { Box, TextField, Typography } from '@mui/material'
 import React from 'react'
 
-const InputFields = ({ title, multi }) => {
+const InputFields = ({ title, multi, type }) => {
     return (
         <div>
             <Typography variant='h5'
@@ -11,7 +11,6 @@ const InputFields = ({ title, multi }) => {
                     marginTop: '5px',
                     fontWeight: '500',
                     paddingBottom: '8px'
-
                 }}>
                 {title}
             </Typography>
@@ -32,7 +31,6 @@ const InputFields = ({ title, multi }) => {
                         multiline
                         rows={4}
                         fullWidth
-
                     />
                     :
                     <TextField
@@ -40,6 +38,7 @@ const InputFields = ({ title, multi }) => {
                         required
                         size={"small"}
                         fullWidth
+                        type={type}
                         sx={{
                             '& .MuiOutlinedInput-input': {
                                 paddingY: '5px',
@@ -49,7 +48,6 @@ const InputFields = ({ title, multi }) => {
                     />
                 }
             </Box>
-
         </div >
     )
 }
