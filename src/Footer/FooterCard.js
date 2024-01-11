@@ -6,7 +6,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5 }) {
             <Card
                 sx={{
                     height: { sx: "17rem", sm: '21rem', md: '13rem', lg: '10rem' },
-                    width: { sx: "5rem", sm: '10rem', md: '14rem', lg: '18rem' },
+                    width: { sx: "10rem", sm: '15rem', md: '15rem', lg: '15rem' },
                     background: "none",
                     boxShadow: "none",
                     textAlign: 'left',

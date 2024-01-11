@@ -20,24 +20,27 @@
   color: black;
   text-transform:none;
   margin-top: 10%;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
 }
 
 .warranty-arrow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .next-arrow {
   color: black; /* Change the text color as needed */
+
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 300px;
+  min-width: 220px;
   text-align: left;
   background-color: green;
   box-shadow: 0px 8px 16px 0px white;
