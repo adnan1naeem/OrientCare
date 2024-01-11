@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Card, Typography, Grid } from '@mui/material';
-
 import './styles.css';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -9,11 +8,9 @@ import { NavLink } from 'react-router-dom';
 const CardComponent = ({ Array }) => {
     const cardsPerPage = 20;
     const [currentPage, setCurrentPage] = useState(1);
-
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = Array?.slice(indexOfFirstCard, indexOfLastCard);
-
     const pageCount = Math.ceil(Array.length / cardsPerPage);
 
     const handlePageChange = (event, value) => {
@@ -32,7 +29,12 @@ const CardComponent = ({ Array }) => {
                         >
                             <Card
                                 sx={{
-                                    width: { sx: '160px', sm: '140px', md: '190px', lg: '199px' },
+                                    width: {
+                                        sx: '160px',
+                                        sm: '140px',
+                                        md: '190px',
+                                        lg: '199px'
+                                    },
                                     marginLeft: '5px',
                                     marginTop: '3rem',
                                     background: 'none',
@@ -52,6 +54,9 @@ const CardComponent = ({ Array }) => {
                                         color: '#252614',
                                         fontSize: '14px',
                                         fontWeight: '700',
+                                        '&:hover': {
+                                            color: 'red',
+                                        },
                                     }}
                                 >
                                     {card?.description}

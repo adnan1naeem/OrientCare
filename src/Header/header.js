@@ -19,15 +19,15 @@ function NavBar() {
 
   const productArray = [
     {
-      productKey: "mini-split",
+      productKey: "products",
       productNamme: "MINI SPLIT INVERTER HEAT PUMPS",
     },
-    { productKey: "multi-zone", productNamme: "MULTIZONE INVERTER HEAT PUMPS" },
+    { productKey: "", productNamme: "MULTIZONE INVERTER HEAT PUMPS" },
     {
-      productKey: "air-handler",
+      productKey: "",
       productNamme: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
     },
-    { productKey: "spare-parts", productNamme: "SPARE PARTS" },
+    { productKey: "spareParts", productNamme: "SPARE PARTS" },
   ];
 
   const partnerArray = [
@@ -43,7 +43,7 @@ function NavBar() {
 
   const warrantyArray = [
     {
-      warrantyKey: "warranty",
+      warrantyKey: 'miniSplit',
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "indoor" },
@@ -117,7 +117,7 @@ function NavBar() {
                       <NavLink
                         key={product?.productKey}
                         exact
-                        to={`/products/${product.productKey}`}
+                        to={`${product.productKey}`}
                         activeClassName="active"
                         className="nav-links-dropDown"
                         onClick={handleClick}
@@ -176,7 +176,7 @@ function NavBar() {
                         <NavLink
                           key={warranty?.warrantyKey}
                           exact
-                          to={`/warranty/${warranty.warrantyKey}`}
+                          to={`/${warranty.warrantyKey}`}
                           activeClassName="active"
                           className="nav-links-dropDown"
                           onClick={handleClick}

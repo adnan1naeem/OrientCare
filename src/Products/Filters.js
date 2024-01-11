@@ -4,7 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 function Filters() {
     const filterNav = () => {
-        return { textDecoration: 'none', color: "#8A8A8A", }
+        return {
+            textDecoration: 'none', color: "#8A8A8A", '&:hover': {
+                color: 'red',
+                cursor: 'pointer',
+            },
+        }
     };
 
     const LeftviewStyle = () => {
@@ -21,7 +26,9 @@ function Filters() {
             boxShadow: "none",
             marginTop: '10px',
         }}>
-            <Typography sx={{ fontSize: '22px', lineHeight: 1.35, fontWeight: '500', color: '#343538', marginTop: '1em', marginBottom: '1.1rem' }}>
+            <Typography sx={{
+                fontSize: '22px', lineHeight: 1.35, fontWeight: '500', color: '#343538', marginTop: '1em', marginBottom: '1.1rem',
+            }}>
                 Mini Splits
             </Typography>
             <Typography sx={{ textAlign: 'left', color: "#252634", fontSize: '15px', fontWeight: '700', pb: '0.2rem' }}>
@@ -36,24 +43,34 @@ function Filters() {
                     exact
                     to="/products"
                     style={filterNav}
+                    activeStyle={{ color: '#4b6ee1' }}
+                    onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
+                    onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
                 >
                     MINI SPLIT INVERTER HEAT PUMPS
                 </NavLink>
             </Typography>
-            <Typography href="/" sx={LeftviewStyle}>
+            <Typography sx={{ textAlign: 'left', fontSize: '14px', fontWeight: '400', marginTop: '1rem' }}>
                 <NavLink
                     exact
                     to="/"
                     style={filterNav}
+                    activeStyle={{ color: '#4b6ee1' }}
+                    onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
+                    onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
+
                 >
                     MULTIZONE INVERTER HEAT PUMPS
                 </NavLink>
             </Typography>
-            <Typography href="/" sx={LeftviewStyle}>
+            <Typography sx={LeftviewStyle}>
                 <NavLink
                     exact
                     to="/"
                     style={filterNav}
+                    activeStyle={{ color: '#4b6ee1' }}
+                    onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
+                    onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
                 >
                     AIR HANDLER UNIT INVERTER HEAT PUMPS
                 </NavLink>
@@ -63,6 +80,9 @@ function Filters() {
                     exact
                     to="/spareParts"
                     style={filterNav}
+                    activeStyle={{ color: '#4b6ee1' }}
+                    onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
+                    onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
                 >
                     SPARE PARTS
                 </NavLink>

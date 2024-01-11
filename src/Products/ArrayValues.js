@@ -10,9 +10,7 @@ import ConnectingPipe from '../Assets/connectingPipe.webp'
 import FanMotor from '../Assets/fanMotor.webp'
 import IndooorFanMotor from '../Assets/IndooorFanMotor_large.webp'
 import CommunicationWire from '../Assets/CommunicationWire_large.webp'
-
 import banner from './../Assets/intelligent-smart.webp'
-import Family from '../Assets/family-shared-unit.webp'
 import Smart from '../Assets/Smat-WiFi_5914b032-fe09-49c2-8631-6c127deae534.webp'
 import SprintActivation from './../Assets/3._Checkout_Page_Sprint_Desktop_View.webp'
 import Iclean from '../Assets/4._Checkout_Page_I-Clean_Desktop_View.webp'
@@ -26,7 +24,6 @@ import EcoGear from './../Assets/12._Checkout_Page_eco-gear_Desktop_View.webp'
 import Friendly from '../Assets/13._Checkout_Page_eco-freindly_Desktop_View.webp'
 import EasyInstall from '../Assets/Easy-Installation_08e132d6-ac5a-4fc5-a469-f911fd0e166c.webp'
 import Technical from './../Assets/Technical-Specifications-12-15.webp'
-
 
 
 export const SubProductsImages = [
@@ -45,8 +42,6 @@ export const SubProductsImages = [
     { id: 13, img: EasyInstall, },
     { id: 15, img: Technical, },
 ];
-
-
 
 export const miniSplit = [
     { id: 1, description: '36000BTU MiniSplit ME SEER18 230V (Works With Alexa)', img: AirConditions, },
@@ -94,7 +89,6 @@ export const spareParts = [
     { id: 58, description: 'OutDoor Unit Fan Motor', img: FanMotor },
     { id: 65, description: 'OutDoor Unit Fan', img: IndooorFanMotor },
     { id: 65, description: 'OutDoor Unit Fan', img: CommunicationWire },
-
 ];
 
 
