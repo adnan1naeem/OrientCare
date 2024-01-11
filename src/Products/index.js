@@ -9,7 +9,6 @@ import Footer from '../Footer/index'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { miniSplit } from './ArrayValues'
-import { NavLink } from 'react-router-dom'
 import Filters from './Filters'
 
 

@@ -9,9 +9,7 @@ import Footer from '../Footer/index'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { spareParts } from '../Products/ArrayValues'
-import { NavLink, useNavigate } from "react-router-dom";
 import Filters from '../Products/Filters'
-
 
 
 function Index() {
@@ -44,7 +42,6 @@ function Index() {
                         <Cards Array={spareParts} />
                     </Card>
                 </Box>
-
             </div>
             <Footer />
         </>
