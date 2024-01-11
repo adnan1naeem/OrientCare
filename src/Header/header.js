@@ -51,12 +51,12 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "warranty",
+      warrantyKey: "miniSplit",
       warrantyNamme: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "outdoor" }],
     },
     {
-      warrantyKey: "warranty",
+      warrantyKey: "",
       warrantyNamme: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
         { name: "Air Handler InDoor", key: "indoor" },

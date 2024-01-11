@@ -9,6 +9,7 @@ import mobile from "./../Assets/mobile-app.png";
 import logo from "./../Assets/care-logo.png";
 import { useNavigate } from "react-router-dom";
 import { ImageText } from "./components/image-text";
+import Footer from '../Footer/index'
 
 const products = [
   { id: 1, name: "Product Manuals", image: product },
@@ -19,28 +20,28 @@ const products = [
   { id: 6, name: "Mobile App", image: mobile },
 ];
 
-const Index = ({}) => {
+const Index = ({ }) => {
   const navigate = useNavigate();
 
   const hanldeNextClick = (product) => {
-    if(product?.id === 1){
-      navigate('/productManuals',{state: product})
+    if (product?.id === 1) {
+      navigate('/productManuals', { state: product })
       return;
     }
-    if(product?.id === 2){
-      navigate('/videos',{state: product})
+    if (product?.id === 2) {
+      navigate('/videos', { state: product })
       return;
     }
-    if(product?.id === 4){
-      navigate('/catalogue',{state: product})
+    if (product?.id === 4) {
+      navigate('/catalogue', { state: product })
       return;
     }
-    if(product?.id === 5){
-      navigate('/certifications',{state: product})
+    if (product?.id === 5) {
+      navigate('/certifications', { state: product })
       return;
     }
-    if(product?.id === 6){
-      navigate('/mobileApp',{state: product})
+    if (product?.id === 6) {
+      navigate('/mobileApp', { state: product })
       return;
     }
   }
@@ -54,10 +55,11 @@ const Index = ({}) => {
       <div className="grid-container">
         {products.map((product) => (
           <div key={product.id} className="grid-item" onClick={() => hanldeNextClick(product)}>
-            <ImageText image={product?.image} text={product?.name}/>
+            <ImageText image={product?.image} text={product?.name} />
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

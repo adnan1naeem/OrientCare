@@ -3,6 +3,8 @@ import { ImageText } from '../../components/image-text';
 import './style.css';
 import { useLocation } from 'react-router-dom';
 import videoBanner from './../../../Assets/videoBanner.webp';
+import Footer from '../../../Footer/index';
+
 
 const Videos = () => {
   const location = useLocation();
@@ -37,6 +39,7 @@ const Videos = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
