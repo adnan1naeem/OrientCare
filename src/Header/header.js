@@ -32,11 +32,11 @@ function NavBar() {
 
   const partnerArray = [
     {
-      partnerKey: "become-partner",
+      partnerKey: "PartnerSubPage",
       partnerNamme: "Become A Partner",
     },
     {
-      partnerKey: "partner-center",
+      partnerKey: "partnercenter",
       partnerNamme: "Partner Center",
     },
   ];
@@ -64,7 +64,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "warranty",
+      warrantyKey: "warrantyRegistration",
       warrantyNamme: "Warranty Registration",
       warrantyList: [],
     },
@@ -133,7 +133,7 @@ function NavBar() {
               <div className="nav-dropdown">
                 <NavLink
                   exact
-                  to="/partners"
+                  to="/BecomeaPartner"
                   activeClassName="active"
                   className="nav-links"
                   onClick={handleClick}
@@ -146,7 +146,7 @@ function NavBar() {
                       <NavLink
                         key={partner?.partnerKey}
                         exact
-                        to={`/partners/${partner.partnerKey}`}
+                        to={`/${partner.partnerKey}`}
                         activeClassName="active"
                         className="nav-links-dropDown"
                         onClick={handleClick}
