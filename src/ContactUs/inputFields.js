@@ -48,7 +48,7 @@ const InputFields = ({ title, multi, type }) => {
                     />
                 }
             </Box>
-        </div >
+        </div>
     )
 }
 

@@ -24,7 +24,7 @@ const Index = () => {
       </div>
 
       <div className="logo_home">
-        <ImageContainer containerImage={logo_one} width="50%" />
+        <ImageContainer containerImage={logo_one} width="52%" />
       </div>
       <div className="para_div">
         <p style={{marginBottom:0}}>

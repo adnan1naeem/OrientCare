@@ -3,7 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 import logo from "./../Assets/care-logo.png";
-import ArrowRight from '@mui/icons-material/ArrowRight';
+import { IoIosArrowForward } from "react-icons/io";
+
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -73,7 +74,10 @@ function NavBar() {
   return (
     <div>
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="main-logo" />
+        <NavLink to="/">
+          <img src={logo} alt="Logo" className="main-logo" />
+        </NavLink>
+
       </div>
       <nav className="navbar">
         <div className="nav-container">
@@ -162,7 +166,7 @@ function NavBar() {
               <div className="nav-dropdown">
                 <NavLink
                   exact
-                  to="/warranty"
+                  to="/warrantyRegistration"
                   activeClassName="active"
                   className="nav-links"
                   onClick={handleClick}
@@ -185,7 +189,7 @@ function NavBar() {
                             {warranty?.warrantyNamme}
                             {warranty?.warrantyList &&
                               warranty?.warrantyList.length > 0 && (
-                                <ArrowRight />
+                                <IoIosArrowForward style={{ marginTop: '3%' }} />
                               )}
                           </div>
                         </NavLink>

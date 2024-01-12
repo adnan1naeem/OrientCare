@@ -12,41 +12,44 @@ function FooterLogoCard() {
         <Box>
             <Card
                 sx={{
-                    height: { sx: "27rem", sm: '14rem', md: '13rem', lg: '10rem' },
-                    width: { sx: "12rem", sm: '25rem', md: '22rem', lg: '23rem' },
+                    height: { sx: "27rem", sm: '14rem', md: '13rem', lg: '11rem' },
+                    width: { sx: "27rem", sm: '25rem', md: '16rem', lg: '19rem' },
                     background: "none",
                     boxShadow: "none",
+                    
                 }}
             >
                 <CardContent sx={{
                     display: "flex",
                     flexDirection: "column",
-                    marginTop: '18px'
+                    marginTop: '14px',
+                    justifyContent:'center'
                 }}>
                     <img
                         src={logo}
                         alt=""
-                        style={{ width: '12rem', paddingBottom: '16px', marginLeft: '5rem' }}
+                        style={{ width: '12rem', paddingBottom: '16px', marginLeft: '1rem' }}
                     />
                     <Typography
                         sx={{
                             color: "#000000",
                             fontSize: '17px',
-                            marginLeft: '6rem',
+                            marginLeft: '2rem',
                             paddingBottom: '5px',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            
                         }}
                     >
                         FOLLOW US
                     </Typography>
 
 
-                    <Typography sx={{ display: 'flex', gap: '7%', paddingTop: '6px', marginLeft: '6rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
-                        <FaFacebookF style={{ color: '#8a8a8a', fontSize: '17px', marginTop: '3px' }} />
-                        <FaTwitter style={{ color: '#8a8a8a', fontSize: '25px', }} />
-                        <ImYoutube2 style={{ color: '#8a8a8a', fontSize: '25px', }} />
-                        <LiaLinkedinIn style={{ color: '#8a8a8a', fontSize: '25px', }} />
-                        <TiSocialInstagram style={{ color: '#8a8a8a', fontSize: '25px', }} />
+                    <Typography sx={{ display: 'flex', gap: '10%', paddingTop: '6px', marginLeft: '2rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
+                        <FaFacebookF style={{ color: '#8a8a8a', fontSize: '20px', marginTop: '3px' }} />
+                        <FaTwitter style={{ color: '#8a8a8a', fontSize: '30px', }} />
+                        <ImYoutube2 style={{ color: '#8a8a8a', fontSize: '35px', }} />
+                        <LiaLinkedinIn style={{ color: '#8a8a8a', fontSize: '35px', }} />
+                        <TiSocialInstagram style={{ color: '#8a8a8a', fontSize: '35px', }} />
                     </Typography>
                 </CardContent>
             </Card>
