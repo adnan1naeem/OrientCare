@@ -51,7 +51,7 @@ function Index() {
                             flexDirection: { xs: "column", sm: 'row', md: 'row', lg: 'row' },
                         }}>
                             <img src={Logo} alt='' className='LogoImageOrient' />
-                            <Typography variant='h1' sx={{ fontSize: '45px', color: '#343538', }}>Wall Mounted Mini Split</Typography>
+                            <Typography variant='h1' sx={{ fontSize: '36px', color: '#343538',fontFamily:'Montserrat', fontWeight:'400' }}>Wall Mounted Mini Split</Typography>
                         </Grid>
                         <Typography sx={{ mb: '2rem', textAlign: 'center', color: '#8A8A8A', fontSize: '17px', lineHeight: '25.5px' }}>
                             Intelligent & Smart OrientCare Ductless Wall Mounted Mini Split with a SEER Value 18 ~ 20.8 also works with Alexa and Google Home besides the remote control. Its innovative Sprint Activation feature provides powerful cooling in the split of the seconds as soon as it gets started. The outdoor fan speed increases from 2nd grade to 9th grade which makes it more comfortable and energy efficient. Eco Gear Control function can adjust its energy consumption by 50% or 75% or 100%.<br /><br />
