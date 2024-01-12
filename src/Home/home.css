@@ -72,9 +72,11 @@
     flex-direction: row;
     gap: 1%;
      /* justify-content: space-between; */
-    margin-top: 2px;
-    margin-left: 4%;
-    margin-right: 4%; 
+    margin-top: 5px;
+    /* margin-left: 4%;
+    margin-right: 4%;  */
+      justify-content: center;
+      align-items: center;
   }
   
   .logo_home {
@@ -96,14 +98,16 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding-top: 15px;
    }
    @font-face {
   font-family: Arcon;
   src: url('../../public/Aileron-Regular.otf');
  }
   p {
+
     font-family:Arcon;
-  font-weight: 600;
+    font-weight: 600;
     text-align: center;
     font-size: 17px;
     color: #8a8a8a;
@@ -116,7 +120,27 @@
     
   }
   
- 
+  .HeadingFontHome{
+    font-size: 34px;
+    font-weight: 600;
+    font-family: monstrat;
+    color: #343538;
+     text-align: center;
+
+  }
+  .headingFontHome_container{
+   justify-content: center;
+   flex-direction: row;
+   align-items:center;
+  }
+  .WhyLogo{
+    margin-bottom: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* margin-top: 10px; */
+    }
 /* Responsive styles for screens up to 768px */
 
 @media (max-width: 768px) {
@@ -137,8 +161,16 @@
     .logo_home,
     .para_div {
       flex-direction: column;
-      margin-left: 0;
-      margin-right: 0;
+      /* margin-left: 0;
+      margin-right: 0; */
+    }
+    .FirstImage{
+    height: 98%;
+    width: 100%;
+    }
+    .first_block_home{
+      justify-content: center;
+      align-items: center;
     }
   
     .first_block,
@@ -148,8 +180,9 @@
     }
   
     .logo_home {
-      margin-top: 20px; /* Adjusted margin for better consistency */
+      margin-top: 20px;  
     }
+   
   
     .para_div {
       margin-left: 10px;
@@ -165,5 +198,6 @@
       flex-direction: column;
       gap: 1%;
     }
+
   }
   

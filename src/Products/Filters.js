@@ -25,7 +25,30 @@ function Filters() {
             background: "none",
             boxShadow: "none",
             marginTop: '10px',
+            borderRadius: 0,
         }}>
+
+            <div>
+                <Typography variant="h6" style={{ display: 'inline', color: '#B5B7C4', fontSize: '11px' }}>
+                    <NavLink
+                        exact
+                        to="/"
+                        style={filterNav}
+                        activeStyle={{ color: '#4b6ee1' }}
+                        onMouseOver={(e) => { e.target.style.color = '#343538'; }}
+                        onMouseOut={(e) => { e.target.style.color = '#B5B7C4'; }}
+                    >
+                        Home
+                    </NavLink>
+                </Typography>
+
+                <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
+                    {' / '}
+                </Typography>
+                <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
+                    MINI SPLITS
+                </Typography>
+            </div>
             <Typography sx={{
                 fontSize: '22px', lineHeight: 1.35, fontWeight: '500', color: '#343538', marginTop: '1em', marginBottom: '1.1rem',
             }}>

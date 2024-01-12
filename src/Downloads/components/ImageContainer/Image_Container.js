@@ -1,7 +1,7 @@
 import React from "react";
 import "./Image_Container.css";
 
-const ImageContainer = ({ containerImage, width }) => {
+const ImageContainer = ({ containerImage, width, height }) => {
   return (
     <div
       className="box"
@@ -15,7 +15,8 @@ const ImageContainer = ({ containerImage, width }) => {
         src={containerImage}
         className="img"
         alt="image"
-        style={{ width: width }}
+        style={{ width: width, height: height }}
+
       />
     </div>
   );

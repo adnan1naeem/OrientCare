@@ -16,6 +16,9 @@ import orient_logo from "../../src/Assets/why.png";
 import logo_one from "../../src/Assets/logo_one.avif";
 import last_image from "../../src/Assets/last_img.webp";
 import Footer from "../Footer/index";
+import { Box, Typography } from "@mui/material";
+import CardsRow from './CardsRow'
+import BannerImage from "./BannerImage";
 const Index = () => {
   return (
     <div className="main_div">
@@ -40,61 +43,46 @@ const Index = () => {
           quality standards as required in every region and market.
         </p>
       </div>
-      <div className="heading">
-        <h2>MINI SPLIT INVERTER HEAT PUMP</h2>
-      </div>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
 
-      <div className="first_block">
-        <ImageContainer containerImage={smart_image} width="100%" />
-      </div>
-
-      <div className="block">
-        <ImageContainer containerImage={image_one} width="100%" />
-
-        <ImageContainer containerImage={image_two} width={"100%"} />
-      </div>
-      <div className="block">
-        <ImageContainer containerImage={image_three} width={"100%"} />
-
-        <ImageContainer containerImage={image_four} width={"100%"} />
-      </div>
-
+        }}>
+        <Typography
+          sx={{
+            fontSize: '34px',
+            fontWeight: '600',
+            color: '#343538',
+            textAlign: 'center',
+          }}>
+          MINI SPLIT INVERTER HEAT PUMP
+        </Typography>
+      </Box>
+      <BannerImage containerImage={smart_image} />
+      <CardsRow containerImage1={image_one} containerImage2={image_two} />
+      <CardsRow containerImage1={image_three} containerImage2={image_four} />
       <div className="heading_one">
         <h2>MULTIZONE INVERTER HEAT PUMPS</h2>
       </div>
-
-      <div className="first_block">
-        <ImageContainer containerImage={smart_image2} width="100%" />
-      </div>
-
+      <BannerImage containerImage={smart_image2} />
       <div className="heading_two">
         <h2>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
       </div>
-
-      <div className="first_block">
-        <ImageContainer containerImage={air_handler} width="100%" />
-      </div>
-
-      <div className="block">
-        <ImageContainer containerImage={image_five} width="100%" />
-        <ImageContainer containerImage={image_six} width="100%" />
-      </div>
-
+      <BannerImage containerImage={air_handler} />
+      <CardsRow containerImage1={image_five} containerImage2={image_six} />
       <div className="heading_one">
         <h2>SPARE PARTS</h2>
       </div>
+      <BannerImage containerImage={smart_image3} />
+      <div className="logo_home ">
+        <div className="WhyLogo">
+          <ImageContainer containerImage={orient_logo} width="60%" />
+        </div>
 
-      <div className="first_block">
-        <ImageContainer containerImage={smart_image3} width="100%" />
       </div>
-
-      <div className="logo_home">
-        <ImageContainer containerImage={orient_logo} width="60%" />
-      </div>
-
-      <div className="last_block">
-        <ImageContainer containerImage={last_image} width="100%" />
-      </div>
+      <BannerImage containerImage={last_image} />
 
       <div className="para_div">
         <p style={{ maxWidth: "90%" }}>

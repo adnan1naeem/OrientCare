@@ -28,8 +28,13 @@ function Index() {
                         gap: '1.3rem',
                         flexWrap: 'wrap'
                     }}>
+
                     {isLargeScreen && (
-                        <Filters />
+                        <>
+
+                            <Filters />
+                        </>
+
                     )}
                     <Card
                         sx={{

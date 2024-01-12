@@ -13,17 +13,17 @@ function FooterLogoCard() {
             <Card
                 sx={{
                     height: { sx: "27rem", sm: '14rem', md: '13rem', lg: '11rem' },
-                    width: { sx: "27rem", sm: '25rem', md: '16rem', lg: '19rem' },
+                    width: { sx: "27rem", sm: '22rem', md: '16rem', lg: '19rem' },
                     background: "none",
                     boxShadow: "none",
-                    
+
                 }}
             >
                 <CardContent sx={{
                     display: "flex",
                     flexDirection: "column",
                     marginTop: '14px',
-                    justifyContent:'center'
+                    justifyContent: 'center'
                 }}>
                     <img
                         src={logo}
@@ -37,20 +37,33 @@ function FooterLogoCard() {
                             marginLeft: '2rem',
                             paddingBottom: '5px',
                             fontWeight: 'bold',
-                            
+
                         }}
                     >
                         FOLLOW US
                     </Typography>
 
+                    <Box sx={{ display: 'flex', gap: '5%', paddingTop: '6px', marginLeft: '2rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
+                        <FaFacebookF className="icon" />
+                        <FaTwitter className="icon" />
+                        <ImYoutube2 className="icon" />
+                        <LiaLinkedinIn className="icon" />
+                        <TiSocialInstagram className="icon" />
 
-                    <Typography sx={{ display: 'flex', gap: '10%', paddingTop: '6px', marginLeft: '2rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
-                        <FaFacebookF style={{ color: '#8a8a8a', fontSize: '20px', marginTop: '3px' }} />
-                        <FaTwitter style={{ color: '#8a8a8a', fontSize: '30px', }} />
-                        <ImYoutube2 style={{ color: '#8a8a8a', fontSize: '35px', }} />
-                        <LiaLinkedinIn style={{ color: '#8a8a8a', fontSize: '35px', }} />
-                        <TiSocialInstagram style={{ color: '#8a8a8a', fontSize: '35px', }} />
-                    </Typography>
+                        <style>
+                            {`
+            .icon {
+                color: #8a8a8a;
+                font-size: 20px;
+                
+            }
+
+            .icon:hover {
+                color: #000000;  
+            }
+        `}
+                        </style>
+                    </Box>
                 </CardContent>
             </Card>
         </Box>

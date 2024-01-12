@@ -10,8 +10,8 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
         <Box>
             <Card
                 sx={{
-                    height: { sx: "17rem", sm: '21rem', md: '13rem', lg: '10rem' },
-                    width: { sx: "10rem", sm: '15rem', md: '15rem', lg: '15rem' },
+                    height: { sx: "17rem", sm: '13rem', md: '13rem', lg: '10rem' },
+                    width: { sx: "10rem", sm: '15rem', md: '12rem', lg: '17rem' },
                     background: "none",
                     boxShadow: "none",
                     textAlign: 'left',
@@ -26,6 +26,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                         className="footer_nav">
                         <Typography
                             sx={{
+                                textAlign: 'left',
                                 color: "#8a8a8a",
                                 fontSize: "12px",
                                 lineHeight: '2rem',
@@ -44,6 +45,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                         className="footer_nav">
                         <Typography
                             sx={{
+                                textAlign: 'left',
                                 color: "#8a8a8a",
                                 fontSize: "12px",
                                 lineHeight: '2rem',
@@ -62,6 +64,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                         className="footer_nav">
                         <Typography
                             sx={{
+                                textAlign: 'left',
                                 color: "#8a8a8a",
                                 fontSize: "12px",
                                 lineHeight: '2rem',
@@ -80,6 +83,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                         className="footer_nav">
                         <Typography
                             sx={{
+                                textAlign: 'left',
                                 color: "#8a8a8a",
                                 fontSize: "12px",
                                 lineHeight: '2rem',
