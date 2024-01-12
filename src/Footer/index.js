@@ -17,18 +17,30 @@ function Footer() {
         <FooterLogoCard />
 
         <FooterCard
+          to1={"/"}
+          to2={"/"}
+          to3={"/"}
+          to4={"/spareParts"}
           text1="Mini Split Inverter Heat Pumps"
           text2="Multizone Inverter Heat Pumps"
           text3="Air Handler Unit Inverter Heat pumps"
           text4="Spare Parts"
         />
         <FooterCard
+          to1={"/partnercenter"}
+          to2={"/PartnerSubPage"}
+          to3={"/Downloads"}
+          to4={"/contact"}
           text1="Partners Center"
           text2="Become a Partner"
           text3="Downloads"
           text4="Contact Us"
         />
         <FooterCard
+          to1={"/termsConditions"}
+          to2={"/PrivacyPolicy"}
+          to3={""}
+          to4={""}
           text1="Term & Condition"
           text2="Privacy Policy"
           text3="Return & Exchange Policy"
@@ -54,11 +66,11 @@ function Footer() {
               marginLeft: {
                 xs: "10%",
                 sm: "10%",
-                md: "15%",
-                lg: "17%",
+                md: "3%",
+                lg: "12%",
                 xl: "25%",
               },
-              textAlign: "center",
+              textAlign: "left",
             }}
           >
             © 2023 - OrientCare Inc. All rights reserved. This Website Uses

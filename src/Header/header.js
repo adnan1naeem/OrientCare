@@ -74,10 +74,10 @@ function NavBar() {
   return (
     <div>
       <div className="logo-container">
-      <NavLink to="/">
-      <img src={logo} alt="Logo" className="main-logo" />
-      </NavLink>
-    
+        <NavLink to="/">
+          <img src={logo} alt="Logo" className="main-logo" />
+        </NavLink>
+
       </div>
       <nav className="navbar">
         <div className="nav-container">
@@ -189,7 +189,7 @@ function NavBar() {
                             {warranty?.warrantyNamme}
                             {warranty?.warrantyList &&
                               warranty?.warrantyList.length > 0 && (
-                                <IoIosArrowForward  style={{marginTop:'3%'}}/>
+                                <IoIosArrowForward style={{ marginTop: '3%' }} />
                               )}
                           </div>
                         </NavLink>
