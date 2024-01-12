@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom';
 import logo from './../../../Assets/care-logo.png';
 import ahriCertified from './../../../Assets/ahri-certified.webp';
 import culusCertified from './../../../Assets/culus-certified.webp';
+import Footer from '../../../Footer/index';
 
 const Certifications = () => {
   const location = useLocation();
@@ -33,52 +34,57 @@ const Certifications = () => {
   }
 
   return (
-    <div className='container'>
-      <div className="header">
-        <img className='img' src={logo} alt="Logo" />
-      </div>
-      <ImageText image={item?.image} text={item?.name} />
-      <div className="cer-container">
-        {viewMore?.length <= 0 ?
-          <>
-            {pdfFiles?.map((item, index) => (
-              <div key={index} className="cer-wrapper">
-                <a href={item?.file} target="_blank">
-                  <img
-                    src={item?.image}
-                    alt="cer Image"
-                    className="cer-image"
-                  />
-                </a>
-                <p className='cer-name'>{item?.name}</p>
-                <button className="view-more-button" onClick={() => handleViewMoreClick(item)}>
-                  View More
-                </button>
-              </div>
-            ))}
-          </>
-          : <>
-            {viewMore?.map((item, index) => (
-              <div key={index} className="cer-wrapper">
-                <a href={item?.file} target="_blank">
-                  <img
-                    src={item?.image}
-                    alt="cer Image"
-                    className="cer-image"
-                  />
-                </a>
-                <p className='cer-name'>{item?.name}</p>
-                <a href={item?.file} target="_blank">
-                  <button className="view-more-button">
+    <>
+
+      <div className='container'>
+        <div className="header">
+          <img className='img' src={logo} alt="Logo" />
+        </div>
+        <ImageText image={item?.image} text={item?.name} />
+        <div className="cer-container">
+          {viewMore?.length <= 0 ?
+            <>
+              {pdfFiles?.map((item, index) => (
+                <div key={index} className="cer-wrapper">
+                  <a href={item?.file} target="_blank">
+                    <img
+                      src={item?.image}
+                      alt="cer Image"
+                      className="cer-image"
+                    />
+                  </a>
+                  <p className='cer-name'>{item?.name}</p>
+                  <button className="view-more-button" onClick={() => handleViewMoreClick(item)}>
                     View More
                   </button>
-                </a>
+                </div>
+              ))}
+            </>
+            : <>
+              {viewMore?.map((item, index) => (
+                <div key={index} className="cer-wrapper">
+                  <a href={item?.file} target="_blank">
+                    <img
+                      src={item?.image}
+                      alt="cer Image"
+                      className="cer-image"
+                    />
+                  </a>
+                  <p className='cer-name'>{item?.name}</p>
+                  <a href={item?.file} target="_blank">
+                    <button className="view-more-button">
+                      View More
+                    </button>
+                  </a>
 
-              </div>
-            ))}
-          </>}
+                </div>
+              ))}
+            </>}
+        </div>
+
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

@@ -8,11 +8,12 @@ function Footer() {
         <Box sx={{ background: "#F8F8F8", paddingTop: "3rem", marginTop: "2%" }}>
             <Box
                 sx={{
+                    display: "flex",
                     gap: "2%",
                     flexWrap: "wrap",
                 }}>
                 <FooterLogoCard />
-                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", }}>
                     <FooterCard
                         text1="Mini Split Inverter Heat Pumps"
                         text2="Multizone Inverter Heat Pumps"

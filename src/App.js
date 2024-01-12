@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Header/header';
 import Downloads from './Downloads';
-// import AboutUs from './Aboutus';
+import AboutUs from './Aboutus';
 import ContactUs from './ContactUs';
 import './App.css';
 import ProductManuals from './Downloads/Pages/product-manuals';
@@ -33,7 +33,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route exact path="/about" element={<Home />} />
+          <Route exact path="/about" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />
           <Route path="/BecomeaPartner" element={<BecomeaPartner />} />
           <Route path="/warranty" element={<Warranty />} />
@@ -45,10 +45,10 @@ const App = () => {
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/spareParts" element={<SpareParts />} />
-          <Route path="/productsDetail" element={<ProductsDetail />} /> 
-          <Route path="/PartnerSubPage" element={<PartnerSubPage />} /> 
-          <Route path="/partnercenter" element={<PartnerCenter />} /> 
-          <Route path="/warrantyRegistration" element={<WarrantyRegistration />} />  
+          <Route path="/productsDetail" element={<ProductsDetail />} />
+          <Route path="/PartnerSubPage" element={<PartnerSubPage />} />
+          <Route path="/partnercenter" element={<PartnerCenter />} />
+          <Route path="/warrantyRegistration" element={<WarrantyRegistration />} />
           <Route path="/productsDetail" element={<ProductsDetail />} />
           <Route path="/miniSplit" element={<MiniSplit />} />
         </Routes>
