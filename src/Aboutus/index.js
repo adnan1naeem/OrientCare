@@ -1,6 +1,7 @@
 import './styles.css';
 import banner from './../Assets/Banner_orient.webp'
 import logo from './../Assets/care_logo.avif'
+import Footer from '../Footer';
 
 function Index() {
     return (
@@ -9,7 +10,7 @@ function Index() {
             <div className='logoContainer'>
                 <img src={logo} className='logo' alt="logo" />
             </div>
-            <div className='discriptionContainer'>
+            <div className='discriptionContainer' style={{marginTop:'1.5%'}}>
                 <p className='discription'>
                     OrientCare is committed to provide its valued customers the ultimate care and comfort through its range of technologically advanced and innovative consumer electronics. The core of our product development philosophy is based on detailed research and consumer insights to offer enhanced lifestyle and peace of mind at every aspect of product usage.
                     <br /><br />
@@ -19,6 +20,7 @@ function Index() {
 
                 </p>
             </div>
+            <Footer/>
         </div>
     );
 }
