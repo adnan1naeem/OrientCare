@@ -13,7 +13,7 @@ import Filters from './Filters'
 
 
 
-function Index() {
+function Index() { 
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 

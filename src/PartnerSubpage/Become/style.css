@@ -32,7 +32,7 @@
 }
 
 .form-group input{
-    background-color: #a6a6a6;
+    background-color: #e8f0fe;
     border-radius: 0;
     box-shadow: none;
     height: 32px;
@@ -51,7 +51,7 @@ input[type=email]:focus,
 }
 
 .form-group select{
-    background-color: #a6a6a6;
+    background-color: #e8f0fe;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -77,10 +77,12 @@ input[type=email]:focus,
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
+    margin-left: 10px;
     font-weight: 700;
     color: #8a8a8a;
     font-size: 12px;
     font-family: Helvetica,Arial,sans-serif,arial,serif;
+
 }
 
 .form-submit input{

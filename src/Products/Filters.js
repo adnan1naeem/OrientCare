@@ -14,7 +14,7 @@ function Filters() {
 
     const LeftviewStyle = () => {
         return {
-            textAlign: 'left', fontSize: '14px', fontWeight: '400', marginTop: '1rem'
+            textAlign: 'left', fontSize: '14px', fontWeight: '400', paddingTop:'8px', paddingBottom:'8px'
         };
     };
 
@@ -27,11 +27,11 @@ function Filters() {
             marginTop: '10px',
         }}>
             <Typography sx={{
-                fontSize: '22px', lineHeight: 1.35, fontWeight: '500', color: '#343538', marginTop: '1em', marginBottom: '1.1rem',
+                fontSize: '22px', lineHeight: 1.35, color: '#343538', marginTop: '1em', marginBottom: '1.1rem',fontFamily:'Montserrat'
             }}>
                 Mini Splits
             </Typography>
-            <Typography sx={{ textAlign: 'left', color: "#252634", fontSize: '15px', fontWeight: '700', pb: '0.2rem' }}>
+            <Typography sx={{ textAlign: 'left', color: "#252634", fontSize: '15px', fontWeight: '700', pb:'10px', pt:'10px' }}>
                 FILTERS
             </Typography>
             <Divider inset="none" />
@@ -50,7 +50,7 @@ function Filters() {
                     MINI SPLIT INVERTER HEAT PUMPS
                 </NavLink>
             </Typography>
-            <Typography sx={{ textAlign: 'left', fontSize: '14px', fontWeight: '400', marginTop: '1rem' }}>
+            <Typography sx={{ textAlign: 'left', fontSize: '14px', fontWeight: '400', paddingTop:'8px', paddingBottom:'8px' }}>
                 <NavLink
                     exact
                     to="/"

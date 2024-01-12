@@ -50,7 +50,7 @@ const index = () => {
                         <div className="form-group">
                             <label for="yourtitle">Your Title</label>
                             <input type="text" className="form-control-1" id="firstName" name="yourtitle" required />
-                        </div>
+                        </div> 
                         <div className="form-group">
                             <label for="inquiry">Inquiry Type</label>
                             <select className="form-control-1" id="inquiry" name="inquiry" required>

@@ -27,7 +27,7 @@ const Index = () => {
         <ImageContainer containerImage={logo_one} width="50%" />
       </div>
       <div className="para_div">
-        <p>
+        <p style={{marginBottom:0}}>
           OrientCare is committed to provide its valued customers the ultimate
           care and comfort through its range of technologically advanced and
           innovative consumer electronics. The core of our product development
@@ -41,7 +41,7 @@ const Index = () => {
         </p>
       </div>
       <div className="heading">
-        <h2>MINI SPLIT INVERTER HEAT PUMP</h2>
+        <h2 style={{margin:0}}>MINI SPLIT INVERTER HEAT PUMP</h2>
       </div>
 
       <div className="first_block">
@@ -60,7 +60,7 @@ const Index = () => {
       </div>
 
       <div className="heading_one">
-        <h2>MULTIZONE INVERTER HEAT PUMPS</h2>
+        <h2 style={{margin:0}}>MULTIZONE INVERTER HEAT PUMPS</h2>
       </div>
 
       <div className="first_block">
@@ -68,7 +68,7 @@ const Index = () => {
       </div>
 
       <div className="heading_two">
-        <h2>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
+        <h2 style={{margin:0}}>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
       </div>
 
       <div className="first_block">
@@ -81,7 +81,7 @@ const Index = () => {
       </div>
 
       <div className="heading_one">
-        <h2>SPARE PARTS</h2>
+        <h2 style={{margin:0}}>SPARE PARTS</h2>
       </div>
 
       <div className="first_block">

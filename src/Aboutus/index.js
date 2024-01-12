@@ -1,9 +1,10 @@
 import './styles.css';
 import banner from './../Assets/Banner_orient.webp'
 import logo from './../Assets/care_logo.avif'
+import Footer from '../Footer/index'
 
 function Index() {
-    return (
+    return ( 
         <div className="App">
             <img src={banner} className="App-logo" />
             <div className='logoContainer'>
@@ -19,6 +20,7 @@ function Index() {
 
                 </p>
             </div>
+            <Footer/>
         </div>
     );
 }
