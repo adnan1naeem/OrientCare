@@ -8,8 +8,7 @@
 
 .part-left{
     width: 45%;
-    display: flex;
-    justify-content: center;
+    padding-left: 60px;
 }
 
 .part-right{
@@ -21,6 +20,7 @@
     font-size: 20px !important;
     margin: 0 0 15px;
     line-height: 1.5;
+    font-weight: 100;
 }
 
 .Reg-form-group{
@@ -43,7 +43,7 @@
     box-shadow: none;
     color: black;
     height: 32px;
-    width: 130%;
+    width: 370px;
     font-size: 14px;
     padding: 6px 12px;
 }
@@ -67,6 +67,10 @@
     justify-content: center;
 }
 
+#warranty-form{
+    display: inline-block;
+}
+
 @media screen and (max-width: 1200px) {
     .WarrantyReg-sec2{
         justify-content: space-evenly;
@@ -76,6 +80,9 @@
 @media screen and (max-width: 880px) {
     .part-left{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
     }
     .part-right{
         width: 100%;
@@ -84,6 +91,9 @@
     }
     .Reg-form-group input, .Reg-form-group select{
         width: 100%;
+    }
+    .form-group{
+        text-align: left;
     }
 }
 

@@ -10,7 +10,7 @@ const Videos = () => {
   const location = useLocation();
   const item = location.state;
 
-  return (
+  return ( 
     <div>
       <div className="full-image-container">
         <img

@@ -27,9 +27,9 @@ const ProductManuals = () => {
           <img className='img' src={logo} alt="Logo" />
         </div>
         <ImageText image={item?.image} text={item?.name} />
-        <div className="pdf-container">
+        <div className="pdf-container"> 
           {pdfFiles?.map((item, index) => (
-            <div key={index} className="pdf-wrapper">
+            <div key={index} className="pdf-wrapper" style={{marginLeft:'40px', marginRight:'40px'}}>
               <a href={item?.file} target="_blank">
                 <img
                   src={item?.image}

@@ -48,9 +48,9 @@ const Index = ({ }) => {
 
   return (
     <div>
-      <div className="header">
+      <div style={{paddingTop:'20px'}} className="header">
         <img className="img" src={logo} alt="Logo" />
-        <h1 className="header-title">Downloads</h1>
+        <h1 style={{fontWeight:'700', fontFamily:'Montserrat', fontSize:'18px'}} className="header-title">Downloads</h1>
       </div>
       <div className="grid-container">
         {products.map((product) => (

@@ -14,9 +14,9 @@ const warranty = () => {
                 <img
                     src={logo_one}
                     alt="orient_logo"
-                    style={{ width: "170px", paddingTop: "53px" }}
+                    style={{ width: "160px" }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: '700', }}>LIMITED WARRANTY</Typography>
+                <Typography variant="h6" sx={{ fontWeight: '700',fontFamily:'Montserrat', fontSize:'18px' }}>LIMITED WARRANTY</Typography>
                 <Typography sx={{ fontSize: "15px", color: "#8A8A8A", }}>
                     Mini Split Inverter Heat Pump InDoor Unit
                 </Typography>
@@ -34,7 +34,7 @@ const warranty = () => {
                     textAlign: 'center',
                 }} className="div_second">
                     <img src={logo_two} width={"160px"} alt="Logo" />
-                    <p style={{ fontSize: "14px", fontFamily: "sans-serif" }}>
+                    <p style={{ fontSize: "12px", fontFamily: "Helvetica,Arial,sans-serif,arial,serif", fontWeight:'100'}}>
                         One(1)year on all parts
                     </p>
                 </Typography>
@@ -64,19 +64,21 @@ const warranty = () => {
                             fontSize: '14px',
                             lineHeight: 1.6,
                             fontWeight: '500',
-                            color: '#8A8A8A',
+                            color:'#8A8A8A',
                             marginBottom: '1.1rem',
                             textAlign: 'left',
                             paddingLeft: '10px',
                         }}
                     >
                         <Typography sx={{
-                            fontSize: '14px',
-                            lineHeight: 1.6,
-                            marginBottom: '1.1rem',
+                            fontSize: '12px',
+                            lineHeight: '1.5',
+                            margin: '0 0 15px',
                             textAlign: 'left',
                             paddingLeft: '1rem',
                             paddingRight: '10px',
+                            fontFamily:'Helvetica,Arial,sans-serif,arial,serif',
+                            paddingBottom:'15px'
 
                         }}>
                             OrientCare Mini Split Inverter Heat Pump Indoor Unit is manufactured
@@ -86,7 +88,7 @@ const warranty = () => {
                             maintenance of this product.<br />
                         </Typography>
 
-                        <ol>
+                        <ol  style={{fontFamily:'Helvetica,Arial,sans-serif,arial,serif', fontSize:'12px', lineHeight:'1.4'}}>
                             {warrantyDetails.map((detail, index) => (
                                 <li key={index}>{detail}</li>
                             ))}

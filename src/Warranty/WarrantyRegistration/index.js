@@ -11,10 +11,10 @@ const index = () => {
         <img
           src={logo_one}
           alt="orient_logo"
-          style={{ width: 160, paddingTop: "50px" }}
+          style={{ width: 160, paddingTop: "25px" }}
         />
-        <h4>WARRANTY REGISTRATION</h4>
-        <p style={{ fontSize: "15px" }}>
+        <h4 style={{fontSize:'18px', fontFamily:'Montserrat'}}>WARRANTY REGISTRATION</h4>
+        <p style={{ fontSize: "12px", fontWeight:'100', fontFamily:'Helvetica,Arial,sans-serif,arial,serif' }}>
           Register your warranty here.
         </p>
       </div>
@@ -28,7 +28,7 @@ const index = () => {
                 <option value="">Select Product Type</option>
                 <option value="Mini Split Innverter Heat Pumps">Mini Split Innverter Heat Pumps</option>
               </select>
-            </div>
+            </div> 
             <div className='Reg-form-group'>
               <label for='unittype'>Unit Type</label>
               <select className="unit-type" id="unit-type" name="unittype" required>
@@ -43,14 +43,14 @@ const index = () => {
             </div>
             <div className='Reg-form-group'>
               <label for='modelnumber'>Model Number</label>
-              <input type='text' id='model-num' className='model-num'/>
+              <input type='text' id='model-num' className='model-num' />
             </div>
             <div className='Reg-form-group'>
               <label for='serialnumber'>Serial Number</label>
-              <input type='text' id='serial-num' className='serial-num'/>
+              <input type='text' id='serial-num' className='serial-num' />
             </div>
             <div className='Reg-form-group'>
-              <input type='submit' value={'Next'}/>
+              <input type='submit' value={'Next'} />
             </div>
           </form>
         </div>

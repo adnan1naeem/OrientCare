@@ -13,11 +13,13 @@ function Index() {
     return (
         <div>
             <Grid item sx={{ marginTop: '35px', textAlign: "center" }}>
-                <img src={logo} alt="Logo" style={{ maxWidth: '160px' }} />
+                <img src={logo} alt="Logo" style={{ maxWidth: '160px', paddingTop:'30px' }} />
                 <Typography variant='h6'
                     sx={{
                         fontWeight: 700,
-                        color: '#343538'
+                        color: '#343538',
+                        fontFamily:'Montserrat',
+                        fontSize:'18px'
                     }}>
                     CONTACT US
                 </Typography>
@@ -44,7 +46,7 @@ function Index() {
                     </Typography>
                     <Box
                         component="form"
-                        sx={{ paddingTop: '4.5rem' }}>
+                        sx={{ paddingTop: '60px' }}>
                         <InputFields title={"Your Name"} />
                         <InputFields title={"Your email"} />
                         <InputFields title={"Subject"} />
