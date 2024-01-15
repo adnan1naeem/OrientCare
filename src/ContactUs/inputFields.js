@@ -42,6 +42,9 @@ const InputFields = ({ title, multi, type }) => {
                         sx={{
                             '& .MuiOutlinedInput-input': {
                                 paddingY: '5px',
+                                "&.MuiOutlinedInput-input:focus": {
+                                    borderColor: '1px 1px 3px aqua'
+                                  }
                             },
                             height: '42px'
                         }}

@@ -86,8 +86,6 @@ function Index() {
                 fontWeight: '700',
               }}>{item?.description}</Typography>
             </>
-
-
           ))}
         </Slider>
 

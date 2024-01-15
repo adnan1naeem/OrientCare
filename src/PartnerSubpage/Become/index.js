@@ -64,7 +64,7 @@ const index = () => {
                     <div className='form-checkbox-1'>
                         <input type='checkbox' className='form-check-input' id='acceptCheckbox' />
                         <label className='form-check-label' for='acceptCheckbox'>I consent to having this website store my submitted information so they can respond to my inquiry.See our privacy policy to learn more how we use data.</label>
-                    </div>
+                    </div> 
 
                     {/* Submit Buttom */}
                     <div className='form-submit'>

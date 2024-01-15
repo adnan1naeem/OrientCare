@@ -31,7 +31,7 @@ const index = () => {
                             <label for="firstName">First Name</label>
                             <input type="text" className="form-control-1" id="firstName" name="firstName" required />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group"> 
                             <label for="Email">Email Address</label>
                             <input type="email" className="form-control-1" id="Email" name="Email" required />
                         </div>

@@ -47,7 +47,8 @@ function Index() {
                     <Box
                         component="form"
                         sx={{ paddingTop: '60px' }}>
-                        <InputFields title={"Your Name"} />
+                        <InputFields 
+                         title={"Your Name"} />
                         <InputFields title={"Your email"} />
                         <InputFields title={"Subject"} />
                         <InputFields multi title={"Your Message"} />

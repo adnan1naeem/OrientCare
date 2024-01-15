@@ -22,7 +22,7 @@ const index = () => {
                 </div>
                 <div className='partnercenter-submit'>
                     <input type='submit' name='submit'/>
-                </div>
+                </div> 
             </form>
         </div>
         <Footer/>
