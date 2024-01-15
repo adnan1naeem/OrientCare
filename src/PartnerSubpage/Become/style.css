@@ -40,14 +40,14 @@
     width: 100%;
     line-height: 1.4;
     padding: 6px 12px;
+    transition: all 0.2s;
 }
 
-.form-group 
-input[type =text]:focus,
-input[type= number]:focus, 
-input[type=email]:focus,
-.form-group select:focus{
+.form-group input[type=text]:focus,
+.form-group input[type=email]:focus,
+.form-group input[type=number]:focus{
     outline: none;
+    box-shadow: 0px 0px 3px aqua;
 }
 
 .form-group select{
@@ -60,6 +60,7 @@ input[type=email]:focus,
     width: 100%;
     line-height: 1.4;
     padding: 6px 12px;
+    transition: all 0.2s;
 }
 
 .form-checkbox-1{
@@ -81,6 +82,7 @@ input[type=email]:focus,
     color: #8a8a8a;
     font-size: 12px;
     font-family: Helvetica,Arial,sans-serif,arial,serif;
+    margin-left: 5px;
 }
 
 .form-submit input{

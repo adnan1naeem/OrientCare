@@ -1,6 +1,5 @@
 import { Typography, Box } from '@mui/material'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import './styles.css'
 import Footer from '../Footer/index'
 

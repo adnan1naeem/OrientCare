@@ -8,8 +8,7 @@
 
 .part-left{
     width: 45%;
-    display: flex;
-    justify-content: center;
+    padding-left: 50px;
 }
 
 .part-right{
@@ -43,14 +42,15 @@
     box-shadow: none;
     color: black;
     height: 32px;
-    width: 130%;
+    width: 375px;
     font-size: 14px;
     padding: 6px 12px;
+    transition: all 0.2s;
 }
 
 .Reg-form-group input[type=text]:focus, .Reg-form-group select:focus{
     outline: none;
-    box-shadow: 0px 0px 3px aqua;
+    box-shadow: 0px 0px 2px aqua;
 }
 
 .Reg-form-group input[type=submit]{
@@ -75,7 +75,9 @@
 
 @media screen and (max-width: 880px) {
     .part-left{
-        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;        
     }
     .part-right{
         width: 100%;
@@ -85,13 +87,16 @@
     .Reg-form-group input, .Reg-form-group select{
         width: 100%;
     }
+    .part-right img{
+        width: 320px;
+    }
 }
 
 @media screen and (max-width: 786px) {
-    .Reg-form-group input[type=submit]{
+    .part-left{
         width: 100%;
     }
-    .part-right img{
-        width: 320px;
+    .Reg-form-group input[type=submit]{
+        width: 100%;
     }
 }

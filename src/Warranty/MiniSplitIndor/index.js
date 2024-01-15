@@ -14,10 +14,10 @@ const warranty = () => {
                 <img
                     src={logo_one}
                     alt="orient_logo"
-                    style={{ width: "170px", paddingTop: "53px" }}
+                    style={{ width: "170px", paddingTop: "10px" }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: '700', }}>LIMITED WARRANTY</Typography>
-                <Typography sx={{ fontSize: "15px", color: "#8A8A8A", }}>
+                <Typography variant="h4" style={{fontFamily:'Montserrat', fontWeight: 700, fontSize:'18px'}}>LIMITED WARRANTY</Typography>
+                <Typography sx={{ fontSize: "15px", color: "#8A8A8A", marginTop:'10px'}}>
                     Mini Split Inverter Heat Pump InDoor Unit
                 </Typography>
             </div>
@@ -34,7 +34,7 @@ const warranty = () => {
                     textAlign: 'center',
                 }} className="div_second">
                     <img src={logo_two} width={"160px"} alt="Logo" />
-                    <p style={{ fontSize: "14px", fontFamily: "sans-serif" }}>
+                    <p style={{ fontSize: "12px", fontFamily: "Helvetica,Arial,sans-serif,arial,serif" }}>
                         One(1)year on all parts
                     </p>
                 </Typography>
@@ -71,12 +71,13 @@ const warranty = () => {
                         }}
                     >
                         <Typography sx={{
-                            fontSize: '14px',
+                            fontSize: '12px',
                             lineHeight: 1.6,
                             marginBottom: '1.1rem',
                             textAlign: 'left',
                             paddingLeft: '1rem',
                             paddingRight: '10px',
+                            fontFamily: 'Helvetica,Arial,sans-serif,arial,serif'
 
                         }}>
                             OrientCare Mini Split Inverter Heat Pump Indoor Unit is manufactured
@@ -86,7 +87,7 @@ const warranty = () => {
                             maintenance of this product.<br />
                         </Typography>
 
-                        <ol>
+                        <ol style={{fontFamily:"Helvetica,Arial,sans-serif,arial,serif", fontSize:'12px'}}>
                             {warrantyDetails.map((detail, index) => (
                                 <li key={index}>{detail}</li>
                             ))}

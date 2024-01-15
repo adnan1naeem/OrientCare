@@ -1,13 +1,12 @@
 .partnercenter-element{
     width: 100%;
-    margin-top: auto;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.partnercenter-input{   
-    
+.partnercenter-input{
     border-radius: 0;
     box-shadow: none;
     height: 62px;
@@ -38,12 +37,14 @@
     width: 100%;
     margin: 0 auto;
     padding: 20px 15px;
+    transition: all 0.2s;
 }
 
 .partnercenter-input 
 input[type=text]:focus,
 input[type=password]:focus{
     outline: none;
+    box-shadow: 0px 0px 2px aqua;
 }
 
 .partnercenter-submit input{

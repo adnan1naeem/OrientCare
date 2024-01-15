@@ -33,7 +33,7 @@ function NavBar() {
 
   const partnerArray = [
     {
-      partnerKey: "PartnerSubPage",
+      partnerKey: "BecomeaPartner",
       partnerNamme: "Become A Partner",
     },
     {

@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/videos" element={<Videos />} />
           <Route path="/spareParts" element={<SpareParts />} />
           <Route path="/productsDetail" element={<ProductsDetail />} />
-          <Route path="/PartnerSubPage" element={<PartnerSubPage />} />
+          <Route path="/becomeapartner" element={<PartnerSubPage />} />
           <Route path="/partnercenter" element={<PartnerCenter />} />
           <Route path="/warrantyRegistration" element={<WarrantyRegistration />} />
           <Route path="/miniSplit" element={<MiniSplit />} />

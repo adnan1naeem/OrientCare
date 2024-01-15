@@ -3,8 +3,8 @@ import { Typography, Grid, Checkbox, FormControlLabel, Button } from '@mui/mater
 import logo from './../Assets/Care-logo.avif';
 import Box from '@mui/material/Box';
 import InputFields from './inputFields';
-import { IoCallOutline } from "react-icons/io5";
-import { MdAttachEmail } from "react-icons/md";
+import phone_logo from '../../src/Assets/phone-1.webp'
+import Email_logo from '../../src/Assets/Email.webp'
 import Footer from '../Footer';
 
 
@@ -12,12 +12,14 @@ function Index() {
     return (
         <>
             <div>
-                <Grid item sx={{ marginTop: '35px', textAlign: "center" }}>
+                <Grid item sx={{ marginTop: '80px', textAlign: "center" }}>
                     <img src={logo} alt="Logo" style={{ maxWidth: '160px' }} />
                     <Typography variant='h6'
                         sx={{
                             fontWeight: 700,
-                            color: '#343538'
+                            color: '#343538',
+                            fontFamily:'Montserrat',
+                            fontSize:'18px'
                         }}>
                         CONTACT US
                     </Typography>
@@ -29,7 +31,7 @@ function Index() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    gap: '28%',
+                    gap: '20%',
                     flexWrap: 'wrap'
                 }} >
                     <Box item sx={{
@@ -101,7 +103,7 @@ function Index() {
                             Send
                         </Button>
                     </Box>
-                    <Box>
+                    <Box sx={{mr:"60px",mb:"9%"}}>
                         <Typography sx={{
                             fontWeight: 'bold',
                             fontSize: '15px',
@@ -124,12 +126,7 @@ function Index() {
                                 fontSize: '20px',
                             }}
                         >
-                            <IoCallOutline style={{
-                                fontSize: '20px',
-                                marginRight: '10px',
-                                color: '#8a8a8a',
-                                fontWeight: 'bold',
-                            }} />
+                            <img src={phone_logo} style={{width:'23px', marginRight:"4px"}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
                                 fontWeight: 'bold',
@@ -140,11 +137,14 @@ function Index() {
 
                         </Typography>
                         <Typography sx={{
-                            marginLeft: '22%',
+                            marginLeft: '30%',
                             marginRight: '10px',
                             color: '#8a8a8a',
                             fontWeight: 'bold',
-                            fontSize: '15px',
+                            fontSize: '12px',
+                            fontFamily:'Arial, sans-serif',
+                            color:'#8a8a8a',
+                            fontWeight: '100' 
                         }}>
                             +1 424 466 7757
                         </Typography>
@@ -159,13 +159,7 @@ function Index() {
 
                             }}
                         >
-                            <MdAttachEmail style={{
-                                marginRight: '10px',
-                                lineHeight: '40px',
-                                color: '#8a8a8a',
-                                fontWeight: 'bold',
-                                fontSize: '20px',
-                            }} />
+                            <img src={Email_logo} style={{width: '25px', marginRight:'px'}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
                                 fontWeight: 'bold',
@@ -180,6 +174,9 @@ function Index() {
                             color: '#8a8a8a',
                             fontWeight: 'bold',
                             fontSize: '12px',
+                            fontFamily:'Arial, sans-serif',
+                            color:'#8a8a8a',
+                            fontWeight: '100' 
 
                         }}>Info@orientcare.us</Typography>
                     </Box>

@@ -1,7 +1,6 @@
 import React from 'react'
 import "../Products/styles.css"
 import SpareBanner from '../Assets/spareParts-banner.webp'
-import Logo from '../Assets/logo_one.avif'
 import { Box, Card, Divider, Typography, Grid } from '@mui/material'
 import SortBy from '../Products/SortBy'
 import Cards from '../Products/Cards'

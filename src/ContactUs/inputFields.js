@@ -19,11 +19,27 @@ const InputFields = ({ title, multi, type }) => {
                 alignSelf: 'center',
                 justifyContent: 'center',
                 maxWidth: {
-                    xs: '89%', sm: '90%', md: '95%', lg: '62%'
+                    xs: '89%', sm: '90%', md: '95%', lg: '70%'
                 },
                 '& .MuiOutlinedInput-root': {
                     borderRadius: 0,
+                    border: 'black',
+                    '&:hover': {
+                        borderColor: 'transparent',
+                        outline: 'none',
+                    },
+                    '&.Mui-focused': {
+                        '& .MuiOutlinedInput-notchedOutline': {
+                            borderColor: 'transparent',
+                            border: 'black',
+                            boxShadow:'0px 0px 3px #0492C2',
+                        },
+                    },
                 },
+                notchedOutline:{
+                    borderWidth: 0,
+                    borderColor: 'transparent'
+                }
             }} >
                 {multi ?
                     <TextField

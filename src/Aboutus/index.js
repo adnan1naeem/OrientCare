@@ -11,7 +11,7 @@ function Index() {
                 <img src={logo} className='logo' alt="logo" />
             </div>
             <div className='discriptionContainer' style={{marginTop:'1.5%'}}>
-                <p className='discription'>
+                <p className='discription' >
                     OrientCare is committed to provide its valued customers the ultimate care and comfort through its range of technologically advanced and innovative consumer electronics. The core of our product development philosophy is based on detailed research and consumer insights to offer enhanced lifestyle and peace of mind at every aspect of product usage.
                     <br /><br />
                     OrientCare having a global perspective, offers durable, cost effective and energy efficient products to a range of audiences and markets. These products are duly certified and tested conforming to quality & performance standards as required in every region where these are being marketed.
