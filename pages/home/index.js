@@ -86,7 +86,7 @@ const Index = () => {
       <BannerImage containerImage={last_image} />
 
       <div className={styles.para_div}>
-        <p style={{ maxWidth: "90%" }}>
+        <p className={styles.paragraphHome}>
           OrientCare is synonymous with technologically advanced products which
           are duly certified and tested adhering to quality and performance
           parameters defined by respective markets.

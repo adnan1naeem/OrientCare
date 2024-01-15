@@ -3,201 +3,215 @@
   src: url('../../public/NimbusSanL-RegIta.otf');
  } */
  
-.main_div {
-    display: flex;
-    max-width: fit-content;
-    flex-direction: column;
-  }
+ .main_div {
+  display: flex;
+  max-width: fit-content;
+  flex-direction: column;
+}
 
-  /* For all h2 headings */
+/* For all h2 headings */
 
-  .h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.35;
-    color: #343538;
-  }
+.h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.35;
+  color: #343538;
+}
 
-  @font-face {
-    font-family: monstrat;
-    src: url('../asset/aileron/Montserrat-VariableFont_wght.ttf');
-  }
-  .heading {
-    text-align: center;
-    margin-bottom:38px ;
-    color: #343538;
-    font-family: monstrat;
-  }
+@font-face {
+  font-family: monstrat;
+  src: url('../asset/aileron/Montserrat-VariableFont_wght.ttf');
+}
+.heading {
+  text-align: center;
+  margin-bottom:38px ;
+  color: #343538;
+  font-family: monstrat;
+}
 
-  .heading_one{
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: 44px;
+.heading_one{
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 44px;
 
-  }
+}
 
-  .heading_two{
-    text-align: center;
-    margin-bottom: 18px;
-    margin-top: 50px;
+.heading_two{
+  text-align: center;
+  margin-bottom: 18px;
+  margin-top: 50px;
 
-  }
-  
-  /* its for all images */
+}
 
-  .first_block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 4%;
-    margin-right: 4%;
-    max-width: fit-content;
-  }
+/* its for all images */
 
-  /* For last Image*/
-  .last_block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1%;
-    margin-left: 4%;
-    margin-right: 4%;
-    max-width: fit-content;
-  }
+.first_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 4%;
+  margin-right: 4%;
+  max-width: fit-content;
+}
 
-   /* For Container of four images*/
-  .block {
-    display: flex;
-    flex-direction: row;
-    gap: 1%;
-     /* justify-content: space-between; */
-    margin-top: 5px;
-    /* margin-left: 4%;
-    margin-right: 4%;  */
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .logo_home {
-    display: flex;
+/* For last Image*/
+.last_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
+  max-width: fit-content;
+}
+
+ /* For Container of four images*/
+.block {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+   /* justify-content: space-between; */
+  margin-top: 5px;
+  /* margin-left: 4%;
+  margin-right: 4%;  */
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    flex-direction: row;
-    margin-top: 20px;
-  }
+}
 
-  /* For Para Div */
-  .para_div {
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    padding-top: 15px;
-   }
-   @font-face {
-  font-family: Arcon;
-  src: url('../asset/aileron/Aileron-Regular.otf');
+.logo_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+/* For Para Div */
+.para_div {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
  }
-  .p {
+ @font-face {
+font-family: Arcon;
+src: url('../asset/aileron/Aileron-Regular.otf');
+}
+.paragraphHome {
 
-    font-family:Arcon;
-    font-weight: 600;
-    text-align: center;
-    font-size: 17px;
-    color: #8a8a8a;
-    line-height: 1.5;
-    margin: 0 0 15px;
-    max-width: fit-content;
-    display: block;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    
-  }
+  font-family:Arcon;
+  font-weight: 600;
+  text-align: center;
+  font-size: 17px;
+  color: #8a8a8a;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  max-width: fit-content;
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   
-  .HeadingFontHome{
-    font-size: 34px;
-    font-weight: 600;
-    font-family: monstrat;
-    color: #343538;
-     text-align: center;
+}
+.p {
 
+  font-family:Arcon;
+  font-weight: 600;
+  text-align: center;
+  font-size: 17px;
+  color: #8a8a8a;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  max-width: fit-content;
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  
+}
+
+.HeadingFontHome{
+  font-size: 34px;
+  font-weight: 600;
+  font-family: monstrat;
+  color: #343538;
+   text-align: center;
+
+}
+.headingFontHome_container{
+ justify-content: center;
+ flex-direction: row;
+ align-items:center;
+}
+.WhyLogo{
+  margin-bottom: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* margin-top: 10px; */
   }
-  .headingFontHome_container{
-   justify-content: center;
-   flex-direction: row;
-   align-items:center;
-  }
-  .WhyLogo{
-    margin-bottom: 20px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    /* margin-top: 10px; */
-    }
 /* Responsive styles for screens up to 768px */
 
 @media (max-width: 768px) {
-    .main {
-      padding: 10px;
-    }
-  
-    .h2 {
-      font-size: 24px; /* Adjusted font size for smaller screens */
-    }
-  
-    .heading {
-      margin-top: 10px; /* Adjusted margin for better spacing */
-    }
-  
-    .first_block,
-    .block,
-    .logo_home,
-    .para_div {
-      flex-direction: column;
-      /* margin-left: 0;
-      margin-right: 0; */
-    }
-    .FirstImage{
-    height: 98%;
-    width: 100%;
-    }
-    .first_block_home{
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .first_block,
-    .block {
-      margin-left: 4%;
-      margin-right: 4%;
-    }
-  
-    .logo_home {
-      margin-top: 20px;  
-    }
-   
-  
-    .para_div {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  
-    .p {
-      font-size: 14px; /* Adjusted font size for better readability */
-    }
-  
-    /* Add the following styles to make images in .block appear in a column */
-    .block {
-      flex-direction: column;
-      gap: 1%;
-    }
-
+  .main {
+    padding: 10px;
   }
-  
+
+  .h2 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  .heading {
+    margin-top: 10px; /* Adjusted margin for better spacing */
+  }
+
+  .first_block,
+  .block,
+  .logo_home,
+  .para_div {
+    flex-direction: column;
+    /* margin-left: 0;
+    margin-right: 0; */
+  }
+  .FirstImage{
+  height: 98%;
+  width: 100%;
+  }
+  .first_block_home{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first_block,
+  .block {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .logo_home {
+    margin-top: 20px;  
+  }
+ 
+
+  .para_div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .p {
+    font-size: 14px; /* Adjusted font size for better readability */
+  }
+
+  /* Add the following styles to make images in .block appear in a column */
+  .block {
+    flex-direction: column;
+    gap: 1%;
+  }
+
+}

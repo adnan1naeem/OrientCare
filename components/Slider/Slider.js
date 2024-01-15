@@ -85,19 +85,15 @@ function Slider() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        pagination={{ clickable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
         ref={swiperRef}
       >
         {slider?.map((item, index) => (
           <SwiperSlide key={index}>
-             <Image src={item} alt={`Slider ${index + 1}`} style={{ width: '100%', height: '100%' }} />
-            {/* <Image
+            <Image
               style={{ width: "100%" }}
               src={item}
               alt={`Slider ${index + 1}`}
-            /> */}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
