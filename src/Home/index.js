@@ -30,7 +30,7 @@ const Index = () => {
         <ImageContainer containerImage={logo_one} width="52%" />
       </div>
       <div className="para_div">
-        <p>
+        <p style={{ marginBottom: 0 }}>
           OrientCare is committed to provide its valued customers the ultimate
           care and comfort through its range of technologically advanced and
           innovative consumer electronics. The core of our product development
@@ -56,36 +56,61 @@ const Index = () => {
             fontWeight: '600',
             color: '#343538',
             textAlign: 'center',
+            paddingTop: '1.5rem',
+            paddingBottom: '3rem'
           }}>
           MINI SPLIT INVERTER HEAT PUMP
         </Typography>
       </Box>
-      <BannerImage containerImage={smart_image} />
-      <CardsRow containerImage1={image_one} containerImage2={image_two} />
-      <CardsRow containerImage1={image_three} containerImage2={image_four} />
-      <div className="heading_one">
-        <h2>MULTIZONE INVERTER HEAT PUMPS</h2>
-      </div>
-      <BannerImage containerImage={smart_image2} />
-      <div className="heading_two">
-        <h2>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
-      </div>
-      <BannerImage containerImage={air_handler} />
-      <CardsRow containerImage1={image_five} containerImage2={image_six} />
-      <div className="heading_one">
-        <h2>SPARE PARTS</h2>
-      </div>
-      <BannerImage containerImage={smart_image3} />
-      <div className="logo_home ">
-        <div className="WhyLogo">
-          <ImageContainer containerImage={orient_logo} width="60%" />
+
+
+      <Box sx={{
+        marginLeft: {
+          xs: "5rem",
+          sm: '5rem',
+          md: '5rem',
+          lg: '7rem',
+
+        },
+        marginRight: {
+          xs: "5rem",
+          sm: '5rem',
+          md: '5rem',
+          lg: '7rem',
+
+        },
+      }}>
+
+
+        <BannerImage containerImage={smart_image} />
+        <CardsRow containerImage1={image_one} containerImage2={image_two} />
+        <CardsRow containerImage1={image_three} containerImage2={image_four} />
+        <div className="heading_one">
+          <h2 style={{ margin: 0 }}>MULTIZONE INVERTER HEAT PUMPS</h2>
         </div>
+        <BannerImage containerImage={smart_image2} />
+        <div className="heading_two">
+          <h2 style={{ margin: 0 }}>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
+        </div>
+        <BannerImage containerImage={air_handler} />
+        <CardsRow containerImage1={image_five} containerImage2={image_six} />
+        <div className="heading_one">
+          <h2 style={{ margin: 0 }}>SPARE PARTS</h2>
+        </div>
+        <BannerImage containerImage={smart_image3} />
+        <div className="logo_home ">
+          <div className="WhyLogo">
+            <ImageContainer containerImage={orient_logo} width="60%" />
+          </div>
+        </div>
+        <BannerImage containerImage={last_image} />
 
-      </div>
-      <BannerImage containerImage={last_image} />
 
+
+
+      </Box>
       <div className="para_div">
-        <p style={{ maxWidth: "90%" }}>
+        <p className="paragraphHome">
           OrientCare is synonymous with technologically advanced products which
           are duly certified and tested adhering to quality and performance
           parameters defined by respective markets.
