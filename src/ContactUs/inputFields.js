@@ -9,7 +9,7 @@ const InputFields = ({ title, multi, type }) => {
                     fontSize: '18px',
                     color: '#595959',
                     marginTop: '5px',
-                    fontWeight: '500',
+                    fontWeight: 'normal',
                     paddingBottom: '8px'
                 }}>
                 {title}
@@ -24,6 +24,7 @@ const InputFields = ({ title, multi, type }) => {
                 '& .MuiOutlinedInput-root': {
                     borderRadius: 0,
                     border: 'black',
+                    height: '32px',
                     '&:hover': {
                         borderColor: 'transparent',
                         outline: 'none',

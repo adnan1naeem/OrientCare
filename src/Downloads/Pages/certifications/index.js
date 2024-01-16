@@ -76,12 +76,10 @@ const Certifications = () => {
                       View More
                     </button>
                   </a>
-
                 </div>
               ))}
             </>}
         </div>
-
       </div>
       <Footer />
     </>

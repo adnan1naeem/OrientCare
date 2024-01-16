@@ -20,7 +20,7 @@ function Filters() {
 
     return (
         <Card sx={{
-            width: '25%',
+            width: {sm: '100%',md: '100%', lg :'25%', xl: "25%"},
             textAlign: 'left',
             background: "none",
             boxShadow: "none",

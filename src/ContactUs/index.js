@@ -12,30 +12,31 @@ function Index() {
     return (
         <>
             <div>
-                <Grid item sx={{ marginTop: '80px', textAlign: "center" }}>
+                <Grid item sx={{ marginTop: '73px', textAlign: "center" }}>
                     <img src={logo} alt="Logo" style={{ maxWidth: '160px' }} />
                     <Typography variant='h6'
                         sx={{
                             fontWeight: 700,
                             color: '#343538',
                             fontFamily:'Montserrat',
-                            fontSize:'18px'
+                            fontSize:'18px',
+                            lineHeight:'1.4'
                         }}>
                         CONTACT US
                     </Typography>
                 </Grid>
                 <Box sx={{
                     background: '#f2f2f2',
-                    marginTop: 10,
+                    marginTop: 11,
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    gap: '20%',
+                    gap: '24%',
                     flexWrap: 'wrap'
                 }} >
                     <Box item sx={{
-                        paddingTop: '4%'
+                        paddingTop: '4.3%'
                     }}>
                         <Typography sx={{
                             color: '#595959',
@@ -46,7 +47,7 @@ function Index() {
                         </Typography>
                         <Box
                             component="form"
-                            sx={{ paddingTop: '4rem' }}>
+                            sx={{ paddingTop: '3.5rem' }}>
                             <InputFields title={"Your Name"} />
                             <InputFields title={"Your email"} />
                             <InputFields title={"Subject"} />
@@ -59,11 +60,12 @@ function Index() {
                                         sx={{
                                             fontWeight: '700',
                                             color: '#8a8a8a',
-                                            fontSize: '10px',
-                                            lineHeight: '1.5',
-                                            paddingLeft: { xs: '6px', sm: '5px', md: '2px', lg: '0px' },
-                                            paddingTop: '2px',
-                                            textAlign: 'left'
+                                            fontSize: '12px',
+                                            lineHeight: '1.4',
+                                            paddingLeft: { xs: '6px', sm: '5px', md: '2px' },
+                                            textAlign: 'left',
+                                            fontFamily: 'Arial, sans-serif',
+
                                         }}
                                     >
                                         I consent to having this website store my submitted information so they can respond to my inquiry. See our privacy policy to learn more how we use data.
@@ -105,11 +107,12 @@ function Index() {
                     </Box>
                     <Box sx={{mr:"60px",mb:"9%"}}>
                         <Typography sx={{
-                            fontWeight: '200',
-                            fontSize: '15px',
+                            fontWeight: '600',
+                            fontSize: '13px',
                             textAlign: 'center',
                             color: '#8a8a8a',
-                            marginLeft: '6rem',
+                            marginLeft: '4.5rem',
+                            marginTop:'70px'
                             // background: 'red'
                         }}>
                             OR<br />
@@ -117,16 +120,16 @@ function Index() {
                         </Typography>
                         <Typography
                             sx={{
-                                marginX: 12,
+                                marginX: 8,
                                 textAlign: 'center',
                                 color: '#8a8a8a',
-                                mt: '40px',
+                                mt: '48px',
                                 display: 'flex',
                                 alignItems: 'center',
                                 fontSize: '20px',
                             }}
                         >
-                            <img src={phone_logo} style={{width:'23px', marginRight:"4px"}}/>
+                            <img src={phone_logo} style={{width:'23px', marginRight:"6px"}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
                                 fontSize: '20px',
@@ -137,7 +140,7 @@ function Index() {
 
                         </Typography>
                         <Typography sx={{
-                            marginLeft: '30%',
+                            marginLeft: '20%',
                             marginRight: '10px',
                             color: '#8a8a8a',
                             fontWeight: 'bold',
@@ -150,16 +153,17 @@ function Index() {
                         </Typography>
                         <Typography
                             sx={{
-                                marginX: 9,
+                                marginX: 10,
                                 textAlign: 'center',
                                 color: '#8a8a8a',
-                                mt: '40px',
+                                mt: '48px',
                                 display: 'flex',
                                 alignItems: 'center',
+                                marginLeft:'50px'
 
                             }}
                         >
-                            <img src={Email_logo} style={{width: '25px', marginRight:'px'}}/>
+                            <img src={Email_logo} style={{width: '25px', marginRight:'3px'}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
                                 fontSize: '20px',
@@ -169,7 +173,7 @@ function Index() {
                             </Typography>
                         </Typography>
                         <Typography sx={{
-                            marginLeft: '32%',
+                            marginLeft: '28%',
                             marginRight: '10px',
                             color: '#8a8a8a',
                             fontWeight: 'bold',
