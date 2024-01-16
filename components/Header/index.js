@@ -14,6 +14,9 @@ function NavBar() {
   const handleButtonClick = () => {
     router.push('/aboutus');
   };
+  const handleProducts = () => {
+    router.push('/Products');
+  };
 
   const handleDownloads = () => {
     setClick(!click);
@@ -98,7 +101,7 @@ function NavBar() {
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
                 <Link className={styles.navLinks}
-                  onClick={handleClick} href="/products">
+                  onClick={handleProducts} href="/Products">
                   Products
                 </Link>
                 {productArray?.length > 0 && (
