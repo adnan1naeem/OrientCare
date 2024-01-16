@@ -88,18 +88,6 @@
   margin-top: 20px;
 }
 
-/* For Para Div */
-.para_div {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  padding-top: 15px;
- }
  @font-face {
 font-family: Arcon;
 src: url('../asset/aileron/Aileron-Regular.otf');
@@ -174,11 +162,6 @@ src: url('../asset/aileron/Aileron-Regular.otf');
   .first_block,
   .block,
   .logo_home,
-  .para_div {
-    flex-direction: column;
-    /* margin-left: 0;
-    margin-right: 0; */
-  }
   .FirstImage{
   height: 98%;
   width: 100%;
@@ -196,12 +179,6 @@ src: url('../asset/aileron/Aileron-Regular.otf');
 
   .logo_home {
     margin-top: 20px;  
-  }
- 
-
-  .para_div {
-    margin-left: 10px;
-    margin-right: 10px;
   }
 
   .p {

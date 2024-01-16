@@ -13,7 +13,9 @@ const ImageContainer = ({ containerImage, width, height }) => {
     >
       <Image
         src={containerImage}
-        style={{marginTop: 10, width: width, height: height }}
+        width={width}
+        height={height}
+        style={{marginTop: 10 }}
         alt="image"
       />
     </div>
