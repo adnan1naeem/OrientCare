@@ -53,7 +53,6 @@ const Index = () => {
                 marginBottom: 3,
                 textAlign: 'center',
               }}>
-              <p>
                 OrientCare is committed to provide its valued customers the ultimate
                 care and comfort through its range of technologically advanced and
                 innovative consumer electronics. The core of our product development
@@ -64,7 +63,6 @@ const Index = () => {
                 effective and energy efficient products to a range of audiences and
                 markets. These products are duly certified and tested conforming to
                 quality standards as required in every region and market.
-              </p>
             </Typography>
           </Box>
           <Box
@@ -124,7 +122,6 @@ const Index = () => {
                 marginBottom: 3,
                 textAlign: 'center',
               }}>
-              <p>
                 OrientCare is synonymous with technologically advanced products which
                 are duly certified and tested adhering to quality and performance
                 parameters defined by respective markets.
@@ -141,7 +138,6 @@ const Index = () => {
                 With OrientCare, you can trust your choice that not only aligns with
                 your needs, but is also backed by a reliable and efficient aftersales
                 services and availability of parts required.
-              </p>
             </Typography>
           </Box>
         </Box>

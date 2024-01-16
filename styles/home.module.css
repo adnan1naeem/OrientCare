@@ -97,7 +97,6 @@
  
  .main_div {
   display: flex;
-  background-color: green;
   max-width: fit-content;
   flex-direction: column;
 
