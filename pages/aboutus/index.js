@@ -1,18 +1,17 @@
-import Image from 'next/image';
 import Footer from '../footer/index';
 import styles from '../../styles/about.module.css';
-// import banner from '../../public/Banner_orient.webp';
-// import logo from '../../public/why.avif';
+import Header from '../../components/Header/index'
+
 
 function Index() {
     return (
+        <>
+            <Header />
 
-        <div className={styles.app}>
-            {/* <Image src={`/public/Banner_orient.webp`} alt="something" height={150} width={200} /> */}
+            <img src={`/images/Banner_orient.webp`} className={styles.Applogoabout} />
 
-            {/* <img src={logo} className={styles.Applogo} /> */}
             <div className={styles.logoContainer}>
-                {/* <img src={'/public/why.avif'} className={styles.logo} alt="logo" /> */}
+                <img src={'/images/logo.avif'} className={styles.logo} alt="logo" />
             </div>
             <div className={styles.descriptionContainer} style={{ marginTop: '1.5%' }}>
                 <p className={styles.description}>
@@ -24,7 +23,8 @@ function Index() {
                 </p>
             </div>
             <Footer />
-        </div>
+
+        </>
     );
 }
 

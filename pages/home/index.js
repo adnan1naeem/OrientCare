@@ -23,7 +23,7 @@ import Header from '../../components/Header/index'
 const Index = () => {
   return (
     <>
-    <Header />
+      <Header />
       <div className={styles.main_div}>
         <div>
           <Slider />

@@ -1,16 +1,19 @@
 /* styles.module.css */
 
-.App {
-    background-color: white;
+.sddsdfds {
+    background-color: red;
+    padding: 50px;
 }
 
-.App-logo {
-    width: 100vw;
+.Applogoabout {
+    width:100vw;
     height: auto;
+    /* flex: 1; */
+    margin-left: -7.5px;
 }
 
 @media (max-width: 768px) {
-    .App-logo {
+    .Applogoabout {
         width: 100vw;
         height: auto;
     }
