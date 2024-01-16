@@ -31,19 +31,8 @@ function Filters() {
 
             <div>
                 <Typography variant="h6" style={{ display: 'inline', color: '#B5B7C4', fontSize: '11px' }}>
-                    {/* <Link
-                        exact
-                        to="/"
-                        style={filterNav}
-                        activeStyle={{ color: '#4b6ee1' }}
-                        onMouseOver={(e) => { e.target.style.color = '#343538'; }}
-                        onMouseOut={(e) => { e.target.style.color = '#B5B7C4'; }}
-                    >
-                        Home
-                    </Link> */}
-
+                    Home
                 </Typography>
-
                 <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
                     {' / '}
                 </Typography>
@@ -63,8 +52,9 @@ function Filters() {
             <Typography sx={{ textAlign: 'left', fontSize: '14px', fontWeight: '600', lineHeight: '19.6px', color: "#252634", paddingTop: '8px' }}>
                 CATEGORIES
             </Typography>
-            <Typography href="/" sx={LeftviewStyle}>
 
+
+            <Typography href="/" sx={LeftviewStyle}>
                 {/* <NavLink
                     exact
                     to="/products"
@@ -72,9 +62,9 @@ function Filters() {
                     activeStyle={{ color: '#4b6ee1' }}
                     onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
                     onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
-                >
-                    MINI SPLIT INVERTER HEAT PUMPS
-                </NavLink> */}
+                > */}
+                MINI SPLIT INVERTER HEAT PUMPS
+                {/* </NavLink> */}
             </Typography>
             <Typography sx={{ textAlign: 'left', fontSize: '14px', fontWeight: '400', marginTop: '1rem' }}>
                 {/* <NavLink
@@ -85,9 +75,9 @@ function Filters() {
                     onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
                     onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
 
-                >
-                    MULTIZONE INVERTER HEAT PUMPS
-                </NavLink> */}
+                > */}
+                MULTIZONE INVERTER HEAT PUMPS
+                {/* </NavLink> */}
             </Typography>
             <Typography sx={LeftviewStyle}>
                 {/* <NavLink
@@ -97,9 +87,9 @@ function Filters() {
                     activeStyle={{ color: '#4b6ee1' }}
                     onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
                     onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
-                >
-                    AIR HANDLER UNIT INVERTER HEAT PUMPS
-                </NavLink> */}
+                > */}
+                AIR HANDLER UNIT INVERTER HEAT PUMPS
+                {/* </NavLink> */}
             </Typography>
             <Typography sx={LeftviewStyle}>
                 {/* <NavLink
@@ -109,9 +99,9 @@ function Filters() {
                     activeStyle={{ color: '#4b6ee1' }}
                     onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
                     onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}
-                >
-                    SPARE PARTS
-                </NavLink> */}
+                > */}
+                SPARE PARTS
+                {/* </NavLink> */}
             </Typography>
         </Card>
     )
