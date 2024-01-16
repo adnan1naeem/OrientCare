@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/home.module.css";
+import styles from "../../styles/Home.module.css";
 import Slider from "../../components/Slider/Slider";
 import ImageContainer from "../../components/ImageContainer/Image_Container";
 import smart_image from "../../public/smart_1.webp";
@@ -22,9 +22,9 @@ import Header from '../../components/Header/index'
 
 const Index = () => {
   return (
-    <>
-    <Header />
       <div className={styles.main_div}>
+      <Header />
+
         <div>
           <Slider />
         </div>
@@ -147,7 +147,6 @@ const Index = () => {
         </Box>
         <Footer />
       </div>
-    </>
   );
 };
 

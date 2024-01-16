@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from 'next/link'
 import styles from '../../styles/header.module.css';
-// import logo from "./../Assets/care-logo.png";
 import { HamburgetMenuClose, HamburgetMenuOpen } from './Icons';
 import { IoIosArrowForward } from 'react-icons/io';
 
