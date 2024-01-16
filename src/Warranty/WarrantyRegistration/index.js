@@ -7,18 +7,20 @@ import RegImg from '../../Assets/WarrantyRegistration.webp';
 const index = () => {
   return (
     <div>
-      <div className="div_one" style={{ paddingTop: 10, paddingBottom: 20 }}>
+      <div className="div_one" style={{ paddingBottom: 20 }}>
         <img
           src={logo_one}
           alt="orient_logo"
-          style={{ width: 160, paddingTop: "50px" }}
+          style={{ width: 160, paddingTop: "30px" }}
         />
-        <h4>WARRANTY REGISTRATION</h4>
-        <p style={{ fontSize: "15px" }}>
+        <h4 style={{fontFamily:'Montserrat', fontWeight: 700, fontSize:'18px'}}>WARRANTY REGISTRATION</h4>
+        <p style={{ fontSize: "12px" ,fontFamily:'Helvetica,Arial,sans-serif,arial,serif'}}>
           Register your warranty here.
-        </p>
+        </p> 
       </div>
       <div className='WarrantyReg-sec2'>
+
+
         <div className='part-left'>
           <form id="Warranty-form">
             <p className='warranty-form-heading'>IDENTIFY YOUR PRODUCT</p>
@@ -55,7 +57,7 @@ const index = () => {
           </form>
         </div>
         <div className='part-right'>
-          <img src={RegImg} />
+          <img src={RegImg} alt='logo'/>
         </div>
       </div>
       <Footer />

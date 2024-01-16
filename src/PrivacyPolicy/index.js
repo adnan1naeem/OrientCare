@@ -1,6 +1,5 @@
 import { Typography, Box } from '@mui/material'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import './styles.css'
 import Footer from '../Footer/index'
 
@@ -13,8 +12,6 @@ function index() {
 
     return (
         <>
-
-
             <Box sx={{ ml: '10%', marginRight: '20%', pt: '25px' }}>
                 <Typography variant='f4' sx={{ color: '#343538', fontSize: '22px', fontWeight: '500', lineHeight: '29.5px' }}>
                     Privacy Policy
@@ -29,7 +26,7 @@ function index() {
                     Loss of or damage to records or data including, but not limited to, any costs of regenerating or restoring any lost or
                     damaged records or data<br /><br />
                     OrientCare collects Personally Identifiable Information when a visitor provide feedback, ask questions, submit applications, warranty forms, or request information about OrientCare products and services, make a purchase, we collect and utilize personally identifiable information about the visitor. This may include name, mailing address, telephone number, email address, and other necessary details to address visitor’s inquiries and handle transactions. OrientCare may retain and store the information thus provided to send the visitor occasional updates about OrientCare, our affiliates, and our products and services. Additionally,
-                    we may utilize the information for internal marketing analysis to gain better insights into our customers and the market.<br /><br />
+                    we may utilize the information for internal marketing analysis to gain better insights into our customers and the market.<br />
                 </Typography>
                 <Typography sx={{ pt: '18px', color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>Non-Personally Identifiable Information</Typography>
                 {/* <Typography>
@@ -51,17 +48,17 @@ function index() {
                     Cookies:
                 </Typography>
 
-                <Typography mb={'3rem'} sx={paragraphText}><br />A cookie is a small data file that is stored on your hard drive when you visit our website. Cookies assist us in tracking the traffic to our website, allowing us to identify the parts that are of most interest to visitors. In order to provide you with personalized content, we may combine cookie information with personally identifiable information. However, this information expires at the end of each visit to the site. You have the option to configure your browser to notify you before a cookie is stored, refuse cookies altogether, or delete all cookies from your hard drive. Please note that if you choose to
+                <Typography sx={paragraphText}><br />A cookie is a small data file that is stored on your hard drive when you visit our website. Cookies assist us in tracking the traffic to our website, allowing us to identify the parts that are of most interest to visitors. In order to provide you with personalized content, we may combine cookie information with personally identifiable information. However, this information expires at the end of each visit to the site. You have the option to configure your browser to notify you before a cookie is stored, refuse cookies altogether, or delete all cookies from your hard drive. Please note that if you choose to
                     reject or delete cookies, it may limit or prevent your ability to navigate our website effectively.
                 </Typography>
-                <Typography variant='f4' sx={{ pt: '18px', color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
+                <br/>
+                <Typography variant='f4' sx={{color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
                     Referrers, IP Addresses, and Environmental Variables
                 </Typography>
-
                 <Typography sx={paragraphText}><br />OrientCare gathers information through referrers, IP addresses, and various environmental variables. A referrer refers to the URL of the website you arrived from, which is transmitted to our
                     server by your web browser. IP address is a unique identifier assigned to your computer on a network. Environmental variables encompass details like the domain from which you accessed the internet, the time of your visit, the type of web browser and operating system used, the website you visited prior to ours, the pages you viewed on our site, and the website you visited afterwards. The collection of IP address information enables us to administer our website and obtain general demographic insights.
                 </Typography>
-                <Typography variant='f4' sx={{ pt: '18px', color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
+                <Typography variant='f4' sx={{ color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
                     <br />Information Sharing:
                 </Typography>
                 <Typography sx={paragraphText}>
@@ -71,9 +68,9 @@ function index() {
 
                     As OrientCare expands its business, there may be transactions involving the sale of assets, acquisitions, or divestiture of subsidiaries or business units. In such cases, personal information covered by this Privacy Policy may be transferred as part of the assets.  We do not sell the information provided by our users.<br /><br />
 
-                    Moreover, OrientCare retains the authority to reveal both personal and non-personal data pertaining to you when it is deemed reasonably essential to adhere to legal obligations, such as court mandates, safeguard the interests of OrientCare or others, or mitigate potential instances of credit or various forms of fraudulent activities.<br /><br />
+                    Moreover, OrientCare retains the authority to reveal both personal and non-personal data pertaining to you when it is deemed reasonably essential to adhere to legal obligations, such as court mandates, safeguard the interests of OrientCare or others, or mitigate potential instances of credit or various forms of fraudulent activities.<br />
                 </Typography>
-                <Typography variant='f4' sx={{ pt: '18px', color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
+                <Typography variant='f4' sx={{ color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
                     <br />Third Party Links:
                 </Typography>
                 <Typography sx={paragraphText}>
@@ -96,11 +93,11 @@ function index() {
                     </span>.<br /><br />
                     If you would like to change or modify information you have previously provided to OrientCare through our Web site, please send an e-mail to  <span style={{ color: "#DE414A" }}>
                         info@OrientCare.us .
-                    </span>. Please note that we may not be able to make certain changes for legal reasons or to preserve accurate records of transactions.<br /> <br /></Typography>
+                    </span>. Please note that we may not be able to make certain changes for legal reasons or to preserve accurate records of transactions.<br /></Typography>
 
 
 
-                <Typography variant='f4' sx={{ pt: '18px', color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
+                <Typography variant='f4' sx={{ color: '#8A8A8A', fontSize: '15px', fontWeight: '700' }}>
                     <br />How does OrientCare secure personal information?<br />
                 </Typography>
                 <Typography sx={paragraphText}>

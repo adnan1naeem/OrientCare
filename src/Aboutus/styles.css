@@ -38,9 +38,10 @@
 .discription {
     color: black;
     text-align: center;
-    font-weight: 500;
+    font-weight: 100;
     margin-top: -10px;
     font-size: 16px;
+    font-family: Helvetica,Arial,sans-serif,arial,serif;
 }
 
 .discriptionContainer {

@@ -6,13 +6,13 @@ import Footer from '../Footer';
 const index = () => {
     return (
         <div>
-            <div className="div_one" style={{ paddingTop: 50, paddingBottom: 20 }}>
+            <div className="div_one" style={{ paddingTop: 50 }}>
                 <img
                     src={logo_one}
                     alt="orient_logo"
                     style={{ width: 160, paddingTop: "50px" }}
                 />
-                <h4>WANT TO BE OUR PARTNER</h4>
+                <h4 style={{fontFamily:'Montserrat', fontWeight: 700, fontSize:'18px'}}>WANT TO BE OUR PARTNER</h4>
                 <p style={{ fontSize: "15px" }}>
                     Intrested in doing business with OrientCare?
                 </p>
@@ -27,10 +27,10 @@ const index = () => {
             <div className='element1'>
                 <form method="POST" className='becomeapartner-form'>
                     <div className='input-element'>
-                        <div className="form-group">
+                        <div className="form-group"> 
                             <label for="firstName">First Name</label>
                             <input type="text" className="form-control-1" id="firstName" name="firstName" required />
-                        </div>
+                        </div> 
                         <div className="form-group">
                             <label for="Email">Email Address</label>
                             <input type="email" className="form-control-1" id="Email" name="Email" required />

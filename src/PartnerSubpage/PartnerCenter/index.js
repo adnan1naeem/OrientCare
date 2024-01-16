@@ -12,7 +12,7 @@ const index = () => {
                     alt="orient_logo"
                     style={{ width: 160, paddingTop: "50px" }}
                 />
-                <h4>PARTNER CENTER</h4>
+                <h4 style={{fontFamily:'Montserrat', fontWeight: 700, fontSize:'18px'}}>PARTNER CENTER</h4>
         </div>
         <div className='partnercenter-element'>
             <form className='partnercenter-form'>

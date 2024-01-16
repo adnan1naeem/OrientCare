@@ -6,19 +6,19 @@ import Footer from '../../Footer';
 const index = () => {
     return (
         <div>
-            <div className="div_one" style={{ paddingTop: 50, paddingBottom: 20 }}>
+            <div className="div_one" style={{ paddingTop: 50 }}>
                 <img
                     src={logo_one}
-                    alt="orient_logo" 
+                    alt="orient_logo"
                     style={{ width: 160, paddingTop: "50px" }}
                 />
-                <h4>WANT TO BE OUR PARTNER</h4>
-                <p style={{ fontSize: "15px" }}>
+                <h4 style={{fontFamily:'Montserrat', fontWeight: 700, fontSize:'18px'}}>WANT TO BE OUR PARTNER</h4>
+                <p style={{ fontSize: "15px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif' }}>
                     Intrested in doing business with OrientCare?
                 </p>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <p style={{ fontSize: "15px" }}>
+                <p style={{ fontSize: "15px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif' }}>
                     Tell us more about your company
                 </p>
             </div>

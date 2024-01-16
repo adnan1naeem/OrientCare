@@ -32,7 +32,7 @@
 }
 
 .form-group input{
-    background-color: #a6a6a6;
+    background-color: #e8f0fe !important;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -41,10 +41,18 @@
     width: 100%;
     line-height: 1.4;
     padding: 6px 12px;
+    transition: all 0.2s;
+}
+
+.form-group input[type=text]:focus,
+.form-group input[type=email]:focus,
+.form-group input[type=number]:focus{
+    outline: none;
+    box-shadow: 0px 0px 2px aqua;
 }
 
 .form-group select{
-    background-color: #a6a6a6;
+    background-color: #e8f0fe !important;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -53,6 +61,12 @@
     width: 100%;
     line-height: 1.4;
     padding: 6px 12px;
+    transition: all 0.2s;
+}
+
+.form-group select:focus{
+    outline: none;
+    box-shadow: 0px 0px 2px aqua;
 }
 
 .form-checkbox-1{

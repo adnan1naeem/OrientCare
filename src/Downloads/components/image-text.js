@@ -11,8 +11,7 @@ export const ImageText = ({image, text}) => {
           alt="Top Image"
           style={{width: 160, height: 160}}
         />
-      <Typography sx={{textAlign:'center',fontSize:'12px',fontWeight:'600',color:'black',marginTop:'-3%', marginBottom:'8%'}}>{text}</Typography>
-      
+      <Typography sx={{textAlign:'center',fontSize:'12px',fontWeight:'600 !important',color:'black',marginTop:'-3%' }}>{text}</Typography>
     </div>
   );
 };

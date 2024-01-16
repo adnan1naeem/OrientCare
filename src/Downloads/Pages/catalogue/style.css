@@ -6,7 +6,7 @@
   margin-top: 50px;
 }
 
-.header img {
+.header img { 
   width: 160px;
   height: 30px;
 }
@@ -31,7 +31,6 @@ body {
   color: black;
   font-weight: bold;
   text-align: left;
-  margin-top: -1px;
 }
 
 .pdf-container {
