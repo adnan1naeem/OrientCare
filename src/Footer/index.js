@@ -16,7 +16,7 @@ function Footer() {
       >
         <FooterLogoCard />
         <FooterCard
-          to1={"/"}
+          to1={"/products"}
           to2={"/"}
           to3={"/"}
           to4={"/spareParts"}
