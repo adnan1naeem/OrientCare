@@ -30,18 +30,10 @@
     font-family: monstrat;
   }
 
-  .heading_one{
+  .heading_one, .heading_two{
     text-align: center;
-    margin-bottom: 15px;
-    margin-top: 44px;
-
-  }
-
-  .heading_two{
-    text-align: center;
-    margin-bottom: 18px;
-    margin-top: 50px;
-
+    margin: 20px 0px;
+    margin-top: 40px;
   }
   
   /* its for all images */
@@ -83,9 +75,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
     flex-direction: row;
-    margin-top: 20px;
+    margin: 20px 0px;
   }
 
   /* For Para Div */
@@ -93,7 +84,6 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    padding-bottom: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -150,12 +140,11 @@
    align-items:center;
   }
   .WhyLogo{
-    margin-bottom: 20px !important;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     }
 /* Responsive styles for screens up to 768px */
 

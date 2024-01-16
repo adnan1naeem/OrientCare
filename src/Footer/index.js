@@ -27,7 +27,7 @@ function Footer() {
         />
         <FooterCard
           to1={"/partnercenter"}
-          to2={"/PartnerSubPage"}
+          to2={"/BecomeaPartner"}
           to3={"/Downloads"}
           to4={"/contact"}
           text1="Partners Center"

@@ -56,8 +56,9 @@ const Index = () => {
             fontWeight: '600',
             color: '#343538',
             textAlign: 'center',
-            paddingTop: '1.5rem',
-            paddingBottom: '3rem'
+            marginTop: '30px',
+            marginBottom:'30px',
+            fontFamily: 'Montserrat'
           }}>
           MINI SPLIT INVERTER HEAT PUMP
         </Typography>
@@ -86,11 +87,11 @@ const Index = () => {
         <CardsRow containerImage1={image_one} containerImage2={image_two} />
         <CardsRow containerImage1={image_three} containerImage2={image_four} />
         <div className="heading_one">
-          <h2 style={{ margin: 0, marginBottom: '20px', fontFamily: 'Montserrat' }}>MULTIZONE INVERTER HEAT PUMPS</h2>
+          <h2 style={{ fontFamily: 'Montserrat' }}>MULTIZONE INVERTER HEAT PUMPS</h2>
         </div>
         <BannerImage containerImage={smart_image2} />
         <div className="heading_two">
-          <h2 style={{ margin: 0, marginBottom: '20px', fontFamily: 'Montserrat' }}>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
+          <h2 style={{marginBottom:0, fontFamily: 'Montserrat' }}>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
         </div>
         <BannerImage containerImage={air_handler} />
         <CardsRow containerImage1={image_five} containerImage2={image_six} />
@@ -104,10 +105,6 @@ const Index = () => {
           </div>
         </div>
         <BannerImage containerImage={last_image} />
-
-
-
-
       </Box>
       <div className="para_div">
         <p className="paragraphHome">

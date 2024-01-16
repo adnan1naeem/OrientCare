@@ -26,7 +26,7 @@ function Index() {
                 </Grid>
                 <Box sx={{
                     background: '#f2f2f2',
-                    marginTop: 12,
+                    marginTop: 10,
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
@@ -46,7 +46,7 @@ function Index() {
                         </Typography>
                         <Box
                             component="form"
-                            sx={{ paddingTop: '4.5rem' }}>
+                            sx={{ paddingTop: '4rem' }}>
                             <InputFields title={"Your Name"} />
                             <InputFields title={"Your email"} />
                             <InputFields title={"Subject"} />
@@ -105,11 +105,11 @@ function Index() {
                     </Box>
                     <Box sx={{mr:"60px",mb:"9%"}}>
                         <Typography sx={{
-                            fontWeight: 'bold',
+                            fontWeight: '200',
                             fontSize: '15px',
                             textAlign: 'center',
                             color: '#8a8a8a',
-                            marginLeft: '5rem',
+                            marginLeft: '6rem',
                             // background: 'red'
                         }}>
                             OR<br />
@@ -117,7 +117,7 @@ function Index() {
                         </Typography>
                         <Typography
                             sx={{
-                                marginX: 10,
+                                marginX: 12,
                                 textAlign: 'center',
                                 color: '#8a8a8a',
                                 mt: '40px',
@@ -129,8 +129,8 @@ function Index() {
                             <img src={phone_logo} style={{width:'23px', marginRight:"4px"}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
-                                fontWeight: 'bold',
-                                fontSize: '17px'
+                                fontSize: '20px',
+
                             }}>
                                 Phone
                             </Typography>
@@ -162,10 +162,10 @@ function Index() {
                             <img src={Email_logo} style={{width: '25px', marginRight:'px'}}/>
                             <Typography sx={{
                                 color: '#8a8a8a',
-                                fontWeight: 'bold',
-                                fontSize: '15px',
+                                fontSize: '20px',
+                                fontFamily: 'Arial, sans-serif'
                             }}>
-                                Email Adress
+                                Email Address
                             </Typography>
                         </Typography>
                         <Typography sx={{

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {  useLayoutEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes,useLocation } from 'react-router-dom';
 import Navbar from './Header/header';
 import Downloads from './Downloads';
 import AboutUs from './Aboutus';
@@ -20,19 +20,25 @@ import PartnerSubPage from './PartnerSubpage/Become/index';
 import PartnerCenter from './PartnerSubpage/PartnerCenter/index';
 import WarrantyRegistration from './Warranty/WarrantyRegistration/index';
 import MiniSplit from './Warranty/MiniSplitIndor/index';
-import ScrollToTop from 'react-scroll-to-top';
-import TermsConditions from './TermsAndConditions/index'
-import PrivacyPolicy from './PrivacyPolicy/index'
-
-
-// const Products = () => <div>Products Page Content</div>;
-// const Partners = () r=> <div>Partners Page Content</div>;
+import TermsConditions from './TermsAndConditions/index';
+import PrivacyPolicy from './PrivacyPolicy/index';
+import ScrollToTop from "react-scroll-to-top";
 
 const App = () => {
+
+  const Wrapper = ({children})=>{ 
+  const location = useLocation();
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children;}
+
   return (
     <div className="main">
       <Router>
+      
         <Navbar />
+        <Wrapper>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route exact path="/about" element={<AboutUs />} />
@@ -56,6 +62,7 @@ const App = () => {
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         </Routes>
         <ScrollToTop smooth color={"white"} height={20} style={{ background: "#404040", borderRadius: '0px', height: '45px', width: '45px' }} />
+      </Wrapper>
       </Router>
     </div>
   );
