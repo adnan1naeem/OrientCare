@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GrPrevious, GrNext } from "react-icons/gr";
-
 import slider_1 from "../../public/main-banner_1.webp";
 import slider_2 from "../../public/main-banner_2.webp";
 import Image from 'next/image'
+import "swiper/css";
 
 function Slider() {
   const slider = [slider_1, slider_2];
@@ -42,7 +42,6 @@ function Slider() {
 
   return (
     <div
-      style={{ position: "relative" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
