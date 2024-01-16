@@ -55,7 +55,6 @@ function FooterLogoCard() {
             .icon {
                 color: #8a8a8a;
                 font-size: 20px;
-                
             }
 
             .icon:hover {

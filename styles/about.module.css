@@ -1,0 +1,51 @@
+/* styles.module.css */
+
+.App {
+    background-color: white;
+}
+
+.App-logo {
+    width: 100vw;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .App-logo {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+}
+
+@media (max-width: 424px) {
+    .logo {
+        width: 70vw;
+        height: auto;
+    }
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.description {
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin-top: -10px;
+    font-size: 16px;
+}
+
+.descriptionContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 65%;
+}
