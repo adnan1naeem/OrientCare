@@ -16,13 +16,13 @@ const BannerImage = ({ containerImage }) => {
                     background: 'none',
                     boxShadow: 'none',
                     borderRadius: 0,
-                    height: { xs: '83%', sm: '83%', md: '83%', lg: '48vh%' }
+                    height: { xs: '73%', sm: '73%', md: '73%', lg: '48vh%' }
                 }}>
 
                 <Image
                     src={containerImage}
                     alt="image"
-                    style={{ width: "100%", height: "50%" }}
+                    style={{ width: "100%", height: "auto" }}
 
                 />
             </Card>
