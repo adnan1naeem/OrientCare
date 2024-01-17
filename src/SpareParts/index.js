@@ -9,6 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { spareParts } from '../Products/ArrayValues'
 import Filters from '../Products/Filters'
+import Dropdown from '../Products/Dropdown';
 
 
 function Index() {
@@ -30,13 +31,20 @@ function Index() {
                     )}
                     <Card
                         sx={{
-                            width: { xs: "100%", sm: '100%', md: '85%', lg: '73%' }, background: "none",
-                            boxShadow: "none", marginTop: '4rem',
+                            width: { xs: "100%", sm: '100%', md: '100%', lg: '70%' }, background: "none",
+                            boxShadow: "none", marginTop: '1rem',
                         }}>
-                        <Grid sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography sx={{ paddingRight: '5px', color: '#8A8A8A', fontSize: '12px' }}>Sort by:</Typography>
-                            <SortBy />
-                        </Grid>
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <Grid sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Typography sx={{ paddingRight: '5px', color: '#8A8A8A', fontSize: '12px' }}>Sort by:</Typography>
+                                <SortBy />
+                            </Grid>
+                            {!isLargeScreen && (
+                                <div style={{zIndex:1}}>
+                                    <Dropdown/>
+                                </div>
+                            )}
+                        </div>
                         <Divider inset="none" sx={{ mt: '5px' }} />
                         <Cards Array={spareParts} />
                     </Card>

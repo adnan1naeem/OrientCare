@@ -39,7 +39,7 @@ function Index() {
                     <Card
                         sx={{
                             width: { xs: "100%", sm: '100%', md: '100%', lg: '70%' }, background: "none",
-                            boxShadow: "none", marginTop: '4rem',
+                            boxShadow: "none", marginTop: '1rem',
                         }}>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
                             <Grid sx={{ display: 'flex', alignItems: 'center' }}>
@@ -47,7 +47,7 @@ function Index() {
                                 <SortBy />
                             </Grid>
                             {!isLargeScreen && (
-                                <div>
+                                <div style={{zIndex:1}}>
                                     <Dropdown/>
                                 </div>
                             )}
