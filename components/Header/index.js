@@ -79,7 +79,7 @@ function NavBar() {
   return (
     <div>
       <div className={styles.logoContainer}>
-        <Link href="/">
+        <Link href="/home">
           <img src="/care-logo.png" alt="Logo" className={styles.mainLogo} />
         </Link>
       </div>
@@ -89,7 +89,7 @@ function NavBar() {
           <ul className={click ? styles.navMenuActive : styles.navMenu}>
             <li className={styles.navItem}>
               <Link className={styles.navLinks}
-                onClick={handleClick} href="/">
+                onClick={handleClick} href="/home">
                 Home
               </Link>
             </li>
