@@ -25,33 +25,28 @@ const products = [
 const Index = () => {
   const router = useRouter();
 
-  useEffect(() => {
-
-    const hanldeNextClick = (product) => {
-      if (product?.id === 1) {
-        router.push('/productmanuals', { state: product })
-        return;
-      }
-      if (product?.id === 2) {
-        router.push('/videos', { state: product })
-        return;
-      }
-      if (product?.id === 4) {
-        router.push('/catalogue', { state: product })
-        return;
-      }
-      if (product?.id === 5) {
-        router.push('/certifications', { state: product })
-        return;
-      }
-      if (product?.id === 6) {
-        router.push('/mobileapp', { state: product })
-        return;
-      }
-    };
-    hanldeNextClick();
-
-  }, [router]);
+  const hanldeNextClick = (product) => {
+    if (product?.id === 1) {
+      router.push('/productmanuals', { state: product })
+      return;
+    }
+    if (product?.id === 2) {
+      router.push('/videos', { state: product })
+      return;
+    }
+    if (product?.id === 4) {
+      router.push('/catalogue', { state: product })
+      return;
+    }
+    if (product?.id === 5) {
+      router.push('/certifications', { state: product })
+      return;
+    }
+    if (product?.id === 6) {
+      router.push('/mobileapp', { state: product })
+      return;
+    }
+  };
 
   return (
     <div>
@@ -62,7 +57,7 @@ const Index = () => {
       </div>
       <div className={styles.gridcontainer}>
         {products.map((product) => (
-          <div key={product.id} className={styles.griditem}>
+          <div key={product?.id} className={styles.griditem}>
             <Link href={`${product?.key}`} onClick={() => hanldeNextClick(product)}>
               <ImageText image={product?.image} text={product?.name} />
             </Link>
