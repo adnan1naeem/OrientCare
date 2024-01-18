@@ -175,7 +175,6 @@ function NavBar() {
                 )}
               </div>
             </li>
-
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
                 <Link className={styles.navLinks} href="/BecomeaPartner">
@@ -216,7 +215,7 @@ function NavBar() {
                               <IoIosArrowForward style={{ marginTop: '3%' }} />
                             )}
                         </div>
-                        <div className={styles.nesteddropdowns}>
+                        <div className={warranty?.warrantyList.length <= 0 ? styles.hideNested : styles.nesteddropdowns}>
                           {warranty?.warrantyList.map((element) => (
                             <Link
                               key={element.key}
@@ -234,12 +233,8 @@ function NavBar() {
                 )}
               </div>
             </li>
-
             <li className={styles.navItem}>
-              <Link href="/Downloads"
-                className={styles.navLinks}
-              >
-
+              <Link href="/Downloads" className={styles.navLinks}>
                 Downloads
               </Link>
             </li>
