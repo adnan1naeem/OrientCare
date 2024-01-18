@@ -3,11 +3,11 @@ import { Typography } from '@mui/material';
 import Image from 'next/image';
 import styles from '../../../styles/downloads.module.css';
 
-const ImageText = ({ imageName, text }) => {
+const ImageText = ({ image, text }) => {
   return (
     <div className={styles.container}>
       <Image
-        src={imageName}
+        src={image}
         alt="TopImage"
         className={styles.ImageTextdownload}
       />
