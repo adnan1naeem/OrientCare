@@ -92,7 +92,7 @@ const Index = () => {
                         </Typography>
 
                         <ol style={{ fontFamily: "Helvetica,Arial,sans-serif,arial,serif", fontSize: '12px' }}>
-                            {warrantyDetails.map((detail, index) => (
+                            {warrantyDetails?.map((detail, index) => (
                                 <li key={index}>{detail}</li>
                             ))}
                         </ol>
@@ -142,7 +142,7 @@ const Index = () => {
                             This Warranty Does Not cover:
                         </Typography>
                         <ol>
-                            {notInclude.map((detail, index) => (
+                            {notInclude?.map((detail, index) => (
                                 <li key={index}>{detail}</li>
                             ))}
                         </ol>

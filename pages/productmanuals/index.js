@@ -10,9 +10,9 @@ import Header from '../../components/Header/index'
 const ProductManuals = () => {
 
   const pdfFiles = [
-    { image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/002.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Remote Controller Manual" },
-    { image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/003.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Smart Kit Manual" },
-    { image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/001.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Installation & Care Manual" },
+    { file: '/pdf/Remote_Controller_User_Manual.pdf', image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/002.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Remote Controller Manual" },
+    { file: '/pdf/Smart_Kit_User_manual.pdf', image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/003.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Smart Kit Manual" },
+    { file: '/pdf/Installation_Care_Manual.pdf', image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/001.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Installation & Care Manual" },
   ];
 
   return (
@@ -27,7 +27,7 @@ const ProductManuals = () => {
 
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>
-              <Link href={`${item?.file}`} rel="noopener noreferrer">
+              <Link href={`${item?.file}`} target="_blank" rel="noopener noreferrer">
                 <img
                   src={item?.image}
                   alt="PDF Image"

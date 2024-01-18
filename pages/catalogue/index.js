@@ -15,7 +15,7 @@ const Catalogue = () => {
 
   const pdfFiles = [
     {
-      // file: pdf, 
+      file: '/pdf/Mini_Splits_Inverter_Heat_Pump.pdf',
       image: catalogueImage, name: "Mini Split Inverter Heat Pumps Catalogue"
     },
   ];
@@ -31,7 +31,7 @@ const Catalogue = () => {
         <div className={styles.pdfcontainer}>
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>
-              <Link href={`${item?.file}`} target="_blank">
+              <Link href={`${item?.file}`} target="_blank" >
                 <Image
                   src={item?.image}
                   alt="PDF Image"

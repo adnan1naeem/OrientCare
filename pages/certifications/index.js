@@ -23,23 +23,23 @@ const Certifications = () => {
     {
       image: ahriCertified, certifiedList: [{
         image: ahriCertified,
-        // file: pdf1,
+        file: '/pdf/12000_BTU.pdf',
         name: "12000 BTU"
       }, {
         image: ahriCertified,
-        // file: pdf2,
+        file: '/pdf/12000_BTU_115_V.pdf',
         name: "12000 BTU 115 V"
       }, {
         image: ahriCertified,
-        // file: pdf3,
+        file: '/pdf/18000_BTU.pdf',
         name: "18000 BTU"
       }, {
         image: ahriCertified,
-        // file: pdf4,
+        file: '/pdf/24000_BTU.pdf',
         name: "24000 BTU"
       }, {
         image: ahriCertified,
-        // file: pdf5,
+        file: '/pdf/36000_BTU.pdf',
         name: "36000 BTU"
       }]
     },
