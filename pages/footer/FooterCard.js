@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 import Link from 'next/link'
 import styles from '../../styles/footer.module.css';
 
-function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, to4 }) {
+const FooterCard = ({ title, text1, text2, text3, text4, text5, to1, to2, to3, to4 }) => {
     return (
         <Box>
             <Card
@@ -19,7 +19,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                 <CardContent sx={{ display: "flex", flexDirection: "column", }}>
                     <Link
                         exact
-                        href={to1}
+                        href={to1  ?? ''}
                         activeClassName="active"
                         className={styles.footer_nav}>
                         <Typography
@@ -38,7 +38,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                     </Link>
                     <Link
                         exact
-                        href={to2}
+                        href={to2  ?? ''}
                         activeClassName="active"
                         className={styles.footer_nav}>
                         <Typography
@@ -57,7 +57,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                     </Link>
                     <Link
                         exact
-                        href={to3}
+                        href={to3  ?? ''}
                         activeClassName="active"
                         className={styles.footer_nav}>
                         <Typography
@@ -76,7 +76,7 @@ function FooterCard({ title, text1, text2, text3, text4, text5, to1, to2, to3, t
                     </Link>
                     <Link
                         exact
-                        href={to4}
+                        href={to4  ?? ''}
                         activeClassName="active"
                         className={styles.footer_nav}>
                         <Typography

@@ -6,7 +6,6 @@ import Stack from '@mui/material/Stack';
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 const CardComponent = ({ Array }) => {
 
     const cardsPerPage = 20;
@@ -14,7 +13,7 @@ const CardComponent = ({ Array }) => {
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = Array?.slice(indexOfFirstCard, indexOfLastCard);
-    const pageCount = Math.ceil(Array.length / cardsPerPage);
+    const pageCount = Math.ceil(Array?.length / cardsPerPage);
 
     const handlePageChange = (event, value) => {
         setCurrentPage(value);
@@ -46,7 +45,7 @@ const CardComponent = ({ Array }) => {
                                 }}
                             >
                                 <div className={styles.ImageProducts}>
-                                    <Image src={card.img} alt="" className={styles.CenteredImage} />
+                                    <Image src={card.img} alt="card img" className={styles.CenteredImage} />
                                 </div>
                                 <Typography
                                     sx={{
