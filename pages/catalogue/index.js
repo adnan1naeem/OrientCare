@@ -27,7 +27,7 @@ const Catalogue = () => {
         <div className={styles.header}>
           <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={catalouge} text={"Catalogue"} />
+        <ImageText image={catalouge} text={"Catalogue"} top={'-2.5rem'} />
         <div className={styles.pdfcontainer}>
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>

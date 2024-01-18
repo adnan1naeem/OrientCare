@@ -16,7 +16,7 @@ const Index = () => {
             style={{ width: 160, paddingTop: "30px" }}
           />
           <h4 style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px' }}>WARRANTY REGISTRATION</h4>
-          <Typography style={{ fontSize: "12px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif' }}>
+          <Typography style={{ fontSize: "12px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif', color: "#8A8A8A" }}>
             Register your warranty here.
           </Typography>
         </div>

@@ -37,7 +37,7 @@ function NavBar() {
       partnerNamme: "Become A Partner",
     },
     {
-      partnerKey: "partnercenter",
+      partnerKey: "PartnerCenter",
       partnerNamme: "Partner Center",
     },
   ];
