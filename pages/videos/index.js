@@ -6,6 +6,8 @@ import video from '../../public/images/videos.WEBP'
 import videoBanner from '../../public/videoBanner.webp'
 import Image from 'next/image';
 import Header from '../../components/Header/index'
+import Link from 'next/link'
+
 
 
 
@@ -34,11 +36,11 @@ const Videos = () => {
             allowfullscreen
           ></iframe>
           <h4 className={styles.texth4}>OrientCare Launch Event in Los Angeles, California</h4>
-          <a href="https://www.youtube.com/watch?v=uETDhITHQJ0">
+          <Link href="https://www.youtube.com/watch?v=uETDhITHQJ0">
             <button className={styles.button}>
               View More
             </button>
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />

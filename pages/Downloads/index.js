@@ -17,7 +17,7 @@ const products = [
   { id: 2, key: 'videos', name: "Videos", image: videos },
   { id: 3, key: '', name: "Blogs", image: blog },
   { id: 4, key: 'catalogue', name: "Catalouge", image: catalouge },
-  { id: 5, key: 'mobileApp', name: "Certifications", image: certificate },
+  { id: 5, key: 'certifications', name: "Certifications", image: certificate },
   { id: 6, key: 'mobileapp', name: "Mobile", image: mobile },
 
 ];

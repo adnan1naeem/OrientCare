@@ -17,10 +17,10 @@ const index = () => {
                     />
                     <Typography sx={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px', paddingTop: '10px', textAlign: 'center' }} >
                         WANT TO BE OUR PARTNER<br />
-                        <per style={{ fontSize: "15px", }}>
+                        <Typography style={{ fontSize: "15px", }}>
                             Intrested in doing business with OrientCare?<br />
                             Tell us more about your company
-                        </per>
+                        </Typography>
                     </Typography>
 
 

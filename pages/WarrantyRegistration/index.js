@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../footer/index';
 import styles from '../../styles/warrantyregistration.module.css'
 import Header from '../../components/Header/index'
+import { Typography } from '@mui/material';
 
 const Index = () => {
   return (
@@ -15,16 +16,16 @@ const Index = () => {
             style={{ width: 160, paddingTop: "30px" }}
           />
           <h4 style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px' }}>WARRANTY REGISTRATION</h4>
-          <p style={{ fontSize: "12px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif' }}>
+          <Typography style={{ fontSize: "12px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif' }}>
             Register your warranty here.
-          </p>
+          </Typography>
         </div>
         <div className={styles.WarrantyRegsec2}>
 
 
           <div className={styles.partleft}>
             <form id="Warranty-form">
-              <p className={styles.warrantyformheading}>IDENTIFY YOUR PRODUCT</p>
+              <Typography className={styles.warrantyformheading}>IDENTIFY YOUR PRODUCT</Typography>
               <div className={styles.Regformgroup}>
                 <label for='producttype'>Product Type</label>
                 <select className={styles.prodtype} id="prod-type" name="producttype" required>
