@@ -1,15 +1,14 @@
 import React from 'react';
-import { Typography, Grid, Checkbox, FormControlLabel, Button } from '@mui/material';
-import Box from '@mui/material/Box';
+import { Typography, Grid, Checkbox, FormControlLabel, Button, Box } from '@mui/material';
 import InputFields from './inputFields';
-// import phone_logo from '../../src/Assets/phone-1.webp'
-// import Email_logo from '../../src/Assets/Email.webp'
 import Footer from '../footer/index';
+import Header from '../../components/Header/index'
 
 
 function Index() {
     return (
         <>
+            <Header />
             <div>
                 <Grid item sx={{ marginTop: '73px', textAlign: "center" }}>
                     <img src={'images/logo.avif'} alt="Logo" style={{ maxWidth: '160px' }} />
@@ -107,9 +106,24 @@ function Index() {
                     <Box sx={{ marginRight: "60px", marginBottom: "9%" }}>
                         <Grid
                             sx={{
+                                mt: '48px',
+                            }}
+                        >
+                            <Typography sx={{
+                                color: '#8A8A8A',
+                                fontSize: '13px',
+                                textAlign: "center",
+                                fontWeight: '600',
+                                marginRight: '8.3rem'
+                            }}>
+                                OR <br /> REACH US
+                            </Typography>
+                        </Grid>
+                        <Grid
+                            sx={{
                                 marginX: 8,
                                 textAlign: 'center',
-                                color: '#8a8a8a',
+                                color: '#8A8A8A',
                                 mt: '48px',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -118,9 +132,8 @@ function Index() {
                         >
                             <img src={'/images/phone-1.webp'} style={{ width: '23px', marginRight: "6px" }} />
                             <Typography sx={{
-                                color: '#8a8a8a',
+                                color: '#8A8A8A',
                                 fontSize: '20px',
-
                             }}>
                                 Phone
                             </Typography>
@@ -128,11 +141,10 @@ function Index() {
                         <Typography sx={{
                             marginLeft: '20%',
                             marginRight: '10px',
-                            color: '#8a8a8a',
+                            color: '#8A8A8A',
                             fontWeight: 'bold',
                             fontSize: '12px',
                             fontFamily: 'Arial, sans-serif',
-                            color: '#8a8a8a',
                             fontWeight: '100'
                         }}>
                             +1 424 466 7757
@@ -141,7 +153,7 @@ function Index() {
                             sx={{
                                 marginRight: '10rem',
                                 textAlign: 'center',
-                                color: '#8a8a8a',
+                                color: '#8A8A8A',
                                 mt: '48px',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -151,7 +163,7 @@ function Index() {
                         >
                             <img src={'/images/Email.webp'} style={{ width: '25px', marginRight: '3px' }} />
                             <Typography sx={{
-                                color: '#8a8a8a',
+                                color: '#8A8A8A',
                                 fontSize: '20px',
                                 fontFamily: 'Arial, sans-serif'
                             }}>
@@ -160,11 +172,10 @@ function Index() {
                         </Grid>
                         <Typography sx={{
                             marginLeft: '5rem',
-                            color: '#8a8a8a',
+                            color: '#8A8A8A',
                             fontWeight: 'bold',
                             fontSize: '12px',
                             fontFamily: 'Arial, sans-serif',
-                            color: '#8a8a8a',
                             fontWeight: '100'
 
                         }}>Info@orientcare.us</Typography>

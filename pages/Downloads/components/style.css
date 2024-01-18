@@ -1,0 +1,7 @@
+.container-comp {
+  display: flex;
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+
+}
