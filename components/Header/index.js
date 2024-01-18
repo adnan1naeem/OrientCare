@@ -216,6 +216,18 @@ function NavBar() {
                               <IoIosArrowForward style={{ marginTop: '3%' }} />
                             )}
                         </div>
+                        <div className={styles.nesteddropdowns}>
+                          {warranty?.warrantyList.map((element) => (
+                            <Link
+                              key={element.key}
+                              href={`/${element.key}`}
+                              className={styles.insidenesteddropdowns}
+                            >
+                              {element.name}
+                            </Link>
+                          ))}
+                        </div>
+
                       </Link>
                     ))}
                   </div>
