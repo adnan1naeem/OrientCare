@@ -6,11 +6,10 @@ import Cards from '../Products/Cards'
 import Footer from '../footer/index'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { spareParts } from '../Products/ArrayValues'
+import { spareParts } from '../../constants/ArrayValues'
 import Filters from '../Products/Filters'
 import Dropdown from '../Products/Dropdown';
 import Header from '../../components/Header/index'
-
 
 function Index() {
     const theme = useTheme();

@@ -5,15 +5,11 @@ import SortBy from './SortBy'
 import Cards from './Cards'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { miniSplit } from './ArrayValues'
+import { miniSplit } from '../../constants/ArrayValues'
 import Filters from './Filters'
-import Air from '../../public/Air_handler.webp'
 import Footer from '../footer/index'
 import Dropdown from '../Products/Dropdown';
-import Image from 'next/image'
 import Header from '../../components/Header/index'
-
-
 
 function Index() {
     const theme = useTheme();

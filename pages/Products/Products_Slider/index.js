@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { miniSplit } from "../ArrayValues";
+import { miniSplit } from "../../../constants/ArrayValues";
 import Image from "next/image";
 
 function SampleNextArrow(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageText } from '../Downloads/components/image-text';
+import ImageText from '../Downloads/components/imageText';
 import Footer from '../footer/index';
 import styles from '../../styles/productmanuals.module.css';
 import mobile from "../../public/images/mobile-app.WEBP";

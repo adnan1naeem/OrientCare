@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageText } from '../Downloads/components/image-text';
+import ImageText from '../Downloads/components/imageText';
 import Footer from '../footer/index';
 import styles from '../../styles/videos.module.css'
 import video from '../../public/images/videos.WEBP'
@@ -7,9 +7,6 @@ import videoBanner from '../../public/videoBanner.webp'
 import Image from 'next/image';
 import Header from '../../components/Header/index'
 import Link from 'next/link'
-
-
-
 
 const Videos = () => {
 

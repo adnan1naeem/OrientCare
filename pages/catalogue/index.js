@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageText } from '../Downloads/components/image-text.js';
+import ImageText from '../Downloads/components/imageText.js';
 // import pdf from './../../../Assets/pdf/Mini_Splits_Inverter_Heat_Pump.pdf'
 import catalogueImage from '../../public/Catalogue.webp'
 import Footer from '../footer/index.js';

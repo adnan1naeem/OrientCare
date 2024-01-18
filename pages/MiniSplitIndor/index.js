@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card, Typography } from "@mui/material";
-import { notInclude, warrantyDetails } from "./dummyData";
+import { notInclude, warrantyDetails } from "../../constants/dummyData";
 import Footer from "../footer/index"
 import styles from "../../styles/minisplit.module.css"
 import Image from "next/image";

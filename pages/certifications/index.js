@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 // import pdf4 from './../../../Assets/pdf/24000_BTU.pdf'
 // import pdf5 from './../../../Assets/pdf/36000_BTU.pdf'
 import certificate from "../../public/images/certificate.WEBP";
-import { ImageText } from '../Downloads/components/image-text';
+import ImageText from '../Downloads/components/imageText';
 import ahriCertified from '../../public/ahri-certified.webp';
 import culusCertified from '../../public/culus-certified.webp';
 import Footer from '../footer/index';

@@ -5,7 +5,7 @@ import certificate from "../../public/images/certificate.WEBP";
 import catalouge from "../../public/images/catalouge.WEBP";
 import product from "../../public/images/mobile-app.WEBP";
 import mobile from "../../public/images/productmanual.WEBP";
-import { ImageText } from "./components/image-text";
+import ImageText from "./components/imageText";
 import Footer from '../footer/index'
 import styles from '../../styles/downloads.module.css'
 import Link from "next/link";
@@ -19,7 +19,6 @@ const products = [
   { id: 4, key: 'catalogue', name: "Catalouge", image: catalouge },
   { id: 5, key: 'certifications', name: "Certifications", image: certificate },
   { id: 6, key: 'mobileapp', name: "Mobile", image: mobile },
-
 ];
 
 const Index = () => {
