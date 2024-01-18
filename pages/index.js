@@ -25,7 +25,7 @@ const Index = () => {
     <div className={styles.main_div}>
       <Header />
 
-      <div>
+       <div>
         <Slider />
       </div>
       <Box

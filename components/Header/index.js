@@ -216,13 +216,13 @@ function NavBar() {
                             )}
                         </div>
                         <div className={warranty?.warrantyList.length <= 0 ? styles.hideNested : styles.nesteddropdowns}>
-                          {warranty?.warrantyList.map((element) => (
+                          {warranty?.warrantyList?.map((element) => (
                             <Link
-                              key={element.key}
-                              href={`/${element.key}`}
+                              key={element?.key}
+                              href={`/${element?.key}`}
                               className={styles.insidenesteddropdowns}
                             >
-                              {element.name}
+                                {element?.name}
                             </Link>
                           ))}
                         </div>
