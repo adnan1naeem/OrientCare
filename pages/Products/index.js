@@ -7,6 +7,12 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { miniSplit } from './ArrayValues'
 import Filters from './Filters'
+import Air from '../../public/Air_handler.webp'
+import Footer from '../footer/index'
+import Dropdown from '../Products/Dropdown';
+import Image from 'next/image'
+import Header from '../../components/Header/index'
+
 
 
 function Index() {
@@ -15,8 +21,9 @@ function Index() {
 
     return (
         <>
+            <Header />
             <div className={styles.ContainerProduct}>
-                <img src={'images/ProductBanner.webp'} className={styles.ProductBannerImage} alt="logo" />
+                <img src={'/images/ProductBanner.webp'} className={styles.ProductBannerImage} alt="logo" />
                 <Box
                     sx={{
                         width: '100%',
@@ -29,17 +36,23 @@ function Index() {
                         <>
                             <Filters />
                         </>
-
                     )}
                     <Card
                         sx={{
                             width: { xs: "100%", sm: '100%', md: '85%', lg: '73%' }, background: "none",
                             boxShadow: "none", marginTop: '4rem',
                         }}>
-                        <Grid sx={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography sx={{ paddingRight: '5px', color: '#8A8A8A', fontSize: '12px' }}>Sort by:</Typography>
-                            <SortBy />
-                        </Grid>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <Grid sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Typography sx={{ paddingRight: '5px', color: '#8A8A8A', fontSize: '12px' }}>Sort by:</Typography>
+                                <SortBy />
+                            </Grid>
+                            {!isLargeScreen && (
+                                <div style={{ zIndex: 1 }}>
+                                    <Dropdown />
+                                </div>
+                            )}
+                        </div>
                         <Divider inset="none" sx={{ mt: '5px' }} />
                         <Cards Array={miniSplit} />
                         <Grid sx={{
@@ -56,7 +69,7 @@ function Index() {
                                 lg: 'row'
                             },
                         }}>
-                            <img src={'images/logo_one.avif'} alt='' className={styles.LogoImageOrient} />
+                            <img src={'/images/logo.webp'} className={styles.LogoImageOrient} alt="logo" />
                             <Typography variant='h1' sx={{ fontSize: '45px', color: '#343538', }}>Wall Mounted Mini Split</Typography>
                         </Grid>
                         <Typography sx={{ mb: '2rem', textAlign: 'center', color: '#8A8A8A', fontSize: '17px', lineHeight: '25.5px' }}>
@@ -67,7 +80,7 @@ function Index() {
                 </Box>
 
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

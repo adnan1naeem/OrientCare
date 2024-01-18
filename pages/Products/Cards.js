@@ -4,9 +4,11 @@ import styles from '../../styles/product.module.css'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 const CardComponent = ({ Array }) => {
+
     const cardsPerPage = 20;
     const [currentPage, setCurrentPage] = useState(1);
     const indexOfLastCard = currentPage * cardsPerPage;
@@ -24,10 +26,8 @@ const CardComponent = ({ Array }) => {
                 {currentCards?.map((card) => (
                     <Grid item key={card.id}>
                         <Link
-
                             href="/productsDetail"
-                            style={{ textDecoration: 'none', }}
-                        >
+                            style={{ textDecoration: 'none', }}>
                             <Card
                                 sx={{
                                     width: {
@@ -46,7 +46,7 @@ const CardComponent = ({ Array }) => {
                                 }}
                             >
                                 <div className={styles.ImageProducts}>
-                                    <img src={card.img} alt="" className="CenteredImage" />
+                                    <Image src={card.img} alt="" className={styles.CenteredImage} />
                                 </div>
                                 <Typography
                                     sx={{

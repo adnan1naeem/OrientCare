@@ -1,4 +1,4 @@
-import AirConditions from '../../public/AirConditions.webp'
+
 import Comprasser from '../../public/comprasser.webp'
 import Fan from '../../public/fan.webp'
 import PCB from '../../public/pcb.webp'
@@ -25,6 +25,16 @@ import Friendly from '../../public/13._Checkout_Page_eco-freindly_Desktop_View.w
 import EasyInstall from '../../public/Easy-Installation_08e132d6-ac5a-4fc5-a469-f911fd0e166c.webp'
 import Technical from './../../public/Technical-Specifications-12-15.webp'
 
+import AirConditions from '../../public/AirConditions.webp'
+
+export const miniSplit = [
+    { id: 1, description: '36000BTU MiniSplit ME SEER18 230V (Works With Alexa)', img: AirConditions, },
+    { id: 2, description: '24000BTU MiniSplit ME SEER18.5 230V (Works With Alexa)', img: AirConditions, },
+    { id: 3, description: '18000BTU MiniSplit ME SEER19.5 230V (Works With Alexa)', img: AirConditions, },
+    { id: 4, description: '12000BTU MiniSplit ME SEER21.4 230V (Works With Alexa)', img: AirConditions, },
+    { id: 5, description: '12000BTU MiniSplit ME SEER20.8 115V (Works With Alexa)', img: AirConditions, },
+];
+
 
 export const SubProductsImages = [
     { id: 1, img: banner, },
@@ -43,13 +53,6 @@ export const SubProductsImages = [
     { id: 15, img: Technical, },
 ];
 
-export const miniSplit = [
-    { id: 1, description: '36000BTU MiniSplit ME SEER18 230V (Works With Alexa)', img: AirConditions, },
-    { id: 2, description: '24000BTU MiniSplit ME SEER18.5 230V (Works With Alexa)', img: AirConditions, },
-    { id: 3, description: '18000BTU MiniSplit ME SEER19.5 230V (Works With Alexa)', img: AirConditions, },
-    { id: 4, description: '12000BTU MiniSplit ME SEER21.4 230V (Works With Alexa)', img: AirConditions, },
-    { id: 5, description: '12000BTU MiniSplit ME SEER20.8 115V (Works With Alexa)', img: AirConditions, },
-];
 
 export const spareParts = [
     { id: 1, description: 'Compressor Mini Split ME 12000 BTUs 115V', img: Comprasser },

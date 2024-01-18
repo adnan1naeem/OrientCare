@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { miniSplit } from "../ArrayValues";
+import Image from "next/image";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -74,7 +75,7 @@ function Index() {
         <Slider {...settings}>
           {miniSplit?.map((item, index) => (
             <>
-              <img
+              <Image
                 style={{ width: "80%" }}
                 src={item?.img}
                 alt={`Slider ${index + 1}`}

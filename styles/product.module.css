@@ -1,5 +1,11 @@
-
-
+.ContainerProduct {
+    margin-left: 9%; 
+    margin-right: 9%; 
+}
+.ProductBannerImage{
+    width: 100%;
+    height: auto;
+}
 .ImageProducts {
   display: flex;
   justify-content: center;
@@ -7,10 +13,20 @@
   height: 140px;
   width: 100%;
 }
+@media (max-width: 603px) {
+   .ImageProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  width: 50%;
+}
+}
 
 .CenteredImage {
   max-width: 100%;
   max-height: 100%;
+ 
 }
 .Sub_Products_Image {
   max-width: 100%;
@@ -18,33 +34,31 @@
   padding-top: 10px;
   
 }
-
+.LogoImageOrient{
+  width:250px;
+  height: auto;
+}
 
 .Sub_Product {
   height: auto;
   width: 100vw;
+  margin-top: 1rem;
   }
 
 @media (max-width: 768px) {
     .Sub_Product {
         width: 100vw;
         height: auto;
-    }
+    } 
 }
  
 .Container_Details{
   background-color:white;
 }
 
-.LogoImageOrient{
-  width:250px;
-  height: auto;
-}
-.ProductBannerImage{
-    width: 100%;
-    height: auto;
-}
-.ContainerProduct {
-    margin-left: 9%; 
-    margin-right: 9%; 
+.LeftviewStyle{
+  text-align: left;
+  font-size: 30px;
+  font-weight: 400; 
+  margin-top: 1rem
 }

@@ -3,9 +3,11 @@ import Link from 'next/link'
 import styles from '../../styles/header.module.css';
 import { HamburgetMenuClose, HamburgetMenuOpen } from './Icons';
 import { IoIosArrowForward } from 'react-icons/io';
+import { useRouter } from "next/router";
 
 function NavBar() {
   const [click, setClick] = useState(false);
+  const router = useRouter()
 
   const handleClick = () => {
     setClick(!click);
@@ -38,18 +40,18 @@ function NavBar() {
 
   const partnerArray = [
     {
-      partnerKey: "PartnerSubPage",
+      partnerKey: "BecomeaPartner",
       partnerNamme: "Become A Partner",
     },
     {
-      partnerKey: "partnercenter",
+      partnerKey: "PartnerCenter",
       partnerNamme: "Partner Center",
     },
   ];
 
   const warrantyArray = [
     {
-      warrantyKey: 'miniSplit',
+      warrantyKey: 'MiniSplitIndor',
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "indoor" },
@@ -57,7 +59,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "miniSplit",
+      warrantyKey: "MiniSplitIndor",
       warrantyNamme: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "outdoor" }],
     },
@@ -70,7 +72,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "warrantyRegistration",
+      warrantyKey: "WarrantyRegistration",
       warrantyNamme: "Warranty Registration",
       warrantyList: [],
     },
@@ -187,11 +189,9 @@ function NavBar() {
             </li>
 
             <li className={styles.navItem}>
-              <Link href="/contact" className={styles.navLinks}
+              <Link href="/ContactUs" className={styles.navLinks}
                 onClick={handleClick}>
-
                 Contact Us
-
               </Link>
             </li>
           </ul>
