@@ -1,22 +1,24 @@
+import AddIcon from "@mui/icons-material/Add";
+import ChevronLeftIcon from "@mui/icons-material/Close";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import { IoIosArrowForward } from "react-icons/io";
+import Link from "next/link";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
-import Link from 'next/link'
-import styles from '../../styles/header.module.css';
-import { IoIosArrowForward } from 'react-icons/io';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ChevronLeftIcon from '@mui/icons-material/Close';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import AddIcon from '@mui/icons-material/Add';
+import { styled } from "@mui/material/styles";
+import styles from "../../styles/header.module.css";
+import { useRouter } from "next/router";
 
 const drawerWidth = 240;
 
 function NavBar() {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   const productArray = [
     {
@@ -44,7 +46,7 @@ function NavBar() {
 
   const warrantyArray = [
     {
-      warrantyKey: 'MiniSplitIndor',
+      warrantyKey: "MiniSplitIndor",
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "miniSplit" },
@@ -71,13 +73,13 @@ function NavBar() {
     },
   ];
 
-  const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
+  const DrawerHeader = styled("div")(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   }));
 
   const handleDrawerOpen = () => {
@@ -88,7 +90,15 @@ function NavBar() {
     setOpen(false);
   };
 
-  const menuList = [{ text: 'Home', key: '' }, { text: 'About Us', key: 'aboutus' }, { text: 'Products', key: 'Products' }, { text: 'Partners', key: 'BecomeaPartner' }, { text: 'Warranty', key: 'warrantyRegistration' }, { text: 'Downloads', key: 'downloads' }, { text: 'Contact Us', key: 'contact' }];
+  const menuList = [
+    { text: "Home", key: "" },
+    { text: "About Us", key: "aboutus" },
+    { text: "Products", key: "Products" },
+    { text: "Partners", key: "BecomeaPartner" },
+    { text: "Warranty", key: "warrantyRegistration" },
+    { text: "Downloads", key: "downloads" },
+    { text: "Contact Us", key: "contact" },
+  ];
 
   return (
     <div>
@@ -99,7 +109,7 @@ function NavBar() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
           >
             <MenuIcon />
           </IconButton>
@@ -112,9 +122,9 @@ function NavBar() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          '& .MuiDrawer-paper': {
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxSizing: 'border-box',
+            boxSizing: "border-box",
           },
         }}
         variant="persistent"
@@ -135,9 +145,9 @@ function NavBar() {
                   <Link className={styles.navLinks} href={`/${item?.key}`}>
                     {item?.text}
                   </Link>
-                  {(item?.text === "Partners" || item?.text === "Warranty" || item?.text === "Products") &&
-                    <AddIcon />
-                  }
+                  {(item?.text === "Partners" ||
+                    item?.text === "Warranty" ||
+                    item?.text === "Products") && <AddIcon />}
                 </div>
               </ListItemButton>
             </ListItem>
@@ -159,15 +169,17 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={styles.navLinks}
-                  href="/Products">
+                <Link className={styles.navLinks} href="/Products">
                   Products
                 </Link>
                 {productArray?.length > 0 && (
                   <div className={styles.dropdownContent}>
                     {productArray?.map((product) => (
-                      <Link className={styles.navLinksDropDown}
-                        key={product?.productKey} href={`/${product.productKey}`}>
+                      <Link
+                        className={styles.navLinksDropDown}
+                        key={product?.productKey}
+                        href={`/${product.productKey}`}
+                      >
                         {product?.productNamme}
                       </Link>
                     ))}
@@ -203,31 +215,36 @@ function NavBar() {
                 {warrantyArray?.length > 0 && (
                   <div className={styles.dropdownContent}>
                     {warrantyArray?.map((warranty) => (
-                      <Link
+                      <div
                         key={warranty?.warrantyKey}
-                        href={`/${warranty?.warrantyKey}`}
+                        onClick={() => router.push(`/${warranty?.warrantyKey}`)}
                         className={styles.navLinksDropDown}
                       >
                         <div className={styles.warrantyArrow}>
                           {warranty?.warrantyNamme}
                           {warranty?.warrantyList &&
                             warranty?.warrantyList.length > 0 && (
-                              <IoIosArrowForward style={{ marginTop: '3%' }} />
+                              <IoIosArrowForward style={{ marginTop: "3%" }} />
                             )}
                         </div>
-                        <div className={warranty?.warrantyList.length <= 0 ? styles.hideNested : styles.nesteddropdowns}>
+                        <div
+                          className={
+                            warranty?.warrantyList.length <= 0
+                              ? styles.hideNested
+                              : styles.nesteddropdowns
+                          }
+                        >
                           {warranty?.warrantyList?.map((element) => (
                             <Link
                               key={element?.key}
                               href={`/${element?.key}`}
                               className={styles.insidenesteddropdowns}
                             >
-                                {element?.name}
+                              {element?.name}
                             </Link>
                           ))}
                         </div>
-
-                      </Link>
+                      </div>
                     ))}
                   </div>
                 )}
