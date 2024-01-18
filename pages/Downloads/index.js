@@ -10,6 +10,7 @@ import Footer from '../footer/index'
 import styles from '../../styles/downloads.module.css'
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Header from '../../components/Header/index'
 
 const products = [
   { id: 1, key: 'productmanuals', name: "Product Manuals", image: product },
@@ -52,6 +53,7 @@ const Index = () => {
 
   return (
     <div>
+      <Header />
       <div className={styles.header}>
         <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         <h1 className={styles.headertitle}>Downloads</h1>

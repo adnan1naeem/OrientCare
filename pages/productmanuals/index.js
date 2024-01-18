@@ -4,6 +4,8 @@ import Footer from '../footer/index';
 import styles from '../../styles/productmanuals.module.css';
 import mobile from "../../public/images/mobile-app.WEBP";
 import Link from 'next/link';
+import { Typography } from '@mui/material';
+import Header from '../../components/Header/index'
 
 const ProductManuals = () => {
 
@@ -15,6 +17,7 @@ const ProductManuals = () => {
 
   return (
     <>
+      <Header />
       <div className={styles.container}>
         <div className={styles.header}>
           <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
@@ -24,23 +27,14 @@ const ProductManuals = () => {
 
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>
-              <iframe
-                width="100%"
-                height="415"
-                src="https://www.youtube.com/embed/uETDhITHQJ0?si=No7VDfbGqdD8RmXo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-              {/* <Link href={`${item?.file}`} rel="noopener noreferrer">
+              <Link href={`${item?.file}`} rel="noopener noreferrer">
                 <img
                   src={item?.image}
                   alt="PDF Image"
                   className={styles.pdfimage}
                 />
                 <Typography className={styles.pdfname}>{item?.name}</Typography>
-              </Link> */}
+              </Link>
             </div>
           ))}
         </div>

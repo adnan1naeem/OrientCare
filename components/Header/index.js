@@ -44,15 +44,15 @@ function NavBar() {
 
   const warrantyArray = [
     {
-      warrantyKey: 'miniSplit',
+      warrantyKey: 'MiniSplitIndor',
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
-        { name: "Mini Split InDoor", key: "indoor" },
-        { name: "Mini Split OutDoor", key: "outdoor" },
+        { name: "Mini Split InDoor", key: "miniSplit" },
+        { name: "Mini Split OutDoor", key: "miniSplit" },
       ],
     },
     {
-      warrantyKey: "miniSplit",
+      warrantyKey: "MiniSplitIndor",
       warrantyNamme: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "outdoor" }],
     },
@@ -65,7 +65,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "warrantyRegistration",
+      warrantyKey: "WarrantyRegistration",
       warrantyNamme: "Warranty Registration",
       warrantyList: [],
     },
@@ -198,7 +198,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link href="/warrantyRegistration" className={styles.navLinks}>
+                <Link href="/WarrantyRegistration" className={styles.navLinks}>
                   Warranty
                 </Link>
                 {warrantyArray?.length > 0 && (
@@ -206,7 +206,7 @@ function NavBar() {
                     {warrantyArray?.map((warranty) => (
                       <Link
                         key={warranty?.warrantyKey}
-                        href={`/${warranty.warrantyKey}`}
+                        href={`/${warranty?.warrantyKey}`}
                         className={styles.navLinksDropDown}
                       >
                         <div className={styles.warrantyArrow}>
@@ -224,12 +224,15 @@ function NavBar() {
             </li>
 
             <li className={styles.navItem}>
-              <Link href="/downloads" className={styles.navLinks}>
+              <Link href="/Downloads"
+                className={styles.navLinks}
+              >
+
                 Downloads
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/contact" className={styles.navLinks}>
+              <Link href="/ContactUs" className={styles.navLinks}>
                 Contact Us
               </Link>
             </li>
