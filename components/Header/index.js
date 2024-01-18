@@ -1,29 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from 'next/link'
 import styles from '../../styles/header.module.css';
-import { HamburgetMenuClose, HamburgetMenuOpen } from './Icons';
 import { IoIosArrowForward } from 'react-icons/io';
-import { useRouter } from "next/router";
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ChevronLeftIcon from '@mui/icons-material/Close';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import AddIcon from '@mui/icons-material/Add';
+
+const drawerWidth = 240;
 
 function NavBar() {
-  const [click, setClick] = useState(false);
-  const router = useRouter()
-
-  const handleClick = () => {
-    setClick(!click);
-  };
-
-  const handleButtonClick = () => {
-    router.push('/aboutus');
-  };
-  const handleProducts = () => {
-    router.push('/Products');
-  };
-
-  const handleDownloads = () => {
-    setClick(!click);
-    navigate("/downloads");
-  };
+  const [open, setOpen] = React.useState(false);
 
   const productArray = [
     {
@@ -40,18 +33,18 @@ function NavBar() {
 
   const partnerArray = [
     {
-      partnerKey: "BecomeaPartner",
+      partnerKey: "PartnerSubPage",
       partnerNamme: "Become A Partner",
     },
     {
-      partnerKey: "PartnerCenter",
+      partnerKey: "partnercenter",
       partnerNamme: "Partner Center",
     },
   ];
 
   const warrantyArray = [
     {
-      warrantyKey: 'MiniSplitIndor',
+      warrantyKey: 'miniSplit',
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "indoor" },
@@ -59,7 +52,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "MiniSplitIndor",
+      warrantyKey: "miniSplit",
       warrantyNamme: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "outdoor" }],
     },
@@ -72,45 +65,109 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "WarrantyRegistration",
+      warrantyKey: "warrantyRegistration",
       warrantyNamme: "Warranty Registration",
       warrantyList: [],
     },
   ];
 
+  const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+  }));
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  const menuList = [{ text: 'Home', key: '' }, { text: 'About Us', key: 'aboutus' }, { text: 'Products', key: 'Products' }, { text: 'Partners', key: 'BecomeaPartner' }, { text: 'Warranty', key: 'warrantyRegistration' }, { text: 'Downloads', key: 'downloads' }, { text: 'Contact Us', key: 'contact' }];
+
   return (
     <div>
       <div className={styles.logoContainer}>
-        <Link href="/home">
+        <div className={styles.navIcon}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+        </div>
+        <Link href="/">
           <img src="/care-logo.png" alt="Logo" className={styles.mainLogo} />
         </Link>
       </div>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {menuList?.map((item) => (
+            <ListItem key={item?.key} disablePadding>
+              <ListItemButton>
+                <div className={styles.menuListDisplay}>
+                  <Link className={styles.navLinks} href={`/${item?.key}`}>
+                    {item?.text}
+                  </Link>
+                  {(item?.text === "Partners" || item?.text === "Warranty" || item?.text === "Products") &&
+                    <AddIcon />
+                  }
+                </div>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
       <nav className={styles.navbar}>
         <div className={styles.navContainer}>
-
-          <ul className={click ? styles.navMenuActive : styles.navMenu}>
+          <ul className={open ? styles.navMenuActive : styles.navMenu}>
             <li className={styles.navItem}>
-              <Link className={styles.navLinks}
-                onClick={handleClick} href="/home">
+              <Link className={styles.navLinks} href="/">
                 Home
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={styles.navLinks} onClick={handleButtonClick} href="/aboutus">
+              <Link className={styles.navLinks} href="/aboutus">
                 About Us
               </Link>
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
                 <Link className={styles.navLinks}
-                  onClick={handleProducts} href="/Products">
+                  href="/Products">
                   Products
                 </Link>
                 {productArray?.length > 0 && (
                   <div className={styles.dropdownContent}>
                     {productArray?.map((product) => (
                       <Link className={styles.navLinksDropDown}
-                        onClick={handleClick} key={product?.productKey} href={`/${product.productKey}`}>
+                        key={product?.productKey} href={`/${product.productKey}`}>
                         {product?.productNamme}
                       </Link>
                     ))}
@@ -121,8 +178,7 @@ function NavBar() {
 
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={styles.navLinks}
-                  onClick={handleClick} href="/BecomeaPartner">
+                <Link className={styles.navLinks} href="/BecomeaPartner">
                   Partners
                 </Link>
                 {partnerArray?.length > 0 && (
@@ -132,26 +188,18 @@ function NavBar() {
                         key={partner?.partnerKey}
                         href={`/${partner.partnerKey}`}
                         className={styles.navLinksDropDown}
-                        onClick={handleClick}
                       >
-
                         {partner?.partnerNamme}
-
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
             </li>
-
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link href="/warrantyRegistration"
-                  className={styles.navLinks}
-                  onClick={handleClick}>
-
+                <Link href="/warrantyRegistration" className={styles.navLinks}>
                   Warranty
-
                 </Link>
                 {warrantyArray?.length > 0 && (
                   <div className={styles.dropdownContent}>
@@ -160,9 +208,7 @@ function NavBar() {
                         key={warranty?.warrantyKey}
                         href={`/${warranty.warrantyKey}`}
                         className={styles.navLinksDropDown}
-                        onClick={handleClick}
                       >
-
                         <div className={styles.warrantyArrow}>
                           {warranty?.warrantyNamme}
                           {warranty?.warrantyList &&
@@ -170,7 +216,6 @@ function NavBar() {
                               <IoIosArrowForward style={{ marginTop: '3%' }} />
                             )}
                         </div>
-
                       </Link>
                     ))}
                   </div>
@@ -179,34 +224,16 @@ function NavBar() {
             </li>
 
             <li className={styles.navItem}>
-              <Link href="/downloads"
-                className={styles.navLinks}
-                onClick={handleDownloads}>
-
+              <Link href="/downloads" className={styles.navLinks}>
                 Downloads
-
               </Link>
             </li>
-
             <li className={styles.navItem}>
-              <Link href="/ContactUs" className={styles.navLinks}
-                onClick={handleClick}>
+              <Link href="/contact" className={styles.navLinks}>
                 Contact Us
               </Link>
             </li>
           </ul>
-
-          <div className={styles.navIcon} onClick={handleClick}>
-            {!click ? (
-              <span className={styles.icon}>
-                <HamburgetMenuOpen />
-              </span>
-            ) : (
-              <span className={styles.icon}>
-                <HamburgetMenuClose />
-              </span>
-            )}
-          </div>
         </div>
       </nav>
     </div>
