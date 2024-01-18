@@ -11,7 +11,7 @@
   height: 30px;
 }
 
-body {
+.body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
@@ -26,14 +26,14 @@ body {
 
 }
 
-.image-container {
+.imagecontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 }
 
-.image-wrapper {
+.imagewrapper {
   width: 150px;
 }
 

@@ -11,7 +11,7 @@ export const ImageText = ({ image, text }) => {
         alt="TopImage"
         className={styles.ImageTextdownload}
       />
-      <Typography sx={{ textAlign: 'center', fontSize: '12px', fontWeight: '600 !important', color: 'black', marginTop: '-3%' }}>{text}</Typography>
+      <Typography sx={{ textAlign: 'center', fontSize: '12px', fontWeight: '600 !important', color: 'black', marginTop: '-3%', paddingLeft: '15px' }}>{text}</Typography>
     </div>
   );
 };

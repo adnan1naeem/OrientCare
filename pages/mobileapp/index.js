@@ -1,15 +1,16 @@
 import React from 'react';
-import { ImageText } from '../../components/image-text';
-import './style.css';
-import { useLocation } from 'react-router-dom';
-import playstore from './../../../Assets/play.webp'
-import appstore from './../../../Assets/App.webp'
-import logo from './../../../Assets/care-logo.png';
-import Footer from '../../../Footer/index';
+import { ImageText } from '../Downloads/components/image-text.js';
+import playstore from '../../public/play.webp'
+import appstore from '../../public/App.webp'
+import Footer from '../footer/index.js';
+import styles from '../../styles/mobileapp.module.css'
+import Link from 'next/link';
+import Image from 'next/image';
+import App from '../../public/images/productmanual.WEBP'
+import Header from '../../components/Header/index.js'
 
-const MobileApp = () => {
-  const location = useLocation();
-  const item = location.state;
+
+const Index = () => {
 
   const Images = [
     { image: playstore, link: "https://play.google.com/store/apps/details?id=com.midea.aircondition&hl=en&gl=US" },
@@ -18,22 +19,22 @@ const MobileApp = () => {
 
   return (
     <>
-
-      <div className='container'>
-        <div className="header">
-          <img className='img' src={logo} alt="Logo" />
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={item?.image} text={item?.name} />
-        <div className="image-container">
+        <ImageText image={App} text={"Mobile App"} />
+        <div className={styles.imagecontainer}>
           {Images?.map((item, index) => (
-            <div key={index} className="image-wrapper">
-              <a href={item?.link} target="_blank">
-                <img
+            <div key={index} className={styles.imagewrapper}>
+              <Link href={item?.link} target="_blank">
+                <Image
                   src={item?.image}
                   alt="Image"
-                  className="image"
+                  className={styles.image}
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -43,4 +44,4 @@ const MobileApp = () => {
   );
 };
 
-export default MobileApp;
+export default Index;

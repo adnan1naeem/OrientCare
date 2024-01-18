@@ -1,39 +1,44 @@
 import React from 'react';
-import { ImageText } from '../../Downloads/components/image-text';
-import './style.css';
-import { useLocation } from 'react-router-dom';
-import pdf from './../../../Assets/pdf/Mini_Splits_Inverter_Heat_Pump.pdf'
-import catalogueImage from './../../../Assets/Catalogue.webp'
-import logo from './../../../Assets/care-logo.png';
-import Footer from '../../Footer/index';
+import { ImageText } from '../Downloads/components/image-text.js';
+// import pdf from './../../../Assets/pdf/Mini_Splits_Inverter_Heat_Pump.pdf'
+import catalogueImage from '../../public/Catalogue.webp'
+import Footer from '../footer/index.js';
+import styles from "../../styles/catalogue.module.css"
+import { Typography } from '@mui/material';
+import Link from 'next/link';
+import Image from 'next/image.js';
+import catalouge from '../../public/images/catalouge.WEBP'
+import Header from "../../components/Header/index.js"
+
 
 const Catalogue = () => {
-  const location = useLocation();
-  const item = location.state;
 
   const pdfFiles = [
-    { file: pdf, image: catalogueImage, name: "Mini Split Inverter Heat Pumps Catalogue" },
+    {
+      // file: pdf, 
+      image: catalogueImage, name: "Mini Split Inverter Heat Pumps Catalogue"
+    },
   ];
 
   return (
     <>
-
-      <div className='container'>
-        <div className="header">
-          <img className='img' src={logo} alt="Logo" />
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={item?.image} text={item?.name} />
-        <div className="pdf-container">
+        <ImageText image={catalouge} text={"Catalogue"} />
+        <div className={styles.pdfcontainer}>
           {pdfFiles?.map((item, index) => (
-            <div key={index} className="pdf-wrapper">
-              <a href={item?.file} target="_blank">
-                <img
+            <div key={index} className={styles.pdfwrapper}>
+              <Link href={`${item?.file}`} target="_blank">
+                <Image
                   src={item?.image}
                   alt="PDF Image"
-                  className="pdf-image"
+                  className={styles.pdfimage}
                 />
-              </a>
-              <p className='pdf-name'>{item?.name}</p>
+              </Link>
+              <Typography className={styles.pdfname}>{item?.name}</Typography>
             </div>
           ))}
         </div>

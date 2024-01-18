@@ -11,7 +11,7 @@
   height: 30px;
 }
 
-body {
+.body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
@@ -26,14 +26,14 @@ body {
 
 }
 
-.cer-name {
+.cername {
   font-size: 20px;
   color: #8a8a8a;
   text-align: center;
   font-family: Helvetica,Arial,sans-serif,arial,serif;
 }
 
-.cer-container {
+.cercontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,7 +42,7 @@ body {
   margin-top: 30px;
 }
 
-.cer-wrapper {
+.cerwrapper {
   width: 240px;
   bottom: 0px;
   display: flex;
@@ -50,11 +50,11 @@ body {
   align-items: center;
 }
 
-.cer-image {
+.cerimage {
   width: 240px;
 }
 
-.view-more-button {
+.viewmorebutton {
   width: 90px;
   height: 40px;
   background-color: white;

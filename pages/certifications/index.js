@@ -1,33 +1,63 @@
 import React, { useEffect, useState } from 'react';
-import pdf1 from './../../../Assets/pdf/12000_BTU.pdf'
-import pdf2 from './../../../Assets/pdf/12000_BTU_115_V.pdf'
-import pdf3 from './../../../Assets/pdf/18000_BTU.pdf'
-import pdf4 from './../../../Assets/pdf/24000_BTU.pdf'
-import pdf5 from './../../../Assets/pdf/36000_BTU.pdf'
-import { ImageText } from '../../components/image-text';
-import './style.css';
-import { useLocation } from 'react-router-dom';
-import logo from './../../../Assets/care-logo.png';
-import ahriCertified from './../../../Assets/ahri-certified.webp';
-import culusCertified from './../../../Assets/culus-certified.webp';
-import Footer from '../../../Footer/index';
+// import pdf1 from './../../../Assets/pdf/12000_BTU.pdf'
+// import pdf2 from './../../../Assets/pdf/12000_BTU_115_V.pdf'
+// import pdf3 from './../../../Assets/pdf/18000_BTU.pdf'
+// import pdf4 from './../../../Assets/pdf/24000_BTU.pdf'
+// import pdf5 from './../../../Assets/pdf/36000_BTU.pdf'
+import certificate from "../../public/images/certificate.WEBP";
+import { ImageText } from '../Downloads/components/image-text';
+import ahriCertified from '../../public/ahri-certified.webp';
+import culusCertified from '../../public/culus-certified.webp';
+import Footer from '../footer/index';
+import styles from '../../styles/certificates.module.css'
+import Link from 'next/link';
+import { Typography } from '@mui/material';
+import Image from 'next/image';
+import Header from '../../components/Header/index'
 
 const Certifications = () => {
-  const location = useLocation();
-  const item = location.state;
+
   const [viewMore, setVewMore] = useState([]);
 
   const pdfFiles = [
-    { image: ahriCertified, certifiedList: [{ image: ahriCertified, file: pdf1, name: "12000 BTU" }, { image: ahriCertified, file: pdf2, name: "12000 BTU 115 V" }, { image: ahriCertified, file: pdf3, name: "18000 BTU" }, { image: ahriCertified, file: pdf4, name: "24000 BTU" }, { image: ahriCertified, file: pdf5, name: "36000 BTU" }] },
+    {
+      image: ahriCertified, certifiedList: [{
+        image: ahriCertified,
+        // file: pdf1,
+        name: "12000 BTU"
+      }, {
+        image: ahriCertified,
+        // file: pdf2,
+        name: "12000 BTU 115 V"
+      }, {
+        image: ahriCertified,
+        // file: pdf3,
+        name: "18000 BTU"
+      }, {
+        image: ahriCertified,
+        // file: pdf4,
+        name: "24000 BTU"
+      }, {
+        image: ahriCertified,
+        // file: pdf5,
+        name: "36000 BTU"
+      }]
+    },
     { image: culusCertified, certifiedList: [] },
   ];
 
-  window.onpopstate = () => {
-    if (viewMore?.length > 0) {
-      window.history.forward();
-    }
-    setVewMore([]);
-  };
+  useEffect(() => {
+    const handlePopState = () => {
+      if (viewMore?.length > 0) {
+        window.history.forward();
+      }
+      setVewMore([]);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
 
   const handleViewMoreClick = (item) => {
     setVewMore([...item.certifiedList]);
@@ -35,26 +65,26 @@ const Certifications = () => {
 
   return (
     <>
-
-      <div className='container'>
-        <div className="header">
-          <img className='img' src={logo} alt="Logo" />
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <img className={styles.img} src={'images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={item?.image} text={item?.name} />
-        <div className="cer-container">
+        <ImageText image={certificate} text={"Certificates"} />
+        <div className={styles.cercontainer}>
           {viewMore?.length <= 0 ?
             <>
               {pdfFiles?.map((item, index) => (
-                <div key={index} className="cer-wrapper">
-                  <a href={item?.file} target="_blank">
-                    <img
+                <div key={index} className={styles.cerwrapper}>
+                  <Link href={`${item?.file}`} target="_blank">
+                    <Image
                       src={item?.image}
                       alt="cer Image"
-                      className="cer-image"
+                      className={styles.cerimage}
                     />
-                  </a>
-                  <p className='cer-name'>{item?.name}</p>
-                  <button className="view-more-button" onClick={() => handleViewMoreClick(item)}>
+                  </Link>
+                  <Typography className={styles.cername}>{item?.name}</Typography>
+                  <button className={styles.viewmorebutton} onClick={() => handleViewMoreClick(item)}>
                     View More
                   </button>
                 </div>
@@ -62,20 +92,20 @@ const Certifications = () => {
             </>
             : <>
               {viewMore?.map((item, index) => (
-                <div key={index} className="cer-wrapper">
-                  <a href={item?.file} target="_blank">
-                    <img
+                <div key={index} className={styles.cerwrapper}>
+                  <Link href={`${item?.file}`} target="_blank">
+                    <Image
                       src={item?.image}
                       alt="cer Image"
-                      className="cer-image"
+                      className={styles.cerimage}
                     />
-                  </a>
-                  <p className='cer-name'>{item?.name}</p>
-                  <a href={item?.file} target="_blank">
-                    <button className="view-more-button">
+                  </Link>
+                  <Typography className={styles.cername}>{item?.name}</Typography>
+                  <Link href={`${item?.file}`} target="_blank">
+                    <button className={styles.viewmorebutton}>
                       View More
                     </button>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </>}
