@@ -22,7 +22,7 @@ function NavBar() {
 
   const productArray = [
     {
-      productKey: "products",
+      productKey: "Products",
       productNamme: "MINI SPLIT INVERTER HEAT PUMPS",
     },
     { productKey: "", productNamme: "MULTIZONE INVERTER HEAT PUMPS" },

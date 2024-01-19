@@ -35,7 +35,7 @@ function Filters({ pageName }) {
             <Typography sx={{
                 fontSize: '22px', lineHeight: 1.35, fontWeight: '500', color: '#343538', marginTop: '1em', marginBottom: '1.1rem',
             }}>
-                Mini Splits
+                {pageName}
             </Typography>
             <Typography sx={{ textAlign: 'left', color: "#252634", fontSize: '15px', fontWeight: '700', pb: '0.2rem' }}>
                 FILTERS

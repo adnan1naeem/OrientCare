@@ -36,7 +36,7 @@ function Footer() {
           text4="Contact Us"
         />
         <FooterCard
-          to1={"/termsConditions"}
+          to1={"/TermsAndConditions"}
           to2={"/PrivacyPolicy"}
           to3={""}
           to4={""}

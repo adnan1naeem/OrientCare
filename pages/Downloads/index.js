@@ -18,7 +18,7 @@ const products = [
   { id: 3, key: '', name: "Blogs", image: blog },
   { id: 4, key: 'catalogue', name: "Catalouge", image: catalouge },
   { id: 5, key: 'certifications', name: "Certifications", image: certificate },
-  { id: 6, key: 'mobileapp', name: "Mobile", image: mobile },
+  { id: 6, key: 'Mobileapp', name: "Mobile", image: mobile },
 ];
 
 const Index = () => {
@@ -26,23 +26,23 @@ const Index = () => {
 
   const hanldeNextClick = (product) => {
     if (product?.id === 1) {
-      router.push('/productmanuals', { state: product })
+      router.push('/Productmanuals', { state: product })
       return;
     }
     if (product?.id === 2) {
-      router.push('/videos', { state: product })
+      router.push('/Videos', { state: product })
       return;
     }
     if (product?.id === 4) {
-      router.push('/catalogue', { state: product })
+      router.push('/Catalogue', { state: product })
       return;
     }
     if (product?.id === 5) {
-      router.push('/certifications', { state: product })
+      router.push('/Certifications', { state: product })
       return;
     }
     if (product?.id === 6) {
-      router.push('/mobileapp', { state: product })
+      router.push('/Mobileapp', { state: product })
       return;
     }
   };
