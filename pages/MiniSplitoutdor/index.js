@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Grid, Typography } from "@mui/material";
 import { notInclude, warrantyDetails } from "../../constants/dummyData";
 import Footer from "../footer/index"
 import styles from "../../styles/minisplit.module.css"
 import Image from "next/image";
 import OneYear from '../../public/one-year.webp'
+import FiveYear from '../../public/FiveYear.webp'
 import Header from '../../components/Header/index'
 
 
@@ -18,7 +19,7 @@ const Index = () => {
                     alt="orient_logo"
                     style={{ width: "170px", paddingTop: "10px" }}
                 />
-                <Typography variant="h4" style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px' }}>LIMITED WARRANTY</Typography>
+                <Typography variant="h4" style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px', color: '#343538' }}>LIMITED WARRANTY</Typography>
                 <Typography sx={{ fontSize: "15px", color: "#8A8A8A", marginTop: '10px' }}>
                     Mini Split Inverter Heat Pump InDoor Unit
                 </Typography>
@@ -27,21 +28,33 @@ const Index = () => {
             <div style={{
                 marginTop: '2rem',
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+
             }}>
-                <Typography sx={{
+                <Grid sx={{
                     marginBottom: '4%',
                     textAlign: 'center',
                 }} className={styles.div_second}>
                     <Image src={OneYear} width={160} alt="Logo" />
                     <Typography sx={{
-                        fontSize: "12px", fontFamily: "Helvetica,Arial,sans-serif,arial,serif"
+                        fontSize: "12px", fontFamily: "Helvetica,Arial,sans-serif,arial,serif", color: "#8A8A8A"
                     }}>
                         One(1)year on all parts
                     </Typography>
-                </Typography>
+                </Grid>
+                <Grid sx={{
+                    marginBottom: '4%',
+                    textAlign: 'center',
+                }} className={styles.div_second}>
+                    <Image src={FiveYear} width={160} alt="Logo" />
+                    <Typography sx={{
+                        fontSize: "12px", fontFamily: "Helvetica,Arial,sans-serif,arial,serif", color: "#8A8A8A"
+                    }}>Five(5)year on<br />
+                        compressor warranty
+                    </Typography>
+                </Grid>
             </div>
             <Box sx={{
                 width: '100%',
@@ -62,8 +75,8 @@ const Index = () => {
                     boxShadow: "none",
                 }}>
 
-                    <Typography
-                        component="div"
+                    <Grid
+
                         sx={{
                             fontSize: '14px',
                             lineHeight: 1.6,
@@ -96,7 +109,7 @@ const Index = () => {
                                 <li key={index}>{detail}</li>
                             ))}
                         </ol>
-                    </Typography>
+                    </Grid>
                 </Card>
                 <Card
                     sx={{
@@ -118,7 +131,7 @@ const Index = () => {
                             lg: '50%'
                         },
                     }}>
-                    <Typography sx={{
+                    <Grid sx={{
                         textAlign: 'left',
                         fontSize: '12px',
                         lineHeight: '16.8px',
@@ -146,7 +159,7 @@ const Index = () => {
                                 <li key={index}>{detail}</li>
                             ))}
                         </ol>
-                    </Typography>
+                    </Grid>
 
                 </Card>
             </Box>

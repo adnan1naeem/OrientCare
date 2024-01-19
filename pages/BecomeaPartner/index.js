@@ -15,12 +15,13 @@ const index = () => {
                         alt="orient_logo"
                         style={{ width: 160, paddingTop: "50px" }}
                     />
-                    <Typography sx={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px', paddingTop: '10px', textAlign: 'center' }} >
+                    <Typography sx={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px', paddingTop: '10px', textAlign: 'center', color: '#343538' }} >
                         WANT TO BE OUR PARTNER<br />
-                        <Typography style={{ fontSize: "15px", }}>
-                            Intrested in doing business with OrientCare?<br />
-                            Tell us more about your company
-                        </Typography>
+
+                    </Typography>
+                    <Typography style={{ fontSize: "15px", textAlign: 'center', color: '#8A8A8A' }}>
+                        Intrested in doing business with OrientCare?<br /><br />
+                        Tell us more about your company
                     </Typography>
 
 
@@ -68,9 +69,11 @@ const index = () => {
 
                         <div className={styles.form_checkbox_1}>
                             <input type='checkbox' className={styles.form_check_input} id='acceptCheckbox' />
-                            <label className={styles.form_check_label} for='acceptCheckbox'>I consent to having this website store my submitted information so they can respond to my inquiry.See our privacy policy to learn more how we use data.</label>
+                            <label className={styles.form_check_label} htmlFor='acceptCheckbox'>
+                                I consent to having this website store my submitted information so they can respond to my inquiry.
+                                See our privacy policy to learn more about how we use data.
+                            </label>
                         </div>
-
 
                         <div className={styles.form_submit}>
                             <input type='submit' className={styles.becomeapartner_btn} />

@@ -49,21 +49,21 @@ function NavBar() {
       warrantyKey: "MiniSplitIndor",
       warrantyNamme: "Mini Split Inverter Heat Pumps",
       warrantyList: [
-        { name: "Mini Split InDoor", key: "miniSplit" },
-        { name: "Mini Split OutDoor", key: "miniSplit" },
+        { name: "Mini Split InDoor", key: "MiniSplitIndor" },
+        { name: "Mini Split OutDoor", key: "MiniSplitoutdor" },
       ],
     },
     {
       warrantyKey: "MiniSplitIndor",
       warrantyNamme: "Multi-Zone Inverter Heat Pumps",
-      warrantyList: [{ name: "Multi Zone OutDoor", key: "outdoor" }],
+      warrantyList: [{ name: "Multi Zone OutDoor", key: "MiniSplitoutdor" }],
     },
     {
       warrantyKey: "",
       warrantyNamme: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
         { name: "Air Handler InDoor", key: "indoor" },
-        { name: "Air Handler OutDoor", key: "outdoor" },
+        { name: "Air Handler OutDoor", key: "MiniSplitoutdor" },
       ],
     },
     {

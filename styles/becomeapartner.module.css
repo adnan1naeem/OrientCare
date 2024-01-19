@@ -68,28 +68,34 @@
     outline: none;
     box-shadow: 0px 0px 2px aqua;
 }
+.form_checkbox_1 {
+    display: flex;  
+    align-items: flex-start;  
+    margin-left: 6rem;
 
-.form_checkbox_1{
-    width: 90%;
- }
+}
 
-.form_checkbox_1 input{
-    margin: 4px 0 0;
+.form_checkbox_1 input {
+    margin: 4px 8px 0 0; 
     line-height: normal;
     padding: 0;
     box-sizing: border-box;
 }
 
-.form_checkbox_1 label{
-    display: inline-block;
+.form_checkbox_1 label {
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
     color: #8a8a8a;
     font-size: 12px;
-    font-family: Helvetica,Arial,sans-serif,arial,serif;
-}
+    font-family: Helvetica, Arial, sans-serif, arial, serif;
+    align-items: center;
 
+}
+.form_check_label{
+     align-items: center;
+    padding-top: 4px;
+}
 #firstname{
     background-color: #a6a6a6;
 }
