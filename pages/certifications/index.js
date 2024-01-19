@@ -70,7 +70,7 @@ const Certifications = () => {
         <div className={styles.header}>
           <img className={styles.img} src={'images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={certificate} text={"Certificates"} />
+        <ImageText image={certificate} text={"Certificates"} top={'-2.5rem'} />
         <div className={styles.cercontainer}>
           {viewMore?.length <= 0 ?
             <>

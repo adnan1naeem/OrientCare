@@ -1,7 +1,8 @@
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, Grid } from '@mui/material'
 import React from 'react'
 import Footer from '../footer/index'
 import Header from '../../components/Header/index'
+import Link from "next/link";
 
 function index() {
     const paragraphText = () => {
@@ -13,6 +14,23 @@ function index() {
     return (
         <>
             <Header />
+            <Grid sx={{ ml: '10%', marginRight: '10%', pt: '25px' }}>
+                <Link
+                    href='/'
+                    activeStyle={{ color: '#4b6ee1' }}
+                    onMouseOver={(e) => { e.target.style.color = '#000'; }}
+                    onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}>
+                    <Typography variant="h6" style={{ display: 'inline', color: '#B5B7C4', fontSize: '11px', }}>
+                        HOME
+                    </Typography>
+                </Link>
+                <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
+                    {' / '}
+                </Typography>
+                <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
+                    PRIVACY POLICY
+                </Typography>
+            </Grid>
             <Box sx={{ ml: '10%', marginRight: '20%', pt: '25px' }}>
                 <Typography variant='f4' sx={{ color: '#343538', fontSize: '22px', fontWeight: '500', lineHeight: '29.5px' }}>
                     Privacy Policy
