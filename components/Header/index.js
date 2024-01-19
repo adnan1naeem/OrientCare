@@ -1,4 +1,5 @@
 import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import ChevronLeftIcon from "@mui/icons-material/Close";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
@@ -16,7 +17,6 @@ import { useRouter } from "next/router";
 import { Grid, Typography } from "@mui/material";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-
 const drawerWidth = 240;
 
 function NavBar() {
@@ -27,31 +27,31 @@ function NavBar() {
 
   const productArray = [
     {
-      productKey: "Products",
+      key: "Products",
       name: "MINI SPLIT INVERTER HEAT PUMPS",
     },
-    { productKey: "multi-zone", name: "MULTIZONE INVERTER HEAT PUMPS" },
+    { key: "multi-zone", name: "MULTIZONE INVERTER HEAT PUMPS" },
     {
-      productKey: "air-handler",
+      key: "air-handler",
       name: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
     },
-    { productKey: "SpareParts", name: "SPARE PARTS" },
+    { key: "SpareParts", name: "SPARE PARTS" },
   ];
 
   const partnerArray = [
     {
-      partnerKey: "BecomeaPartner",
+      key: "BecomeaPartner",
       name: "Become A Partner",
     },
     {
-      partnerKey: "PartnerCenter",
+      key: "PartnerCenter",
       name: "Partner Center",
     },
   ];
 
   const warrantyArray = [
     {
-      warrantyKey: "MiniSplitIndor",
+      key: "MiniSplitIndor",
       name: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "MiniSplitIndor" },
@@ -59,12 +59,12 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "MiniSplitIndor",
+      key: "MiniSplitIndor",
       name: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "MiniSplitoutdor" }],
     },
     {
-      warrantyKey: "",
+      key: "Air-Handler",
       name: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
         { name: "Air Handler InDoor", key: "MiniSplitIndor" },
@@ -72,7 +72,7 @@ function NavBar() {
       ],
     },
     {
-      warrantyKey: "WarrantyRegistration",
+      key: "WarrantyRegistration",
       name: "Warranty Registration",
       warrantyList: [],
     },
@@ -164,21 +164,21 @@ function NavBar() {
                       item?.text === "Warranty" ||
                       item?.text === "Products") &&
                       <IconButton sx={{ position: 'absolute', right: 3 }} onClick={() => handleSubmenuToggle(item)}>
-                        <AddIcon />
+                        {submenuVisibility[item?.text] ?  <RemoveIcon /> : <AddIcon />}
                       </IconButton>
                     }
                   </div>
-                
-                    {submenuVisibility[item?.text] && (
-                      <>
-                        {submenuList?.map((item) => (
-                         <Grid sx={{display:'flex', ml: '0.7rem',pt:'10px'}}>
-                            <MdOutlineKeyboardArrowRight />
-                            <Typography sx={{ fontSize: '10px',   width: '170px', }}>{item?.name}</Typography></Grid>
-                        ))}
-                      </>
-                    )}
-             
+                  {submenuVisibility[item?.text] && (
+                    <div>
+                      {submenuList?.map((item) => (
+                        <Grid href={`/${item?.key}`} onClick={()=> router.push(`/${item?.key}`)} sx={{ display: 'flex', ml: '0.7rem', pt: '10px' }}>
+                          <MdOutlineKeyboardArrowRight />
+                          <Typography sx={{ fontSize: '10px', width: '170px', }}>{item?.name}</Typography>
+                        </Grid>
+                      ))}
+                    </div>
+                  )}
+
                 </div>
               </ListItemButton>
             </ListItem>
@@ -208,8 +208,8 @@ function NavBar() {
                     {productArray?.map((product) => (
                       <Link
                         className={styles.navLinksDropDown}
-                        key={product?.productKey}
-                        href={`/${product.productKey}`}
+                        key={product?.key}
+                        href={`/${product.key}`}
                       >
                         {product?.name}
                       </Link>
@@ -227,8 +227,8 @@ function NavBar() {
                   <div className={styles.dropdownContent}>
                     {partnerArray?.map((partner) => (
                       <Link
-                        key={partner?.partnerKey}
-                        href={`/${partner.partnerKey}`}
+                        key={partner?.key}
+                        href={`/${partner.key}`}
                         className={styles.navLinksDropDown}
                       >
                         {partner?.name}
@@ -247,8 +247,8 @@ function NavBar() {
                   <div className={styles.dropdownContent}>
                     {warrantyArray?.map((warranty, index) => (
                       <div
-                        key={warranty?.warrantyKey + index}
-                        onClick={() => router.push(`/${warranty?.warrantyKey}`)}
+                        key={warranty?.key + index}
+                        onClick={() => router.push(`/${warranty?.key}`)}
                         className={styles.navLinksDropDown}
                       >
                         <div className={styles.warrantyArrow}>
