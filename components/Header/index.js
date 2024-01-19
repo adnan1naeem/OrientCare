@@ -13,41 +13,46 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import styles from "../../styles/header.module.css";
 import { useRouter } from "next/router";
+import { Grid, Typography } from "@mui/material";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 
 const drawerWidth = 240;
 
 function NavBar() {
+  const [submenuVisibility, setSubmenuVisibility] = React.useState({});
+  const [submenuList, setSubmenuList] = React.useState([]);
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
 
   const productArray = [
     {
       productKey: "Products",
-      productNamme: "MINI SPLIT INVERTER HEAT PUMPS",
+      name: "MINI SPLIT INVERTER HEAT PUMPS",
     },
-    { productKey: "", productNamme: "MULTIZONE INVERTER HEAT PUMPS" },
+    { productKey: "multi-zone", name: "MULTIZONE INVERTER HEAT PUMPS" },
     {
-      productKey: "",
-      productNamme: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
+      productKey: "air-handler",
+      name: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
     },
-    { productKey: "SpareParts", productNamme: "SPARE PARTS" },
+    { productKey: "SpareParts", name: "SPARE PARTS" },
   ];
 
   const partnerArray = [
     {
       partnerKey: "BecomeaPartner",
-      partnerNamme: "Become A Partner",
+      name: "Become A Partner",
     },
     {
       partnerKey: "PartnerCenter",
-      partnerNamme: "Partner Center",
+      name: "Partner Center",
     },
   ];
 
   const warrantyArray = [
     {
       warrantyKey: "MiniSplitIndor",
-      warrantyNamme: "Mini Split Inverter Heat Pumps",
+      name: "Mini Split Inverter Heat Pumps",
       warrantyList: [
         { name: "Mini Split InDoor", key: "MiniSplitIndor" },
         { name: "Mini Split OutDoor", key: "MiniSplitoutdor" },
@@ -55,12 +60,12 @@ function NavBar() {
     },
     {
       warrantyKey: "MiniSplitIndor",
-      warrantyNamme: "Multi-Zone Inverter Heat Pumps",
+      name: "Multi-Zone Inverter Heat Pumps",
       warrantyList: [{ name: "Multi Zone OutDoor", key: "MiniSplitoutdor" }],
     },
     {
       warrantyKey: "",
-      warrantyNamme: "Air Handler Unit Inverter Heat Pumps",
+      name: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
         { name: "Air Handler InDoor", key: "MiniSplitIndor" },
         { name: "Air Handler OutDoor", key: "MiniSplitoutdor" },
@@ -68,7 +73,7 @@ function NavBar() {
     },
     {
       warrantyKey: "WarrantyRegistration",
-      warrantyNamme: "Warranty Registration",
+      name: "Warranty Registration",
       warrantyList: [],
     },
   ];
@@ -93,12 +98,21 @@ function NavBar() {
   const menuList = [
     { text: "Home", key: "" },
     { text: "About Us", key: "aboutus" },
-    { text: "Products", key: "Products" },
-    { text: "Partners", key: "BecomeaPartner" },
-    { text: "Warranty", key: "warrantyRegistration" },
+    { text: "Products", key: "Products", subList: productArray },
+    { text: "Partners", key: "BecomeaPartner", subList: partnerArray },
+    { text: "Warranty", key: "warrantyRegistration", subList: warrantyArray },
     { text: "Downloads", key: "downloads" },
     { text: "Contact Us", key: "contact" },
   ];
+
+  const handleSubmenuToggle = (item) => {
+    console.log(item?.subList)
+    setSubmenuList([...item?.subList]);
+    setSubmenuVisibility((prev) => ({
+      ...Object.fromEntries(Object.keys(prev).map((key) => [key, false])),
+      [item.text]: !prev[item.text],
+    }));
+  };
 
   return (
     <div>
@@ -141,13 +155,30 @@ function NavBar() {
           {menuList?.map((item) => (
             <ListItem key={item?.key} disablePadding>
               <ListItemButton>
-                <div className={styles.menuListDisplay}>
-                  <Link className={styles.navLinks} href={`/${item?.key}`}>
-                    {item?.text}
-                  </Link>
-                  {(item?.text === "Partners" ||
-                    item?.text === "Warranty" ||
-                    item?.text === "Products") && <AddIcon />}
+                <div className={styles.subMenuList}>
+                  <div className={styles.menuListDisplay}>
+                    <Link className={styles.navLinks} href={`/${item?.key}`}>
+                      {item?.text}
+                    </Link>
+                    {(item?.text === "Partners" ||
+                      item?.text === "Warranty" ||
+                      item?.text === "Products") &&
+                      <IconButton sx={{ position: 'absolute', right: 3 }} onClick={() => handleSubmenuToggle(item)}>
+                        <AddIcon />
+                      </IconButton>
+                    }
+                  </div>
+                
+                    {submenuVisibility[item?.text] && (
+                      <>
+                        {submenuList?.map((item) => (
+                         <Grid sx={{display:'flex', ml: '0.7rem',pt:'10px'}}>
+                            <MdOutlineKeyboardArrowRight />
+                            <Typography sx={{ fontSize: '10px',   width: '170px', }}>{item?.name}</Typography></Grid>
+                        ))}
+                      </>
+                    )}
+             
                 </div>
               </ListItemButton>
             </ListItem>
@@ -180,7 +211,7 @@ function NavBar() {
                         key={product?.productKey}
                         href={`/${product.productKey}`}
                       >
-                        {product?.productNamme}
+                        {product?.name}
                       </Link>
                     ))}
                   </div>
@@ -200,7 +231,7 @@ function NavBar() {
                         href={`/${partner.partnerKey}`}
                         className={styles.navLinksDropDown}
                       >
-                        {partner?.partnerNamme}
+                        {partner?.name}
                       </Link>
                     ))}
                   </div>
@@ -214,14 +245,14 @@ function NavBar() {
                 </Link>
                 {warrantyArray?.length > 0 && (
                   <div className={styles.dropdownContent}>
-                    {warrantyArray?.map((warranty) => (
+                    {warrantyArray?.map((warranty, index) => (
                       <div
-                        key={warranty?.warrantyKey}
+                        key={warranty?.warrantyKey + index}
                         onClick={() => router.push(`/${warranty?.warrantyKey}`)}
                         className={styles.navLinksDropDown}
                       >
                         <div className={styles.warrantyArrow}>
-                          {warranty?.warrantyNamme}
+                          {warranty?.name}
                           {warranty?.warrantyList &&
                             warranty?.warrantyList.length > 0 && (
                               <IoIosArrowForward style={{ marginTop: "3%" }} />
@@ -234,9 +265,9 @@ function NavBar() {
                               : styles.nesteddropdowns
                           }
                         >
-                          {warranty?.warrantyList?.map((element) => (
+                          {warranty?.warrantyList?.map((element, index) => (
                             <Link
-                              key={element?.key}
+                              key={element?.key + index}
                               href={`/${element?.key}`}
                               className={styles.insidenesteddropdowns}
                             >
