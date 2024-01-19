@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react'
 
 
-function Filters() {
+function Filters({ pageName }) {
     return (
 
         <Card sx={{
@@ -29,7 +29,7 @@ function Filters() {
                     {' / '}
                 </Typography>
                 <Typography variant="h6" style={{ display: 'inline', color: '#343538', fontSize: '11px' }}>
-                    MINI SPLITS
+                    {pageName}
                 </Typography>
             </div>
             <Typography sx={{

@@ -16,10 +16,10 @@ function Footer() {
       >
         <FooterLogoCard />
         <FooterCard
-          to1={"/"}
+          to1={"/Products"}
           to2={"/"}
           to3={"/"}
-          to4={"/spareParts"}
+          to4={"/SpareParts"}
           text1="Mini Split Inverter Heat Pumps"
           text2="Multizone Inverter Heat Pumps"
           text3="Air Handler Unit Inverter Heat pumps"

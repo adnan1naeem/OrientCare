@@ -30,10 +30,10 @@ const CardComponent = ({ Array }) => {
                             <Card
                                 sx={{
                                     width: {
-                                        sx: '160px',
+                                        xs: '160px',
                                         sm: '140px',
                                         md: '190px',
-                                        lg: '199px'
+                                        lg: '190px'
                                     },
                                     marginLeft: '5px',
                                     marginTop: '3rem',
@@ -44,7 +44,9 @@ const CardComponent = ({ Array }) => {
                                     flexDirection: 'column',
                                 }}
                             >
-                                <Image src={card.img} alt="card img" className={styles.CenteredImage} />
+                                <div className={styles.ImageProducts}>
+                                    <Image src={card.img} alt="card img" className={styles.CenteredImage} />
+                                </div>
                                 <Typography
                                     sx={{
                                         marginTop: '15px',

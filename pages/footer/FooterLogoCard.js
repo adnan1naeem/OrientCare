@@ -1,6 +1,5 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
-// import logo from '../../public/care-logo.png'
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { TiSocialInstagram } from "react-icons/ti";
@@ -26,7 +25,7 @@ function FooterLogoCard() {
                     justifyContent: 'center'
                 }}>
                     <img
-                        src={"../../public/care-logo.png"}
+                        src={"/images/logo.avif"}
                         alt=""
                         style={{ width: '12rem', paddingBottom: '16px', marginLeft: '1rem' }}
                     />
@@ -43,7 +42,7 @@ function FooterLogoCard() {
                         FOLLOW US
                     </Typography>
 
-                    <Box sx={{ display: 'flex', gap: '5%', paddingTop: '6px', marginLeft: '2rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
+                    <Box sx={{ display: 'flex', gap: '5%', paddingTop: '1rem', marginLeft: '2rem', width: { sx: "27rem", sm: '17rem', md: '19rem', lg: '23rem' } }}>
                         <FaFacebookF className="icon" />
                         <FaTwitter className="icon" />
                         <ImYoutube2 className="icon" />

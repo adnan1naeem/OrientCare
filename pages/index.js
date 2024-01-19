@@ -97,7 +97,7 @@ const Index = () => {
           <h2>MULTIZONE INVERTER HEAT PUMPS</h2>
         </div>
         <BannerImage containerImage={smart_image2} />
-        <div className={styles.heading_two}>
+        <div className={styles.heading_one}>
           <h2>AIR HANDLER UNIT INVERTER HEAT PUMP</h2>
         </div>
         <BannerImage containerImage={air_handler} />
@@ -128,6 +128,7 @@ const Index = () => {
               color: "#8a8a8a",
               marginBottom: 3,
               textAlign: "center",
+              mt: '0.7rem'
             }}
           >
             OrientCare is synonymous with technologically advanced products

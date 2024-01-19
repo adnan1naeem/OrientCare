@@ -27,12 +27,12 @@ function Index() {
                         flexWrap: 'wrap'
                     }}>
                     {isLargeScreen && (
-                        <Filters />
+                        <Filters pageName={"SPARE PARTS"} />
                     )}
                     <Card
                         sx={{
                             width: { xs: "100%", sm: '100%', md: '100%', lg: '70%' }, background: "none",
-                            boxShadow: "none", marginTop: '1rem',
+                            boxShadow: "none", marginTop: '5rem',
                         }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Grid sx={{ display: 'flex', alignItems: 'center' }}>

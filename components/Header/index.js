@@ -62,7 +62,7 @@ function NavBar() {
       warrantyKey: "",
       warrantyNamme: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
-        { name: "Air Handler InDoor", key: "indoor" },
+        { name: "Air Handler InDoor", key: "MiniSplitIndor" },
         { name: "Air Handler OutDoor", key: "MiniSplitoutdor" },
       ],
     },

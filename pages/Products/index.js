@@ -30,13 +30,13 @@ function Index() {
 
                     {isLargeScreen && (
                         <>
-                            <Filters />
+                            <Filters pageName={"MINI SPLITS"} />
                         </>
                     )}
                     <Card
                         sx={{
                             width: { xs: "100%", sm: '100%', md: '85%', lg: '73%' }, background: "none",
-                            boxShadow: "none", marginTop: '4rem',
+                            boxShadow: "none", marginTop: '5rem',
                         }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Grid sx={{ display: 'flex', alignItems: 'center' }}>
