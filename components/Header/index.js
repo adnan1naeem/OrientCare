@@ -30,12 +30,12 @@ function NavBar() {
       productKey: "",
       productNamme: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
     },
-    { productKey: "spareParts", productNamme: "SPARE PARTS" },
+    { productKey: "SpareParts", productNamme: "SPARE PARTS" },
   ];
 
   const partnerArray = [
     {
-      partnerKey: "PartnerSubPage",
+      partnerKey: "BecomeaPartner",
       partnerNamme: "Become A Partner",
     },
     {
