@@ -158,18 +158,18 @@ function NavBar() {
         <div className={styles.navContainer}>
           <ul className={open ? styles.navMenuActive : styles.navMenu}>
             <li className={styles.navItem}>
-              <Link className={styles.navLinks} href="/">
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/">
                 Home
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={styles.navLinks} href="/aboutus">
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/aboutus">
                 About Us
               </Link>
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={styles.navLinks} href="/Products">
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/Products">
                   Products
                 </Link>
                 {productArray?.length > 0 && (
@@ -189,7 +189,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={styles.navLinks} href="/BecomeaPartner">
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/BecomeaPartner">
                   Partners
                 </Link>
                 {partnerArray?.length > 0 && (
@@ -209,7 +209,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link href="/WarrantyRegistration" className={styles.navLinks}>
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/WarrantyRegistration" >
                   Warranty
                 </Link>
                 {warrantyArray?.length > 0 && (
@@ -251,12 +251,12 @@ function NavBar() {
               </div>
             </li>
             <li className={styles.navItem}>
-              <Link href="/Downloads" className={styles.navLinks}>
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/Downloads" >
                 Downloads
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/ContactUs" className={styles.navLinks}>
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/ContactUs" >
                 Contact Us
               </Link>
             </li>

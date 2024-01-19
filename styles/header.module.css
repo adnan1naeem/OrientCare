@@ -149,7 +149,7 @@
 
 .navLinks {
   color:#333333;
-  font-family: Helvetica,Arial,sans-serif,arial,serif;;
+  font-family: Helvetica,Arial,sans-serif,arial,serif;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -235,4 +235,11 @@
   .mainLogo {
     margin-left: 12%;
   }
+}
+
+.navLinksRed {
+  color: #333333;
+  font-size: 14px;
+  font-family: Helvetica,Arial,sans-serif,arial,serif;
+
 }
