@@ -1,10 +1,11 @@
 import React from 'react'
 import Footer from '../footer/index';
 import styles from '../../styles/becomeapartner.module.css'
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import Header from '../../components/Header/index'
 
-const index = () => {
+const Index = () => {
+
     return (
         <>
             <Header />
@@ -17,20 +18,15 @@ const index = () => {
                     />
                     <Typography sx={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px', paddingTop: '10px', textAlign: 'center', color: '#343538' }} >
                         WANT TO BE OUR PARTNER<br />
-
                     </Typography>
                     <Typography style={{ fontSize: "15px", textAlign: 'center', color: '#8A8A8A' }}>
                         Intrested in doing business with OrientCare?<br /><br />
                         Tell us more about your company
                     </Typography>
-
-
                 </div>
 
-
-
                 <div className={styles.element1}>
-                    <form method="POST" className={styles.becomeapartner_form}>
+                    <form className={styles.becomeapartner_form}>
                         <div className={styles.input_element}>
                             <div className={styles.form_group}>
                                 <label for="firstName">First Name</label>
@@ -48,7 +44,7 @@ const index = () => {
                             </div>
                             <div className={styles.form_group}>
                                 <label for="phonenumber">Phone Number</label>
-                                <input type="number" className={styles.form_control_1} id="Email" name="Email" required />
+                                <input type="number" className={styles.form_control_1} id="number" name="number" required />
                             </div>
                         </div>
                         <div className={styles.input_element}>
@@ -74,10 +70,22 @@ const index = () => {
                                 See our privacy policy to learn more about how we use data.
                             </label>
                         </div>
+                        <Button
+                            sx={{
 
-                        <div className={styles.form_submit}>
-                            <input type='submit' className={styles.becomeapartner_btn} />
-                        </div>
+                                background: '#5cd6d6',
+                                width: '185px',
+                                height: '50px',
+                                fontWeight: '600',
+                                textTransform: 'none',
+                                marginBottom: '3rem',
+                                mt: '3.5rem',
+                            }}
+                            variant="contained"
+                            type="submit"
+                        >
+                            submit
+                        </Button>
                     </form>
                 </div>
                 <Footer />
@@ -87,4 +95,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

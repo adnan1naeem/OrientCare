@@ -70,7 +70,7 @@ function Filters({ pageName }) {
                     AIR HANDLER UNIT INVERTER HEAT PUMPS
                 </Typography>
             </Link>
-            <Link href='/SpareParts'
+            <Link href='/spareparts'
                 activeStyle={{ color: '#4b6ee1' }}
                 onMouseOver={(e) => { e.target.style.color = '#4b6ee1'; }}
                 onMouseOut={(e) => { e.target.style.color = '#8A8A8A'; }}>

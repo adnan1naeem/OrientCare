@@ -13,12 +13,12 @@ import { useRouter } from "next/router";
 import Header from '../../components/Header/index'
 
 const products = [
-  { id: 1, key: 'Productmanuals', name: "Product Manuals", image: product },
-  { id: 2, key: 'Videos', name: "Videos", image: videos },
+  { id: 1, key: 'productmanuals', name: "Product Manuals", image: product },
+  { id: 2, key: 'videos', name: "Videos", image: videos },
   { id: 3, key: '', name: "Blogs", image: blog },
-  { id: 4, key: 'Catalogue', name: "Catalouge", image: catalouge },
-  { id: 5, key: 'Certifications', name: "Certifications", image: certificate },
-  { id: 6, key: 'Mobileapp', name: "Mobile", image: mobile },
+  { id: 4, key: 'catalogue', name: "Catalouge", image: catalouge },
+  { id: 5, key: 'certifications', name: "Certifications", image: certificate },
+  { id: 6, key: 'mobileapp', name: "Mobile", image: mobile },
 ];
 
 const Index = () => {
@@ -26,23 +26,23 @@ const Index = () => {
 
   const hanldeNextClick = (product) => {
     if (product?.id === 1) {
-      router.push('/Productmanuals', { state: product })
+      router.push('/productmanuals', { state: product })
       return;
     }
     if (product?.id === 2) {
-      router.push('/Videos', { state: product })
+      router.push('/videos', { state: product })
       return;
     }
     if (product?.id === 4) {
-      router.push('/Catalogue', { state: product })
+      router.push('/catalogue', { state: product })
       return;
     }
     if (product?.id === 5) {
-      router.push('/Certifications', { state: product })
+      router.push('/certifications', { state: product })
       return;
     }
     if (product?.id === 6) {
-      router.push('/Mobileapp', { state: product })
+      router.push('/mobileapp', { state: product })
       return;
     }
   };

@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageText from '../Downloads/components/imageText.js';
+import ImageText from '../downloads/components/imageText.js';
 import playstore from '../../public/play.webp'
 import appstore from '../../public/App.webp'
 import Footer from '../footer/index.js';

@@ -1,7 +1,7 @@
 import { Box, TextField, Typography } from '@mui/material'
 import React from 'react'
 
-const InputFields = ({ title, multi, type, name, width }) => {
+const InputFields = ({ title, multi, type, name, width, required }) => {
     return (
         <div>
             <Typography variant='h5'
@@ -49,21 +49,27 @@ const InputFields = ({ title, multi, type, name, width }) => {
                         rows={4}
                         fullWidth
                         name={name}
+                        required={required}
+
                     />
                     :
                     <TextField
                         id="fullWidth"
-                        required
                         size={"small"}
                         fullWidth
                         type={type}
                         name={name}
+                        required={required}
+                        autoComplete={false}
                         sx={{
                             '& .MuiOutlinedInput-input': {
                                 paddingY: '5px',
+                                '&:-webkit-autofill': {
+                                    WebkitBoxShadow:
+                                        '0 0 0 100px #F2F2F2 inset',
+                                },
                             },
                             height: '42px',
-
                         }}
                     />
                 }

@@ -16,28 +16,28 @@ function Footer() {
       >
         <FooterLogoCard />
         <FooterCard
-          to1={"/Products"}
+          to1={"/products"}
           to2={"/"}
           to3={"/"}
-          to4={"/SpareParts"}
+          to4={"/spareparts"}
           text1="Mini Split Inverter Heat Pumps"
           text2="Multizone Inverter Heat Pumps"
           text3="Air Handler Unit Inverter Heat pumps"
           text4="Spare Parts"
         />
         <FooterCard
-          to1={"/PartnerCenter"}
-          to2={"/BecomeaPartner"}
-          to3={"/Downloads"}
-          to4={"/ContactUs"}
+          to1={"/partnercenter"}
+          to2={"/becomeapartner"}
+          to3={"/downloads"}
+          to4={"/contactus"}
           text1="Partners Center"
           text2="Become a Partner"
-          text3="Downloads"
+          text3="downloads"
           text4="Contact Us"
         />
         <FooterCard
-          to1={"/TermsAndConditions"}
-          to2={"/PrivacyPolicy"}
+          to1={"/termsandconditions"}
+          to2={"/privacypolicy"}
           to3={"/"}
           to4={"/"}
           text1="Term & Condition"

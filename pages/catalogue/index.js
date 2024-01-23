@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageText from '../Downloads/components/imageText.js';
+import ImageText from '../downloads/components/imageText.js';
 // import pdf from './../../../Assets/pdf/Mini_Splits_Inverter_Heat_Pump.pdf'
 import catalogueImage from '../../public/Catalogue.webp'
 import Footer from '../footer/index.js';
@@ -11,7 +11,7 @@ import catalouge from '../../public/images/catalouge.WEBP'
 import Header from "../../components/Header/index.js"
 
 
-const Catalogue = () => {
+const Index = () => {
 
   const pdfFiles = [
     {
@@ -49,4 +49,4 @@ const Catalogue = () => {
   );
 };
 
-export default Catalogue;
+export default Index;

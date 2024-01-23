@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from '../../styles/product.module.css'
 import { Box, Card, Divider, Typography, Grid } from '@mui/material'
-import SortBy from '../Products/SortBy'
-import Cards from '../Products/Cards'
+import SortBy from '../products/SortBy'
+import Cards from '../products/Cards'
 import Footer from '../footer/index'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { spareParts } from '../../constants/ArrayValues'
-import Filters from '../Products/Filters'
-import Dropdown from '../Products/Dropdown';
+import Filters from '../products/Filters'
+import Dropdown from '../products/Dropdown';
 import Header from '../../components/Header/index'
 
 function Index() {

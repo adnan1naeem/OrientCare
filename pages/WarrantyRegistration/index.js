@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../footer/index';
 import styles from '../../styles/warrantyregistration.module.css'
 import Header from '../../components/Header/index'
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import Link from "next/link";
 
 const Index = () => {
@@ -54,12 +54,27 @@ const Index = () => {
                 <label for='serialnumber'>Serial Number</label>
                 <input type='text' id='serial-num' className={styles.serialnum} />
               </div>
-              <div className={styles.Regformgroup}>
-                <Link href={"WarrantyRegistrationForm"}>
+              <Link href={"warrantyregistrationform"}>
+                <Button
+                  sx={{
+                    background: '#5cd6d6',
+                    width: '10rem',
+                    height: '3rem',
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    mt: '2rem'
+                  }}
+                  variant="contained"
+                  type='submit'
+                >
+                  Next
+                </Button>
+              </Link>
+              {/* <div className={styles.Regformgroup}>
+                <Link href={"warrantyregistrationform"}>
                   <input type='submit' value={'Next'} />
                 </Link>
-
-              </div>
+              </div> */}
             </form>
           </div>
           <div className={styles.partright}>

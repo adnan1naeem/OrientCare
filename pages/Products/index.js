@@ -8,7 +8,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { miniSplit } from '../../constants/ArrayValues'
 import Filters from './Filters'
 import Footer from '../footer/index'
-import Dropdown from '../Products/Dropdown';
+import Dropdown from '../products/Dropdown';
 import Header from '../../components/Header/index'
 
 function Index() {
@@ -35,7 +35,7 @@ function Index() {
                     )}
                     <Card
                         sx={{
-                            width: { xs: "100%", sm: '100%', md: '85%', lg: '73%' }, background: "none",
+                            width: { xs: "100%", sm: '100%', md: '85%', lg: '70%' }, background: "none",
                             boxShadow: "none", marginTop: '5rem',
                         }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>

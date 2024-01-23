@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageText from '../Downloads/components/imageText';
+import ImageText from '../downloads/components/imageText';
 import Footer from '../footer/index';
 import styles from '../../styles/videos.module.css'
 import video from '../../public/images/videos.WEBP'
@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Header from '../../components/Header/index'
 import Link from 'next/link'
 
-const Videos = () => {
+const Index = () => {
 
   return (
     <div>
@@ -45,4 +45,4 @@ const Videos = () => {
   );
 };
 
-export default Videos;
+export default Index;

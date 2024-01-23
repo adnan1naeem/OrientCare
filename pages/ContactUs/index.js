@@ -8,11 +8,26 @@ import emailjs from "@emailjs/browser";
 
 function Index() {
     const form = useRef();
-    const [showAlert, setShowAlert] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        const formFields = form.current.elements;
+        let isValid = true;
+
+        for (let i = 0; i < formFields?.length - 1; i++) {
+            if (formFields[i]?.value?.trim() === '') {
+                isValid = false;
+                break;
+            }
+        }
+
+        if (!isValid) {
+            alert("Please fill all the fields value.")
+            return;
+        }
+
         setLoading(true);
 
         emailjs
@@ -24,10 +39,12 @@ function Index() {
             )
             .then(
                 (result) => {
-                    console.log("Res::: ", result.text);
-                    handleClick()
+                    if (result?.text === "OK") {
+                        alert("Your action was completed successfully.")
+                    }
                 },
                 (error) => {
+                    alert(error.text)
                     console.log("Error::: ", error.text);
                 }
             )
@@ -36,16 +53,13 @@ function Index() {
             });
     };
 
-    const handleClick = () => {
-        setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 7000);
-    };
+
 
 
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div>
                 <Grid item sx={{ marginTop: '73px', textAlign: "center" }}>
                     <img src={'images/logo.avif'} alt="Logo" style={{ maxWidth: '160px' }} />
@@ -87,10 +101,11 @@ function Index() {
                             name="contactForm"
                             sx={{ paddingTop: '3.5rem' }}>
 
-                            <InputFields name="to_name" title={"Your Name"} />
-                            <InputFields name="from_email" title={"Your email"} />
-                            <InputFields name="subject" title={"Subject"} />
-                            <InputFields name="message" multi title={"Your Message"} />
+
+                            <InputFields required={true} name="to_name" title={"Your Name"} />
+                            <InputFields required={true} name="from_email" title={"Your email"} />
+                            <InputFields required={true} name="subject" title={"Subject"} />
+                            <InputFields required={true} name="message" multi title={"Your Message"} />
                             <FormControlLabel
                                 control={<Checkbox />}
                                 label={

@@ -4,7 +4,7 @@ import Banner from '../../public/intelligent-smart.webp'
 import { Grid, Box, Typography, Card } from '@mui/material'
 import { SubProductsImages } from '../../constants/ArrayValues'
 import Footer from '../footer/index'
-import ProductSlider from '../Products/Products_Slider/index'
+import ProductSlider from '../products/Products_Slider/index'
 import Image from 'next/image'
 import Header from '../../components/Header/index'
 

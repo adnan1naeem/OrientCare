@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageText from '../Downloads/components/imageText';
+import ImageText from '../downloads/components/imageText';
 import Footer from '../footer/index';
 import styles from '../../styles/productmanuals.module.css';
 import mobile from "../../public/images/mobile-app.WEBP";
@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Typography } from '@mui/material';
 import Header from '../../components/Header/index'
 
-const ProductManuals = () => {
+const Index = () => {
 
   const pdfFiles = [
     { file: '/pdf/Remote_Controller_User_Manual.pdf', image: 'https://cdn.shopify.com/s/files/1/0767/9832/9113/files/002.jpg?v=1692279950', name: "Mini Split Inverter Heat Pump Remote Controller Manual" },
@@ -44,4 +44,4 @@ const ProductManuals = () => {
   );
 };
 
-export default ProductManuals;
+export default Index;

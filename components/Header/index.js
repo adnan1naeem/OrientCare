@@ -27,52 +27,52 @@ function NavBar() {
 
   const productArray = [
     {
-      key: "Products",
+      key: "products",
       name: "MINI SPLIT INVERTER HEAT PUMPS",
     },
-    { key: "multi-zone", name: "MULTIZONE INVERTER HEAT PUMPS" },
+    { key: "/", name: "MULTIZONE INVERTER HEAT PUMPS" },
     {
-      key: "air-handler",
+      key: "/",
       name: "AIR HANDLER UNIT INVERTER HEAT PUMPS",
     },
-    { key: "SpareParts", name: "SPARE PARTS" },
+    { key: "spareparts", name: "SPARE PARTS" },
   ];
 
   const partnerArray = [
     {
-      key: "BecomeaPartner",
+      key: "becomeapartner",
       name: "Become A Partner",
     },
     {
-      key: "PartnerCenter",
+      key: "partnercenter",
       name: "Partner Center",
     },
   ];
 
   const warrantyArray = [
     {
-      key: "MiniSplitIndor",
+      key: "minisplitIndor",
       name: "Mini Split Inverter Heat Pumps",
       warrantyList: [
-        { name: "Mini Split InDoor", key: "MiniSplitIndor" },
-        { name: "Mini Split OutDoor", key: "MiniSplitoutdor" },
+        { name: "Mini Split InDoor", key: "minisplitIndor" },
+        { name: "Mini Split OutDoor", key: "minisplitoutdor" },
       ],
     },
     {
-      key: "MiniSplitIndor",
+      key: "minisplitIndor",
       name: "Multi-Zone Inverter Heat Pumps",
-      warrantyList: [{ name: "Multi Zone OutDoor", key: "MiniSplitoutdor" }],
+      warrantyList: [{ name: "Multi Zone OutDoor", key: "minisplitoutdor" }],
     },
     {
       key: "/",
       name: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
-        { name: "Air Handler InDoor", key: "MiniSplitIndor" },
-        { name: "Air Handler OutDoor", key: "MiniSplitoutdor" },
+        { name: "Air Handler InDoor", key: "minisplitIndor" },
+        { name: "Air Handler OutDoor", key: "minisplitoutdor" },
       ],
     },
     {
-      key: "WarrantyRegistration",
+      key: "warrantyregistration",
       name: "Warranty Registration",
       warrantyList: [],
     },
@@ -98,9 +98,9 @@ function NavBar() {
   const menuList = [
     { text: "Home", key: "" },
     { text: "About Us", key: "aboutus" },
-    { text: "Products", key: "Products", subList: productArray },
-    { text: "Partners", key: "BecomeaPartner", subList: partnerArray },
-    { text: "Warranty", key: "warrantyRegistration", subList: warrantyArray },
+    { text: "Products", key: "products", subList: productArray },
+    { text: "Partners", key: "becomeapartner", subList: partnerArray },
+    { text: "Warranty", key: "warrantyregistration", subList: warrantyArray },
     { text: "Downloads", key: "downloads" },
     { text: "Contact Us", key: "contact" },
   ];
@@ -162,7 +162,7 @@ function NavBar() {
                     </Link>
                     {(item?.text === "Partners" ||
                       item?.text === "Warranty" ||
-                      item?.text === "Products") &&
+                      item?.text === "products") &&
                       <IconButton sx={{ position: 'absolute', right: 3 }} onClick={() => handleSubmenuToggle(item)}>
                         {submenuVisibility[item?.text] ? <RemoveIcon /> : <AddIcon />}
                       </IconButton>
@@ -200,7 +200,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/Products">
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/products">
 
                   Products
                 </Link>
@@ -228,7 +228,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/BecomeaPartner">
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/becomeapartner">
                   Partners
                 </Link>
                 {partnerArray?.length > 0 && (
@@ -244,7 +244,7 @@ function NavBar() {
                             color: '#8A8A8A',
                           },
                         }}>
-                          {partner?.name.toUpperCase()}
+                          {partner?.name?.toUpperCase()}
                         </Typography>
 
                       </Link>
@@ -255,7 +255,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/WarrantyRegistration" >
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/warrantyregistration" >
                   Warranty
                 </Link>
                 {warrantyArray?.length > 0 && (
@@ -266,22 +266,27 @@ function NavBar() {
                         onClick={() => router.push(`/${warranty?.key}`)}
                         className={styles.navLinksDropDown}
                       >
-                        <Typography sx={{
-                          color: '#000', fontSize: '12px', '&:hover': {
-                            color: '#8A8A8A',
+                        <div className={styles.warrantyArrow}>
+                          <Typography sx={{
+                            color: '#000', fontSize: '12px', '&:hover': {
+                              color: '#8A8A8A',
 
-                          },
-                        }}>
-                          <div className={styles.warrantyArrow}>
+                            }
+                          }}>
+                            {warranty?.name?.toUpperCase()}
+                          </Typography>
+                          <Typography sx={{
+                            color: '#000', fontSize: '12px', '&:hover': {
+                              color: '#8A8A8A',
 
-                            {warranty?.name.toUpperCase()}
+                            },
+                          }}>
                             {warranty?.warrantyList &&
                               warranty?.warrantyList.length > 0 && (
                                 <IoIosArrowForward style={{ marginTop: '1%' }} />
                               )}
-
-                          </div>
-                        </Typography>
+                          </Typography>
+                        </div>
                         <div
                           className={
                             warranty?.warrantyList.length <= 0
@@ -300,7 +305,7 @@ function NavBar() {
                                   color: '#8A8A8A',
                                 },
                               }}>
-                                {element?.name.toUpperCase()}
+                                {element?.name?.toUpperCase()}
                               </Typography>
                             </Link>
 
@@ -313,12 +318,12 @@ function NavBar() {
               </div>
             </li>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/Downloads" >
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/downloads" >
                 Downloads
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/ContactUs" >
+              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/contactus" >
                 Contact Us
               </Link>
             </li>
