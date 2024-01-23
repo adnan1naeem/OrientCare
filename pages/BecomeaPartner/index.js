@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../footer/index';
 import styles from '../../styles/becomeapartner.module.css'
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Grid } from '@mui/material';
 import Header from '../../components/Header/index'
 
 const Index = () => {
@@ -70,23 +70,29 @@ const Index = () => {
                                 See our privacy policy to learn more about how we use data.
                             </label>
                         </div>
-                        <Button
+                        <Grid
                             sx={{
-
-                                background: '#5cd6d6',
-                                width: '185px',
-                                height: '50px',
-                                fontWeight: '600',
-                                textTransform: 'none',
-                                marginBottom: '3rem',
-                                mt: '3.5rem',
-                            }}
-                            variant="contained"
-                            type="submit"
-                        >
-                            submit
-                        </Button>
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex",
+                            }}>
+                            <Button
+                                sx={{
+                                    background: '#5cd6d6',
+                                    width: '185px',
+                                    height: '50px',
+                                    fontWeight: '600',
+                                    textTransform: 'none',
+                                    marginBottom: '3rem',
+                                    mt: '3.5rem',
+                                }}
+                                variant="contained"
+                            >
+                                Submit
+                            </Button>
+                        </Grid>
                     </form>
+
                 </div>
                 <Footer />
             </div>
