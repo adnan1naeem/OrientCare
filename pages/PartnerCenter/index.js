@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../footer/index';
 import styles from '../../styles/partnercenter.module.css'
 import Header from '../../components/Header/index'
+import ReCAPTCHA from "react-google-recaptcha";
 
 const index = () => {
     return (
@@ -23,12 +24,21 @@ const index = () => {
                             <input type='password' name='password' placeholder='PASSWORD' />
                         </div>
                         <div className={styles.partnercenter_submit}>
-                            <input type='submit' name='submit' />
+                            <input type='submit' name='submit' value='LOGIN' />
+                        </div>
+                        <div className={styles.captcha}>
+                            <ReCAPTCHA
+                                sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
+                                onChange={(value) => console.log("Captcha value:", value)}
+                            />
                         </div>
                     </form>
+
                 </div>
-                <Footer />
+
+
             </div>
+            <Footer />
         </>
     )
 }

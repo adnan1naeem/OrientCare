@@ -3,6 +3,7 @@ import Footer from '../footer/index';
 import styles from '../../styles/warrantyregistration.module.css'
 import Header from '../../components/Header/index'
 import { Typography } from '@mui/material';
+import Link from "next/link";
 
 const Index = () => {
   return (
@@ -54,7 +55,10 @@ const Index = () => {
                 <input type='text' id='serial-num' className={styles.serialnum} />
               </div>
               <div className={styles.Regformgroup}>
-                <input type='submit' value={'Next'} />
+                <Link href={"WarrantyRegistrationForm"}>
+                  <input type='submit' value={'Next'} />
+                </Link>
+
               </div>
             </form>
           </div>

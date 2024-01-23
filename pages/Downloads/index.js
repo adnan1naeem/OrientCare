@@ -13,11 +13,11 @@ import { useRouter } from "next/router";
 import Header from '../../components/Header/index'
 
 const products = [
-  { id: 1, key: 'productmanuals', name: "Product Manuals", image: product },
-  { id: 2, key: 'videos', name: "Videos", image: videos },
+  { id: 1, key: 'Productmanuals', name: "Product Manuals", image: product },
+  { id: 2, key: 'Videos', name: "Videos", image: videos },
   { id: 3, key: '', name: "Blogs", image: blog },
-  { id: 4, key: 'catalogue', name: "Catalouge", image: catalouge },
-  { id: 5, key: 'certifications', name: "Certifications", image: certificate },
+  { id: 4, key: 'Catalogue', name: "Catalouge", image: catalouge },
+  { id: 5, key: 'Certifications', name: "Certifications", image: certificate },
   { id: 6, key: 'Mobileapp', name: "Mobile", image: mobile },
 ];
 

@@ -1,11 +1,48 @@
-import React from 'react';
-import { Typography, Grid, Checkbox, FormControlLabel, Button, Box } from '@mui/material';
+import React, { useRef, useState } from 'react';
+import { Typography, Grid, Checkbox, FormControlLabel, Button, Box, CircularProgress } from '@mui/material';
 import InputFields from './inputFields';
 import Footer from '../footer/index';
 import Header from '../../components/Header/index'
+import emailjs from "@emailjs/browser";
 
 
 function Index() {
+    const form = useRef();
+    const [showAlert, setShowAlert] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        emailjs
+            .sendForm(
+                "service_m7iviec",
+                "template_8ikyhiq",
+                form.current,
+                "VP_sXIW8hpiqoXG--"
+            )
+            .then(
+                (result) => {
+                    console.log("Res::: ", result.text);
+                    handleClick()
+                },
+                (error) => {
+                    console.log("Error::: ", error.text);
+                }
+            )
+            .finally(() => {
+                setLoading(false);
+            });
+    };
+
+    const handleClick = () => {
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 7000);
+    };
+
+
+
     return (
         <>
             <Header />
@@ -32,7 +69,7 @@ function Index() {
                     alignItems: 'center',
                     gap: '24%',
                     flexWrap: 'wrap'
-                }} >
+                }}>
                     <Box item sx={{
                         paddingTop: '4.3%'
                     }}>
@@ -45,11 +82,15 @@ function Index() {
                         </Typography>
                         <Box
                             component="form"
+                            onSubmit={sendEmail}
+                            ref={form}
+                            name="contactForm"
                             sx={{ paddingTop: '3.5rem' }}>
-                            <InputFields title={"Your Name"} />
-                            <InputFields title={"Your email"} />
-                            <InputFields title={"Subject"} />
-                            <InputFields multi title={"Your Message"} />
+
+                            <InputFields name="to_name" title={"Your Name"} />
+                            <InputFields name="from_email" title={"Your email"} />
+                            <InputFields name="subject" title={"Subject"} />
+                            <InputFields name="message" multi title={"Your Message"} />
                             <FormControlLabel
                                 control={<Checkbox />}
                                 label={
@@ -88,27 +129,36 @@ function Index() {
 
                                 }}
                             />
+                            <Button
+                                sx={{
+                                    marginY: '10px',
+                                    background: '#5cd6d6',
+                                    width: '300px',
+                                    height: '48px',
+                                    mt: '20px',
+                                    fontWeight: '600',
+                                    textTransform: 'none',
+                                    marginBottom: '3rem',
+                                    position: 'relative',
+                                }}
+                                onClick={sendEmail}
+                                variant="contained"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <CircularProgress size={24} sx={{ color: 'white', position: 'absolute', top: '50%', left: '50%', marginTop: '-12px', marginLeft: '-12px' }} />
+                                ) : (
+                                    'Send'
+                                )}
+                            </Button>
                         </Box>
-                        <Button sx={{
-                            marginY: '10px',
-                            background: '#5cd6d6',
-                            width: '300px',
-                            height: '48px',
-                            mt: '20px',
-                            fontWeight: '600',
-                            textTransform: 'none',
-                            marginBottom: '3rem'
-                        }}
-                            variant="contained">
-                            Send
-                        </Button>
+
                     </Box>
                     <Box sx={{ marginRight: "60px", marginBottom: "9%" }}>
                         <Grid
                             sx={{
                                 mt: '48px',
-                            }}
-                        >
+                            }}>
                             <Typography sx={{
                                 color: '#8A8A8A',
                                 fontSize: '13px',
@@ -188,3 +238,4 @@ function Index() {
 }
 
 export default Index;
+

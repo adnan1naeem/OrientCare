@@ -64,7 +64,7 @@ function NavBar() {
       warrantyList: [{ name: "Multi Zone OutDoor", key: "MiniSplitoutdor" }],
     },
     {
-      key: "Air-Handler",
+      key: "/",
       name: "Air Handler Unit Inverter Heat Pumps",
       warrantyList: [
         { name: "Air Handler InDoor", key: "MiniSplitIndor" },
@@ -164,14 +164,14 @@ function NavBar() {
                       item?.text === "Warranty" ||
                       item?.text === "Products") &&
                       <IconButton sx={{ position: 'absolute', right: 3 }} onClick={() => handleSubmenuToggle(item)}>
-                        {submenuVisibility[item?.text] ?  <RemoveIcon /> : <AddIcon />}
+                        {submenuVisibility[item?.text] ? <RemoveIcon /> : <AddIcon />}
                       </IconButton>
                     }
                   </div>
                   {submenuVisibility[item?.text] && (
                     <div>
                       {submenuList?.map((item) => (
-                        <Grid href={`/${item?.key}`} onClick={()=> router.push(`/${item?.key}`)} sx={{ display: 'flex', ml: '0.7rem', pt: '10px' }}>
+                        <Grid href={`/${item?.key}`} onClick={() => router.push(`/${item?.key}`)} sx={{ display: 'flex', ml: '0.7rem', pt: '10px' }}>
                           <MdOutlineKeyboardArrowRight />
                           <Typography sx={{ fontSize: '10px', width: '170px', }}>{item?.name}</Typography>
                         </Grid>
@@ -201,6 +201,7 @@ function NavBar() {
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
                 <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/Products">
+
                   Products
                 </Link>
                 {productArray?.length > 0 && (
@@ -211,7 +212,14 @@ function NavBar() {
                         key={product?.key}
                         href={`/${product.key}`}
                       >
-                        {product?.name}
+                        <Typography sx={{
+                          color: '#000', fontSize: '12px', '&:hover': {
+                            color: '#8A8A8A',
+                          },
+                        }}>
+                          {product?.name?.toUpperCase()}
+                        </Typography>
+
                       </Link>
                     ))}
                   </div>
@@ -231,7 +239,14 @@ function NavBar() {
                         href={`/${partner.key}`}
                         className={styles.navLinksDropDown}
                       >
-                        {partner?.name}
+                        <Typography sx={{
+                          color: '#000', fontSize: '12px', '&:hover': {
+                            color: '#8A8A8A',
+                          },
+                        }}>
+                          {partner?.name.toUpperCase()}
+                        </Typography>
+
                       </Link>
                     ))}
                   </div>
@@ -251,13 +266,22 @@ function NavBar() {
                         onClick={() => router.push(`/${warranty?.key}`)}
                         className={styles.navLinksDropDown}
                       >
-                        <div className={styles.warrantyArrow}>
-                          {warranty?.name}
-                          {warranty?.warrantyList &&
-                            warranty?.warrantyList.length > 0 && (
-                              <IoIosArrowForward style={{ marginTop: "3%" }} />
-                            )}
-                        </div>
+                        <Typography sx={{
+                          color: '#000', fontSize: '12px', '&:hover': {
+                            color: '#8A8A8A',
+
+                          },
+                        }}>
+                          <div className={styles.warrantyArrow}>
+
+                            {warranty?.name.toUpperCase()}
+                            {warranty?.warrantyList &&
+                              warranty?.warrantyList.length > 0 && (
+                                <IoIosArrowForward style={{ marginTop: '1%' }} />
+                              )}
+
+                          </div>
+                        </Typography>
                         <div
                           className={
                             warranty?.warrantyList.length <= 0
@@ -271,8 +295,15 @@ function NavBar() {
                               href={`/${element?.key}`}
                               className={styles.insidenesteddropdowns}
                             >
-                              {element?.name}
+                              <Typography sx={{
+                                color: '#000', fontSize: '12px', '&:hover': {
+                                  color: '#8A8A8A',
+                                },
+                              }}>
+                                {element?.name.toUpperCase()}
+                              </Typography>
                             </Link>
+
                           ))}
                         </div>
                       </div>

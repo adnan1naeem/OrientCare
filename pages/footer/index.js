@@ -26,10 +26,10 @@ function Footer() {
           text4="Spare Parts"
         />
         <FooterCard
-          to1={"/partnercenter"}
-          to2={"/PartnerSubPage"}
+          to1={"/PartnerCenter"}
+          to2={"/BecomeaPartner"}
           to3={"/Downloads"}
-          to4={"/contact"}
+          to4={"/ContactUs"}
           text1="Partners Center"
           text2="Become a Partner"
           text3="Downloads"
@@ -38,8 +38,8 @@ function Footer() {
         <FooterCard
           to1={"/TermsAndConditions"}
           to2={"/PrivacyPolicy"}
-          to3={""}
-          to4={""}
+          to3={"/"}
+          to4={"/"}
           text1="Term & Condition"
           text2="Privacy Policy"
           text3="Return & Exchange Policy"
@@ -56,7 +56,6 @@ function Footer() {
           <Typography
             sx={{
               color: "#8a8a8a",
-              marginBottom: "1rem",
               marginTop: "1rem",
               fontSize: "12px",
               letterSpacing: 0.3,
@@ -66,8 +65,8 @@ function Footer() {
                 xs: "10%",
                 sm: "10%",
                 md: "3%",
-                lg: "12%",
-                xl: "25%",
+                lg: "9%",
+                xl: "20%",
               },
               textAlign: "left",
             }}

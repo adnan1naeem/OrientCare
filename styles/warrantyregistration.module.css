@@ -27,6 +27,11 @@
     flex-direction: column;
     margin-bottom: 15px;
 }
+.Regformgroup1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
 
 .Regformgroup label{
     margin-bottom: 5px;
@@ -34,6 +39,13 @@
     font-weight: normal;
     color: #595959;
 }
+.Regformgroup1 label{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #595959;
+}
+
 
 .Regformgroup input, .Regformgroup select{
     background-color: #d9d9d9;
@@ -47,13 +59,53 @@
     padding: 6px 12px;
     transition: all 0.2s;
 }
-
+.Regformgroup1 input, .Regformgroup1 select{
+    background-color: #5cd6d6;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: black;
+    height: 32px;
+    width: 500px;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.2s;
+}
+.modelnum12{
+    background-color: #5cd6d6;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: black;
+    height: 32px;
+    width: 375px;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: all 0.2s; 
+}
 .Regformgroup input[type=text]:focus, .Regformgroup select:focus{
+    outline: none;
+    box-shadow: 0px 0px 2px aqua;
+}
+.Regformgroup1 input:focus, .Regformgroup1 select:focus{
     outline: none;
     box-shadow: 0px 0px 2px aqua;
 }
 
 .Regformgroup input[type=submit]{
+    color: white;
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #5cd6d6;
+    margin-top: 5%;
+    border: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.Regformgroup1 input[type=submit]{
     color: white;
     width: 160px;
     height: 50px;
@@ -87,6 +139,9 @@
     .Regformgroup input, .Reg-form-group select{
         width: 100%;
     }
+      .Regformgroup1 input, .Reg-form-group select{
+        width: 100%;
+    }
     .partright img{
         width: 320px;
     }
@@ -97,6 +152,9 @@
         width: 100%;
     }
     .Regformgroup input[type=submit]{
+        width: 100%;
+    }
+     .Regformgroup1 input[type=submit]{
         width: 100%;
     }
 }

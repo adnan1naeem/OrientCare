@@ -90,3 +90,8 @@
 .div_one img {
     width: 160px;
 }
+.captcha{
+    margin: 20px;
+    margin-left: 18rem;
+    margin-top: 3rem;
+}

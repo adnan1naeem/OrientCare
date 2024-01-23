@@ -31,9 +31,9 @@ const Index = () => {
       </div>
       <Box
         sx={{
-          paddingLeft: { xs: "5%", sm: "5%", md: "5%", lg: "13%", xl: "17%" },
-          paddingRight: { xs: "5%", sm: "5%", md: "5%", lg: "13%", xl: "17%" },
-          // backgroundColor:{ xs: "red", sm: 'orange', md: 'blue', lg: 'green', xl: "purple" }
+          paddingLeft: { xs: "5%", sm: "5%", md: "5%", lg: "8%", xl: "17%" },
+          paddingRight: { xs: "5%", sm: "5%", md: "5%", lg: "8%", xl: "17%" },
+          // backgroundColor: { xs: "red", sm: 'orange', md: 'blue', lg: 'green', xl: "purple" }
         }}
       >
         <div className={styles.logo_home}>
@@ -157,3 +157,4 @@ const Index = () => {
 };
 
 export default Index;
+
