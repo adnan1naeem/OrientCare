@@ -38,7 +38,8 @@ const Index = () => {
                             <Button
                                 sx={{
                                     background: '#5cd6d6',
-                                    width: '12rem',
+                                    // width: '12rem',
+                                    width: '50%',
                                     height: '3.9rem',
                                     textTransform: 'none',
                                     fontSize: '16px'

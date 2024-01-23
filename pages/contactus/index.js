@@ -5,11 +5,13 @@ import Footer from '../footer/index';
 import Header from '../../components/Header/index'
 import emailjs from "@emailjs/browser";
 import Layout from '../../components/layout';
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Index() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
-
+    const router = useRouter();
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -40,7 +42,7 @@ function Index() {
             .then(
                 (result) => {
                     if (result?.text === "OK") {
-                        alert("Your action was completed successfully.")
+                        router.push("/Sucess")
                     }
                 },
                 (error) => {
