@@ -1,15 +1,14 @@
-import React from 'react';
-import ImageText from '../downloads/components/imageText';
-import Footer from '../footer/index';
-import styles from '../../styles/videos.module.css'
-import video from '../../public/images/videos.WEBP'
-import videoBanner from '../../public/videoBanner.webp'
-import Image from 'next/image';
-import Header from '../../components/Header/index'
-import Link from 'next/link'
+import Footer from "../footer/index";
+import Header from "../../components/Header/index";
+import Image from "next/image";
+import ImageText from "../Downloads/components/imageText";
+import Link from "next/link";
+import React from "react";
+import styles from "../../styles/videos.module.css";
+import video from "../../public/images/videos.WEBP";
+import videoBanner from "../../public/videoBanner.webp";
 
 const Index = () => {
-
   return (
     <div>
       <Header />
@@ -32,11 +31,11 @@ const Index = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <h4 className={styles.texth4}>OrientCare Launch Event in Los Angeles, California</h4>
+          <h4 className={styles.texth4}>
+            OrientCare Launch Event in Los Angeles, California
+          </h4>
           <Link href="https://www.youtube.com/watch?v=uETDhITHQJ0">
-            <button className={styles.button}>
-              View More
-            </button>
+            <button className={styles.button}>View More</button>
           </Link>
         </div>
       </div>

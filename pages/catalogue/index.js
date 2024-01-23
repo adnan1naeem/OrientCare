@@ -1,22 +1,21 @@
-import React from 'react';
-import ImageText from '../downloads/components/imageText.js';
+import Footer from "../footer/index.js";
+import Header from "../../components/Header/index.js";
+import Image from "next/image.js";
+import ImageText from "../Downloads/components/imageText.js";
+import Link from "next/link";
+import React from "react";
+import { Typography } from "@mui/material";
 // import pdf from './../../../Assets/pdf/Mini_Splits_Inverter_Heat_Pump.pdf'
-import catalogueImage from '../../public/Catalogue.webp'
-import Footer from '../footer/index.js';
-import styles from "../../styles/catalogue.module.css"
-import { Typography } from '@mui/material';
-import Link from 'next/link';
-import Image from 'next/image.js';
-import catalouge from '../../public/images/catalouge.WEBP'
-import Header from "../../components/Header/index.js"
-
+import catalogueImage from "../../public/Catalogue.webp";
+import catalouge from "../../public/images/catalouge.WEBP";
+import styles from "../../styles/catalogue.module.css";
 
 const Index = () => {
-
   const pdfFiles = [
     {
-      file: '/pdf/Mini_Splits_Inverter_Heat_Pump.pdf',
-      image: catalogueImage, name: "Mini Split Inverter Heat Pumps Catalogue"
+      file: "/pdf/Mini_Splits_Inverter_Heat_Pump.pdf",
+      image: catalogueImage,
+      name: "Mini Split Inverter Heat Pumps Catalogue",
     },
   ];
 
@@ -25,13 +24,13 @@ const Index = () => {
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>
-          <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
+          <img className={styles.img} src={"/images/logo.avif"} alt="Logo" />
         </div>
-        <ImageText image={catalouge} text={"Catalogue"} top={'-2.5rem'} />
+        <ImageText image={catalouge} text={"Catalogue"} top={"-2.5rem"} />
         <div className={styles.pdfcontainer}>
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>
-              <Link href={`${item?.file}`} target="_blank" >
+              <Link href={`${item?.file}`} target="_blank">
                 <Image
                   src={item?.image}
                   alt="PDF Image"
@@ -42,7 +41,6 @@ const Index = () => {
             </div>
           ))}
         </div>
-
       </div>
       <Footer />
     </>
