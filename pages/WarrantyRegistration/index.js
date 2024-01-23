@@ -9,7 +9,9 @@ const Index = () => {
   return (
     <>
       <Header />
+
       <div>
+
         <div className={styles.div_one} style={{ paddingBottom: 20 }}>
           <img
             src={'/images/logo.avif'}
@@ -21,9 +23,8 @@ const Index = () => {
             Register your warranty here.
           </Typography>
         </div>
+
         <div className={styles.WarrantyRegsec2}>
-
-
           <div className={styles.partleft}>
             <form id="Warranty-form">
               <Typography className={styles.warrantyformheading}>IDENTIFY YOUR PRODUCT</Typography>
@@ -70,11 +71,7 @@ const Index = () => {
                   Next
                 </Button>
               </Link>
-              {/* <div className={styles.Regformgroup}>
-                <Link href={"warrantyregistrationform"}>
-                  <input type='submit' value={'Next'} />
-                </Link>
-              </div> */}
+
             </form>
           </div>
           <div className={styles.partright}>

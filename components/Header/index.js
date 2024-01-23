@@ -270,15 +270,14 @@ function NavBar() {
                           <Typography sx={{
                             color: '#000', fontSize: '12px', '&:hover': {
                               color: '#8A8A8A',
-
                             }
                           }}>
+
                             {warranty?.name?.toUpperCase()}
                           </Typography>
                           <Typography sx={{
                             color: '#000', fontSize: '12px', '&:hover': {
                               color: '#8A8A8A',
-
                             },
                           }}>
                             {warranty?.warrantyList &&
