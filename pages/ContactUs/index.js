@@ -4,7 +4,7 @@ import InputFields from './inputFields';
 import Footer from '../footer/index';
 import Header from '../../components/Header/index'
 import emailjs from "@emailjs/browser";
-
+import Layout from '../../components/layout';
 
 function Index() {
     const form = useRef();
@@ -59,7 +59,8 @@ function Index() {
 
     return (
         <>
-            {/* <Header /> */}
+            <Layout title={"Contact Us"} />
+            <Header />
             <div>
                 <Grid item sx={{ marginTop: '73px', textAlign: "center" }}>
                     <img src={'images/logo.avif'} alt="Logo" style={{ maxWidth: '160px' }} />

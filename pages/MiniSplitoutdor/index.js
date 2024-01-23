@@ -8,10 +8,13 @@ import Image from "next/image";
 import OneYear from "../../public/one-year.webp";
 import React from "react";
 import styles from "../../styles/minisplit.module.css";
+import Layout from '../../components/layout';
+
 
 const Index = () => {
   return (
     <div>
+      <Layout title={"Mini Splitoutdor"} />
       <Header />
       <div className={styles.div_one}>
         <img

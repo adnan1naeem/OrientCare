@@ -3,7 +3,7 @@ import React from 'react'
 import Footer from '../footer/index'
 import Link from 'next/link';
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 function index() {
     const paragraphText = () => {
         return {
@@ -13,6 +13,7 @@ function index() {
 
     return (
         <>
+            <Layout title={"Terms And Services"} />
             <Header />
             <Grid sx={{ ml: '10%', marginRight: '10%', pt: '25px' }}>
                 <Link

@@ -7,13 +7,14 @@ import Footer from '../footer/index'
 import ProductSlider from '../products/Products_Slider/index'
 import Image from 'next/image'
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 
 
 function Index() {
 
     return (
         <>
+            <Layout title={"Orient-Care Product Details"} />
             <Header />
             <div className={styles.Container_Details}>
                 <img src={'/images/intelligent-smart.webp'} className={styles.Sub_Product} alt='' />

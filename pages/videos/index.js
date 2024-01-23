@@ -7,11 +7,14 @@ import videoBanner from '../../public/videoBanner.webp'
 import Image from 'next/image';
 import Header from '../../components/Header/index'
 import Link from 'next/link'
+import Layout from '../../components/layout';
 
 const Index = () => {
 
   return (
+
     <div>
+      <Layout title={"Videos"} />
       <Header />
       <div className={styles.fullimagecontainer}>
         <Image

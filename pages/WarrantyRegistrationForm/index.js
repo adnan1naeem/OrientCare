@@ -3,12 +3,13 @@ import { Typography, Grid, Checkbox, FormControlLabel, Button, Box } from '@mui/
 import InputFields from './TextField';
 import Footer from '../footer/index';
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 
 function Index() {
 
     return (
         <>
+            <Layout title={"Warranty form - orient"} />
             <Header />
             <div>
                 <Grid item sx={{ marginTop: '73px', textAlign: "center" }}>

@@ -7,11 +7,12 @@ import Image from "next/image";
 import OneYear from '../../public/one-year.webp'
 import FiveYear from '../../public/FiveYear.webp'
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 
 const Index = () => {
     return (
         <div>
+            <Layout title={"Mini Splitindor"} />
             <Header />
             <div className={styles.div_one}>
                 <img

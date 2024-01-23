@@ -4,10 +4,12 @@ import styles from '../../styles/partnercenter.module.css'
 import Header from '../../components/Header/index'
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button, Grid } from '@mui/material';
+import Layout from '../../components/layout';
 
 const Index = () => {
     return (
         <>
+            <Layout title={"Partner Center"} />
             <Header />
             <div>
                 <div className={styles.div_one} style={{ paddingTop: 50, paddingBottom: 20 }}>

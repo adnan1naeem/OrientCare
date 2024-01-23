@@ -10,12 +10,14 @@ import { spareParts } from '../../constants/ArrayValues'
 import Filters from '../products/Filters'
 import Dropdown from '../products/Dropdown';
 import Header from '../../components/Header/index'
+import Layout from '../../components/layout';
 
 function Index() {
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
     return (
         <>
+            <Layout title={"Spare Parts"} />
             <Header />
             <div className={styles.ContainerProduct}>
                 <img src={'/images/spareParts-banner.webp'} className={styles.ProductBannerImage} alt="logo" />

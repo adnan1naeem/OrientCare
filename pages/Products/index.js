@@ -10,6 +10,7 @@ import Filters from './Filters'
 import Footer from '../footer/index'
 import Dropdown from '../products/Dropdown';
 import Header from '../../components/Header/index'
+import Layout from '../../components/layout';
 
 function Index() {
     const theme = useTheme();
@@ -17,6 +18,7 @@ function Index() {
 
     return (
         <>
+            <Layout title={"Mini Split"} />
             <Header />
             <div className={styles.ContainerProduct}>
                 <img src={'/images/ProductBanner.webp'} className={styles.ProductBannerImage} alt="logo" />

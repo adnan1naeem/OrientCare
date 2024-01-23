@@ -4,10 +4,12 @@ import styles from '../../styles/warrantyregistration.module.css'
 import Header from '../../components/Header/index'
 import { Typography, Button } from '@mui/material';
 import Link from "next/link";
+import Layout from '../../components/layout';
 
 const Index = () => {
   return (
     <>
+      <Layout title={"Warranty - orient care"} />
       <Header />
 
       <div>

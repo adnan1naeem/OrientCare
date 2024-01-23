@@ -1,9 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import pdf1 from './../../../Assets/pdf/12000_BTU.pdf'
-// import pdf2 from './../../../Assets/pdf/12000_BTU_115_V.pdf'
-// import pdf3 from './../../../Assets/pdf/18000_BTU.pdf'
-// import pdf4 from './../../../Assets/pdf/24000_BTU.pdf'
-// import pdf5 from './../../../Assets/pdf/36000_BTU.pdf'
 import certificate from "../../public/images/certificate.WEBP";
 import ImageText from '../downloads/components/imageText';
 import ahriCertified from '../../public/ahri-certified.webp';
@@ -14,6 +9,7 @@ import Link from 'next/link';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import Header from '../../components/Header/index'
+import Layout from '../../components/layout';
 
 const Index = () => {
 
@@ -65,6 +61,7 @@ const Index = () => {
 
   return (
     <>
+      <Layout title={"Certificates"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>

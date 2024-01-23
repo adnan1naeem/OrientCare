@@ -20,10 +20,13 @@ import smart_image from "../public/smart_1.webp";
 import smart_image2 from "../public/smart_2.webp";
 import smart_image3 from "../public/smart_3.webp";
 import styles from "../styles/home.module.css";
+import Layout from '../components/layout';
+
 
 const Index = () => {
   return (
     <div className={styles.main_div}>
+      <Layout title={"Orient Care"} />
       <Header />
 
       <div>
@@ -33,7 +36,6 @@ const Index = () => {
         sx={{
           paddingLeft: { xs: "5%", sm: "5%", md: "5%", lg: "8%", xl: "17%" },
           paddingRight: { xs: "5%", sm: "5%", md: "5%", lg: "8%", xl: "17%" },
-          // backgroundColor: { xs: "red", sm: 'orange', md: 'blue', lg: 'green', xl: "purple" }
         }}
       >
         <div className={styles.logo_home}>

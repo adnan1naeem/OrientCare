@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import App from '../../public/images/productmanual.WEBP'
 import Header from '../../components/Header/index.js'
-
+import Layout from '../../components/layout';
 
 const Index = () => {
 
@@ -19,6 +19,7 @@ const Index = () => {
 
   return (
     <>
+      <Layout title={"Mobile App"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>

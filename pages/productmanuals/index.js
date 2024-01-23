@@ -6,7 +6,7 @@ import mobile from "../../public/images/mobile-app.WEBP";
 import Link from 'next/link';
 import { Typography } from '@mui/material';
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 const Index = () => {
 
   const pdfFiles = [
@@ -17,6 +17,7 @@ const Index = () => {
 
   return (
     <>
+      <Layout title={"Product manuals"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>

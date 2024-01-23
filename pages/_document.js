@@ -7,7 +7,6 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <meta name="description" content="Orient Care" />
-                    <title>Orient care</title>
                     <link rel="icon" href="/preview.png" />
                 </Head>
                 <body>

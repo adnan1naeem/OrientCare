@@ -3,11 +3,13 @@ import Footer from '../footer/index';
 import styles from '../../styles/becomeapartner.module.css'
 import { Typography, Button, Grid } from '@mui/material';
 import Header from '../../components/Header/index'
-
+import Layout from '../../components/layout';
 const Index = () => {
 
     return (
         <>
+
+            <Layout title={"Become A Partner"} />
             <Header />
             <div>
                 <div className={styles.div_one} style={{ paddingTop: 50 }}>

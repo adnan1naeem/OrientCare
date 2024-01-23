@@ -9,7 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image.js';
 import catalouge from '../../public/images/catalouge.WEBP'
 import Header from "../../components/Header/index.js"
-
+import Layout from '../../components/layout';
 
 const Index = () => {
 
@@ -22,6 +22,8 @@ const Index = () => {
 
   return (
     <>
+
+      <Layout title={"Catalouge"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>

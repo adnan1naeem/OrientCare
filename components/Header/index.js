@@ -40,7 +40,7 @@ function NavBar() {
 
   const partnerArray = [
     {
-      key: "becomeapartner",
+      key: "becomepartner",
       name: "Become A Partner",
     },
     {
@@ -99,7 +99,7 @@ function NavBar() {
     { text: "Home", key: "" },
     { text: "About Us", key: "aboutus" },
     { text: "Products", key: "products", subList: productArray },
-    { text: "Partners", key: "becomeapartner", subList: partnerArray },
+    { text: "Partners", key: "becomepartner", subList: partnerArray },
     { text: "Warranty", key: "warrantyregistration", subList: warrantyArray },
     { text: "Downloads", key: "downloads" },
     { text: "Contact Us", key: "contact" },
@@ -228,7 +228,7 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/becomeapartner">
+                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/becomepartner">
                   Partners
                 </Link>
                 {partnerArray?.length > 0 && (

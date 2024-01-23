@@ -2,11 +2,15 @@ import Footer from '../footer/index';
 import styles from '../../styles/about.module.css';
 import Header from '../../components/Header/index'
 import { Typography } from '@mui/material';
+import Layout from '../../components/layout';
 
 
 function Index() {
+
     return (
         <>
+            <Layout title={"About Us"} />
+
             <Header />
 
             <img src={`/images/Banner_orient.webp`} className={styles.Applogoabout} />
@@ -28,6 +32,7 @@ function Index() {
         </>
     );
 }
+
 
 export default Index;
 
