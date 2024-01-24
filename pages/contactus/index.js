@@ -29,33 +29,6 @@ function Index() {
             setLoading(false)
             return;
         }
-
-        // const formFields = form.current.elements;
-        // const newIsEmptyFields = { ...isEmptyFields };
-        // Object.keys(newIsEmptyFields).forEach((fieldName) => {
-        //     const fieldValue = formFields[fieldName]?.value;
-        //     newIsEmptyFields[fieldName] = !fieldValue || fieldValue.trim() === '';
-        // });
-        // if (newIsEmptyFields?.to_name) {
-        //     alert("Please Enter Your Name")
-        //     setLoading(false);
-        //     return
-        // } else if (newIsEmptyFields?.from_email) {
-        //     alert("Please Enter Your Email")
-        //     setLoading(false);
-        //     return
-        // }
-        // else if (newIsEmptyFields?.subject) {
-        //     alert("Please Enter Your Subject")
-        //     setLoading(false);
-        //     return
-        // }
-        // else if (newIsEmptyFields?.message) {
-        //     alert("Please Enter Your Message")
-        //     setLoading(false);
-        //     return
-        // }
-
         emailjs
             .sendForm(
                 "service_m7iviec",
@@ -66,7 +39,7 @@ function Index() {
             .then(
                 (result) => {
                     if (result?.text === "OK") {
-                        router.push("/Sucess");
+                        router.push("/success");
                     }
                 },
                 (error) => {
@@ -125,8 +98,6 @@ function Index() {
                             ref={form}
                             name="contactForm"
                             sx={{ paddingTop: '3.5rem' }}>
-
-
                             <InputFields required={true} name="to_name" title={"Your Name"} />
                             <InputFields required={true} name="from_email" title={"Your email"} />
                             <InputFields required={true} name="subject" title={"Subject"} />

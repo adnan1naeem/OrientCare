@@ -13,7 +13,7 @@ function Index() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        router.push("/Sucess");
+        router.push("/success");
     };
 
 
@@ -58,7 +58,7 @@ function Index() {
                                 <InputFields type={"number"} name={"number"} title={"Your Phone Number"} />
                                 <InputFields type={"email"} name={'email'} title={"Your Email"} />
                                 <InputFields type={"text"} name={'postal'} title={"Your Postal Address"} />
-                                <InputFields type={"text"} name={'adress'} title={"Your Postal Address"} />
+                                <InputFields type={"text"} name={'adress'} title={"Address Where Unit is Installed"} />
                             </Box>
                         </Grid>
                         <Grid item sx={{

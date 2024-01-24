@@ -18,7 +18,7 @@ const Index = () => {
             return;
         }
 
-        router.push("/Sucess");
+        router.push("/success");
     };
 
     return (
