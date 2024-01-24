@@ -23,6 +23,13 @@ function Index() {
 
         e.preventDefault();
         setLoading(true);
+        const isCheckboxChecked = document.getElementsByName("checkbox")[0].checked;
+        if (!isCheckboxChecked) {
+            alert("Please consent to the privacy policy.");
+            setLoading(false)
+            return;
+        }
+
         // const formFields = form.current.elements;
         // const newIsEmptyFields = { ...isEmptyFields };
         // Object.keys(newIsEmptyFields).forEach((fieldName) => {
@@ -126,6 +133,7 @@ function Index() {
                             <InputFields required={true} name="message" multi title={"Your Message"} />
                             <FormControlLabel
                                 control={<Checkbox />}
+                                name="checkbox"
                                 label={
                                     <Typography
                                         variant="body1"

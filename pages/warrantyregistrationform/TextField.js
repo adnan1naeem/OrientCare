@@ -1,8 +1,10 @@
 import { Box, TextField, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../styles/warrantyregistration.module.css'
 
-const Index = ({ title, type, }) => {
+const Index = ({ title, type, name }) => {
+
+
     return (
         <div>
             <Typography variant='h5'
@@ -16,7 +18,8 @@ const Index = ({ title, type, }) => {
                 {title}
             </Typography>
             <div className={styles.Regformgroup1}>
-                <input type={type} id='model-num' className={styles.modelnum1} />
+                <input required type={type}
+                    id='model-num' name={name} className={styles.modelnum1} />
             </div>
 
 

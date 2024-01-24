@@ -4,13 +4,17 @@ import styles from '../../styles/becomeapartner.module.css'
 import { Typography, Button, Grid, FormControlLabel, Checkbox } from '@mui/material';
 import Header from '../../components/Header/index'
 import Layout from '../../components/layout';
-import { useRouter } from "next/router";
 
 
 const Index = () => {
-    const router = useRouter();
     const sendEmail = (e) => {
         e.preventDefault();
+        const isCheckboxChecked = document.getElementsByName("checkbox")[0].checked;
+        if (!isCheckboxChecked) {
+            alert("Please consent to the privacy policy.");
+            return;
+        }
+
         router.push("/Sucess");
     };
 
@@ -72,10 +76,9 @@ const Index = () => {
                                 </select>
                             </div>
                         </div>
-
-
                         <FormControlLabel
                             control={<Checkbox />}
+                            name="checkbox"
                             label={
                                 <Typography
                                     variant="body1"
@@ -83,13 +86,8 @@ const Index = () => {
                                         fontWeight: '700',
                                         color: '#8a8a8a',
                                         fontSize: '12px',
-                                        lineHeight: '1.4',
                                         paddingLeft: { xs: '6px', sm: '5px', md: '2px' },
-                                        textAlign: 'left',
-                                        fontFamily: 'Arial, sans-serif',
-                                        pt: '1.2%',
-                                        alignItems: 'center'
-
+                                        lineHeight: '1.4', textAlign: 'left', fontFamily: 'Arial, sans-serif', pt: '1.2%', alignItems: 'center'
                                     }}
                                 >
                                     I consent to having this website store my submitted information so they can respond to my inquiry.

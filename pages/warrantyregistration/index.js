@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Footer from '../footer/index';
 import styles from '../../styles/warrantyregistration.module.css'
 import Header from '../../components/Header/index'
 import { Typography, Button } from '@mui/material';
-import Link from "next/link";
 import Layout from '../../components/layout';
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const form = useRef();
+  const router = useRouter();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    router.push("/warrantyregistrationform");
+  };
+
   return (
     <>
       <Layout title={"Warranty - orient care"} />
@@ -28,7 +37,7 @@ const Index = () => {
 
         <div className={styles.WarrantyRegsec2}>
           <div className={styles.partleft}>
-            <form id="Warranty-form">
+            <form id="Warranty-form" onSubmit={sendEmail}>
               <Typography className={styles.warrantyformheading}>IDENTIFY YOUR PRODUCT</Typography>
               <div className={styles.Regformgroup}>
                 <label for='producttype'>Product Type</label>
@@ -51,28 +60,28 @@ const Index = () => {
               </div>
               <div className={styles.Regformgroup}>
                 <label for='modelnumber'>Model Number</label>
-                <input type='text' id='model-num' className={styles.modelnum} />
+                <input required type='text' id='model-num' className={styles.modelnum} />
               </div>
               <div className={styles.Regformgroup}>
                 <label for='serialnumber'>Serial Number</label>
-                <input type='text' id='serial-num' className={styles.serialnum} />
+                <input required type='text' id='serial-num' className={styles.serialnum} />
               </div>
-              <Link href={"warrantyregistrationform"}>
-                <Button
-                  sx={{
-                    background: '#5cd6d6',
-                    width: '10rem',
-                    height: '3rem',
-                    textTransform: 'none',
-                    fontSize: '16px',
-                    mt: '2rem'
-                  }}
-                  variant="contained"
-                  type='submit'
-                >
-                  Next
-                </Button>
-              </Link>
+
+              <Button
+                sx={{
+                  background: '#5cd6d6',
+                  width: '10rem',
+                  height: '3rem',
+                  textTransform: 'none',
+                  fontSize: '16px',
+                  mt: '2rem'
+                }}
+                variant="contained"
+                type='submit'
+              >
+                Next
+              </Button>
+
 
             </form>
           </div>
