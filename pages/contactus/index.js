@@ -5,32 +5,49 @@ import Footer from '../footer/index';
 import Header from '../../components/Header/index'
 import emailjs from "@emailjs/browser";
 import Layout from '../../components/layout';
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 function Index() {
     const form = useRef();
     const [loading, setLoading] = useState(false);
     const router = useRouter();
+
+    const [isEmptyFields, setIsEmptyFields] = useState({
+        to_name: false,
+        from_email: false,
+        subject: false,
+        message: false,
+    });
+
     const sendEmail = (e) => {
+
         e.preventDefault();
-
-        const formFields = form.current.elements;
-        let isValid = true;
-
-        for (let i = 0; i < formFields?.length - 1; i++) {
-            if (formFields[i]?.value?.trim() === '') {
-                isValid = false;
-                break;
-            }
-        }
-
-        if (!isValid) {
-            alert("Please fill all the fields value.")
-            return;
-        }
-
         setLoading(true);
+        // const formFields = form.current.elements;
+        // const newIsEmptyFields = { ...isEmptyFields };
+        // Object.keys(newIsEmptyFields).forEach((fieldName) => {
+        //     const fieldValue = formFields[fieldName]?.value;
+        //     newIsEmptyFields[fieldName] = !fieldValue || fieldValue.trim() === '';
+        // });
+        // if (newIsEmptyFields?.to_name) {
+        //     alert("Please Enter Your Name")
+        //     setLoading(false);
+        //     return
+        // } else if (newIsEmptyFields?.from_email) {
+        //     alert("Please Enter Your Email")
+        //     setLoading(false);
+        //     return
+        // }
+        // else if (newIsEmptyFields?.subject) {
+        //     alert("Please Enter Your Subject")
+        //     setLoading(false);
+        //     return
+        // }
+        // else if (newIsEmptyFields?.message) {
+        //     alert("Please Enter Your Message")
+        //     setLoading(false);
+        //     return
+        // }
 
         emailjs
             .sendForm(
@@ -42,11 +59,11 @@ function Index() {
             .then(
                 (result) => {
                     if (result?.text === "OK") {
-                        router.push("/Sucess")
+                        router.push("/Sucess");
                     }
                 },
                 (error) => {
-                    alert(error.text)
+                    alert(error.text);
                     console.log("Error::: ", error.text);
                 }
             )
@@ -54,8 +71,6 @@ function Index() {
                 setLoading(false);
             });
     };
-
-
 
 
 
@@ -161,7 +176,7 @@ function Index() {
                                     marginBottom: '3rem',
                                     position: 'relative',
                                 }}
-                                onClick={sendEmail}
+                                type='submit'
                                 variant="contained"
                                 disabled={loading}
                             >

@@ -32,13 +32,10 @@ const Index = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            // mt: '20rem'
-
                         }}>
                             <Button
                                 sx={{
                                     background: '#5cd6d6',
-                                    // width: '12rem',
                                     width: '50%',
                                     height: '3.9rem',
                                     textTransform: 'none',
@@ -48,18 +45,27 @@ const Index = () => {
                             >
                                 LOGIN
                             </Button>
+
                         </Grid>
                         <Grid sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            mt: 10
+                            mt: 10,
+                            ml:
+                            {
+                                xs: '1%',
+                                sm: '24.9%',
+                                md: '24.9%',
+                                lg: '24.9%',
+                                xl: '24.9%'
+                            },
+                            mb: 10
                         }}>
                             <ReCAPTCHA
+
                                 sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
                                 onChange={(value) => console.log("Captcha value:", value)}
                             />
                         </Grid>
+
                     </form>
                 </div>
             </div>

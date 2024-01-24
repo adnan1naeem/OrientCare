@@ -1,10 +1,18 @@
 import React from 'react'
 import Footer from '../footer/index';
 import styles from '../../styles/becomeapartner.module.css'
-import { Typography, Button, Grid } from '@mui/material';
+import { Typography, Button, Grid, FormControlLabel, Checkbox } from '@mui/material';
 import Header from '../../components/Header/index'
 import Layout from '../../components/layout';
+import { useRouter } from "next/router";
+
+
 const Index = () => {
+    const router = useRouter();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        router.push("/Sucess");
+    };
 
     return (
         <>
@@ -28,7 +36,7 @@ const Index = () => {
                 </div>
 
                 <div className={styles.element1}>
-                    <form className={styles.becomeapartner_form}>
+                    <form className={styles.becomeapartner_form} onSubmit={sendEmail}>
                         <div className={styles.input_element}>
                             <div className={styles.form_group}>
                                 <label for="firstName">First Name</label>
@@ -65,13 +73,38 @@ const Index = () => {
                             </div>
                         </div>
 
-                        <div className={styles.form_checkbox_1}>
-                            <input type='checkbox' className={styles.form_check_input} id='acceptCheckbox' />
-                            <label className={styles.form_check_label} htmlFor='acceptCheckbox'>
-                                I consent to having this website store my submitted information so they can respond to my inquiry.
-                                See our privacy policy to learn more about how we use data.
-                            </label>
-                        </div>
+
+                        <FormControlLabel
+                            control={<Checkbox />}
+                            label={
+                                <Typography
+                                    variant="body1"
+                                    sx={{
+                                        fontWeight: '700',
+                                        color: '#8a8a8a',
+                                        fontSize: '12px',
+                                        lineHeight: '1.4',
+                                        paddingLeft: { xs: '6px', sm: '5px', md: '2px' },
+                                        textAlign: 'left',
+                                        fontFamily: 'Arial, sans-serif',
+                                        pt: '1.2%',
+                                        alignItems: 'center'
+
+                                    }}
+                                >
+                                    I consent to having this website store my submitted information so they can respond to my inquiry.
+                                    See our privacy policy to learn more about how we use data.
+                                </Typography>
+                            }
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                alignItems: 'flex-start',
+                                width: '80%',
+                                ml: '5.8%',
+                            }}
+                        />
+
                         <Grid
                             sx={{
                                 justifyContent: "center",
@@ -88,6 +121,7 @@ const Index = () => {
                                     marginBottom: '3rem',
                                     mt: '3.5rem',
                                 }}
+                                type='submit'
                                 variant="contained"
                             >
                                 Submit

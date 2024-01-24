@@ -24,7 +24,6 @@ const InputFields = ({ title, multi, type, name, width, required }) => {
                 '& .MuiOutlinedInput-root': {
                     borderRadius: 0,
                     border: 'black',
-                    // height: '32px',
                     '&:hover': {
                         borderColor: 'transparent',
                         outline: 'none',
