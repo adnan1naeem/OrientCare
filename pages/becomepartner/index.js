@@ -4,9 +4,12 @@ import styles from '../../styles/becomeapartner.module.css'
 import { Typography, Button, Grid, FormControlLabel, Checkbox } from '@mui/material';
 import Header from '../../components/Header/index'
 import Layout from '../../components/layout';
+import { useRouter } from "next/router";
 
 
 const Index = () => {
+
+    const router = useRouter();
     const sendEmail = (e) => {
         e.preventDefault();
         const isCheckboxChecked = document.getElementsByName("checkbox")[0].checked;

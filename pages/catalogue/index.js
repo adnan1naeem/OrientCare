@@ -22,7 +22,6 @@ const Index = () => {
 
   return (
     <>
-
       <Layout title={"Catalouge"} />
       <Header />
       <div className={styles.container}>

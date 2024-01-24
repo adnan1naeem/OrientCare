@@ -23,8 +23,8 @@ const Index = () => {
                 <div className={styles.partnercenter_element}>
                     <form className={styles.partnercenter_form}>
                         <div className={styles.partnercenter_input}>
-                            <input type='text' name='username' placeholder='USER NAME' />
-                            <input type='password' name='password' placeholder='PASSWORD' />
+                            <input required type='text' name='username' placeholder='USER NAME' />
+                            <input required type='password' name='password' placeholder='PASSWORD' />
                         </div>
 
 
@@ -42,6 +42,7 @@ const Index = () => {
                                     fontSize: '16px'
                                 }}
                                 variant="contained"
+                                type='submit'
                             >
                                 LOGIN
                             </Button>

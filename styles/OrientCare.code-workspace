@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "OrientCare",
+			"path": ".."
+		},
+		{
+			"name": "pages",
+			"path": "../../../Desktop/pages"
+		}
+	],
+	"settings": {}
+}

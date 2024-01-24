@@ -39,39 +39,43 @@ function Index() {
                     name="warrentyform"
                     onSubmit={sendEmail}
                     ref={form}
-                    sx={{
+                >
+                    <Box sx={{
                         marginTop: 11,
                         width: '100%',
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'center',
                     }}>
-                    <Grid item sx={{
-                        pl: { xs: '', sm: '5rem', md: '5rem', lg: '5rem' },
-                        width: { xs: '22rem', sm: "35rem", md: '40rem', lg: '40rem' },
 
-                    }}>
-                        <Box>
-                            <InputFields type={"text"} name={"name"} title={"Your Name"} />
-                            <InputFields type={"number"} name={"number"} title={"Your Phone Number"} />
-                            <InputFields type={"email"} name={'email'} title={"Your Email"} />
-                            <InputFields type={"text"} name={'postal'} title={"Your Postal Address"} />
-                            <InputFields type={"text"} name={'adress'} title={"Your Postal Address"} />
-                        </Box>
-                    </Grid>
-                    <Grid item sx={{
-                        pl: { xs: '', sm: '5rem', md: '5rem', lg: '5rem' },
-                        width: { xs: '22rem', sm: "35rem", md: '40rem', lg: '40rem' },
-                    }}>
-                        <Box sx={{}}>
-                            <InputFields type={"date"} name={"date"} title={"Date of Purchase"} />
-                            <InputFields type={"text"} name={"installer"} title={"Name of Registered Installer"} />
-                            <InputFields type={"date"} name={"purchase"} title={"Date of Purchase"} />
-                            <InputFields type={"text"} name={"dealer"} title={"Name of Shop / Dealer from whom the unit is purchased"} />
+                        <Grid item sx={{
+                            pl: { xs: '', sm: '5rem', md: '5rem', lg: '5rem' },
+                            width: { xs: '22rem', sm: "35rem", md: '40rem', lg: '40rem' },
 
-                        </Box>
-                    </Grid>
+                        }}>
+                            <Box>
+                                <InputFields type={"text"} name={"name"} title={"Your Name"} />
+                                <InputFields type={"number"} name={"number"} title={"Your Phone Number"} />
+                                <InputFields type={"email"} name={'email'} title={"Your Email"} />
+                                <InputFields type={"text"} name={'postal'} title={"Your Postal Address"} />
+                                <InputFields type={"text"} name={'adress'} title={"Your Postal Address"} />
+                            </Box>
+                        </Grid>
+                        <Grid item sx={{
+                            pl: { xs: '', sm: '5rem', md: '5rem', lg: '5rem' },
+                            width: { xs: '22rem', sm: "35rem", md: '40rem', lg: '40rem' },
+                        }}>
+                            <Box sx={{}}>
+                                <InputFields type={"date"} name={"date"} title={"Date of Purchase"} />
+                                <InputFields type={"text"} name={"installer"} title={"Name of Registered Installer"} />
+                                <InputFields type={"date"} name={"purchase"} title={"Date of Purchase"} />
+                                <InputFields type={"text"} name={"dealer"} title={"Name of Shop / Dealer from whom the unit is purchased"} />
 
+                            </Box>
+                        </Grid>
+
+
+                    </Box>
                     <div
                         style={{
                             display: 'flex',
@@ -100,7 +104,6 @@ function Index() {
                             Send
                         </Button>
                     </div>
-
                 </Box>
 
 
