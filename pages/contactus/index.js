@@ -99,7 +99,7 @@ function Index() {
                             name="contactForm"
                             sx={{ paddingTop: '3.5rem' }}>
                             <InputFields required={true} name="to_name" title={"Your Name"} />
-                            <InputFields required={true} name="from_email" title={"Your email"} />
+                            <InputFields type={'email'} required={true} name="from_email" title={"Your email"} />
                             <InputFields required={true} name="subject" title={"Subject"} />
                             <InputFields required={true} name="message" multi title={"Your Message"} />
                             <FormControlLabel

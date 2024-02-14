@@ -25,7 +25,7 @@ const Index = () => {
         <div className={styles.header}>
           <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={App} text={"Mobile App"} />
+        <ImageText mb={'3.5rem'} top={"-2rem"} image={App} text={"Mobile App"} />
         <div className={styles.imagecontainer}>
           {Images?.map((item, index) => (
             <div key={index} className={styles.imagewrapper}>

@@ -67,7 +67,7 @@ const Index = () => {
         <div className={styles.header}>
           <img className={styles.img} src={'images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={certificate} text={"Certificates"} />
+        <ImageText mb={'3.5rem'} top={"-2rem"} image={certificate} text={"Certificates"} />
         <div className={styles.cercontainer}>
           {viewMore?.length <= 0 ?
             <>

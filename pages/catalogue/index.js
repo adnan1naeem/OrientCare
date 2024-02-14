@@ -28,7 +28,7 @@ const Index = () => {
         <div className={styles.header}>
           <img className={styles.img} src={'/images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText image={catalouge} text={"Catalogue"} />
+        <ImageText top={"-2rem"} image={catalouge} text={"Catalogue"} />
         <div className={styles.pdfcontainer}>
           {pdfFiles?.map((item, index) => (
             <div key={index} className={styles.pdfwrapper}>

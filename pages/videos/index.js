@@ -23,7 +23,7 @@ const Index = () => {
           alt="Banner Image"
         />
       </div>
-      <ImageText image={video} text={"Video"} />
+      <ImageText mb={'3.5rem'} top={"-2rem"} image={video} text={"Video"} />
       <div className={styles.Youtube}>
         <div className={styles.banner}>
           <iframe
