@@ -18,8 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140px;
-  width: 180px;
+  width: 60%;
   background-color: white;
 }
 }

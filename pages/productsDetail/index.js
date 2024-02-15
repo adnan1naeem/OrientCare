@@ -51,7 +51,7 @@ function Index() {
                                 color: '#000',
                                 marginTop: '6em',
                             }}>
-                                Discription
+                                Description
                             </Typography>
                             <Typography sx={{
                                 fontSize: '14px',

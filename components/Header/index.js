@@ -89,10 +89,13 @@ function NavBar() {
 
   const handleDrawerOpen = () => {
     setOpen(true);
+    document.body.style.overflow = "hidden";
+    
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   const menuList = [
@@ -136,6 +139,7 @@ function NavBar() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
+          
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",

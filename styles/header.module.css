@@ -157,6 +157,9 @@
   border-bottom: 3px solid transparent;
   font-size: 12px;
 }
+.navLinks:hover {
+  color: #8A8A8A; /* Change the color to red on hover */
+}
 
 .navItem {
   margin-top: -2%;
