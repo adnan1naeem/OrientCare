@@ -27,8 +27,9 @@ const Index = () => {
       <div className={styles.Youtube}>
         <div className={styles.banner}>
           <iframe
-            width="100%"
-            height="415"
+          className={styles.frame}
+         
+            
             src="https://www.youtube.com/embed/uETDhITHQJ0?si=No7VDfbGqdD8RmXo"
             title="YouTube video player"
             frameborder="0"

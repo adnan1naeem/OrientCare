@@ -47,7 +47,7 @@ function Index() {
                             </Grid>
                             {!isLargeScreen && (
                                 <div style={{ zIndex: 1 }}>
-                                    <Dropdown />
+                                    <Dropdown pageName={"MINI SPLITS"} />
                                 </div>
                             )}
                         </div>

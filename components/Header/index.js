@@ -106,7 +106,7 @@ function NavBar() {
   ];
 
   const handleSubmenuToggle = (item) => {
-    console.log(item?.subList)
+    console.log(item?.subList);
     setSubmenuList([...item?.subList]);
     setSubmenuVisibility((prev) => ({
       ...Object.fromEntries(Object.keys(prev).map((key) => [key, false])),
@@ -162,23 +162,44 @@ function NavBar() {
                     </Link>
                     {(item?.text === "Partners" ||
                       item?.text === "Warranty" ||
-                      item?.text === "products") &&
-                      <IconButton sx={{ position: 'absolute', right: 3 }} onClick={() => handleSubmenuToggle(item)}>
-                        {submenuVisibility[item?.text] ? <RemoveIcon /> : <AddIcon />}
+                      item?.key === "products") && (
+                      <IconButton
+                        sx={{ position: "absolute", right: 3 }}
+                        onClick={() => handleSubmenuToggle(item)}
+                      >
+                        {submenuVisibility[item?.text] ? (
+                          <RemoveIcon />
+                        ) : (
+                          <AddIcon />
+                        )}
                       </IconButton>
-                    }
+                    )}
                   </div>
                   {submenuVisibility[item?.text] && (
                     <div>
                       {submenuList?.map((item) => (
-                        <Grid href={`/${item?.key}`} onClick={() => router.push(`/${item?.key}`)} sx={{ display: 'flex', ml: '0.7rem', pt: '10px' }}>
+                        <Grid
+                          href={`/${item?.key}`}
+                          onClick={() => router.push(`/${item?.key}`)}
+                          sx={{ display: "flex", ml: "0.7rem", pt: "10px" }}
+                        >
                           <MdOutlineKeyboardArrowRight />
-                          <Typography sx={{ fontSize: '10px', width: '170px', }}>{item?.name}</Typography>
+                          <Typography
+                            sx={{
+                              fontSize: "10px",
+                              width: "170px",
+                              transition: "color 0.3s",
+                              "&:hover": {
+                                color: "blue", // Change the color on hover
+                              },
+                            }}
+                          >
+                            {item?.name}
+                          </Typography>
                         </Grid>
                       ))}
                     </div>
                   )}
-
                 </div>
               </ListItemButton>
             </ListItem>
@@ -189,19 +210,27 @@ function NavBar() {
         <div className={styles.navContainer}>
           <ul className={open ? styles.navMenuActive : styles.navMenu}>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/">
+              <Link
+                className={`${styles.navLinks} ${styles.navLinksRed}`}
+                href="/"
+              >
                 Home
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/aboutus">
+              <Link
+                className={`${styles.navLinks} ${styles.navLinksRed}`}
+                href="/aboutus"
+              >
                 About Us
               </Link>
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/products">
-
+                <Link
+                  className={`${styles.navLinks} ${styles.navLinksRed}`}
+                  href="/products"
+                >
                   Products
                 </Link>
                 {productArray?.length > 0 && (
@@ -212,14 +241,17 @@ function NavBar() {
                         key={product?.key}
                         href={`/${product.key}`}
                       >
-                        <Typography sx={{
-                          color: '#000', fontSize: '12px', '&:hover': {
-                            color: '#8A8A8A',
-                          },
-                        }}>
+                        <Typography
+                          sx={{
+                            color: "#000",
+                            fontSize: "12px",
+                            "&:hover": {
+                              color: "#8A8A8A",
+                            },
+                          }}
+                        >
                           {product?.name?.toUpperCase()}
                         </Typography>
-
                       </Link>
                     ))}
                   </div>
@@ -228,7 +260,10 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/becomepartner">
+                <Link
+                  className={`${styles.navLinks} ${styles.navLinksRed}`}
+                  href="/becomepartner"
+                >
                   Partners
                 </Link>
                 {partnerArray?.length > 0 && (
@@ -239,14 +274,17 @@ function NavBar() {
                         href={`/${partner.key}`}
                         className={styles.navLinksDropDown}
                       >
-                        <Typography sx={{
-                          color: '#000', fontSize: '12px', '&:hover': {
-                            color: '#8A8A8A',
-                          },
-                        }}>
+                        <Typography
+                          sx={{
+                            color: "#000",
+                            fontSize: "12px",
+                            "&:hover": {
+                              color: "#8A8A8A",
+                            },
+                          }}
+                        >
                           {partner?.name?.toUpperCase()}
                         </Typography>
-
                       </Link>
                     ))}
                   </div>
@@ -255,7 +293,10 @@ function NavBar() {
             </li>
             <li className={styles.navItem}>
               <div className={styles.navDropdown}>
-                <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/warrantyregistration" >
+                <Link
+                  className={`${styles.navLinks} ${styles.navLinksRed}`}
+                  href="/warrantyregistration"
+                >
                   Warranty
                 </Link>
                 {warrantyArray?.length > 0 && (
@@ -267,22 +308,31 @@ function NavBar() {
                         className={styles.navLinksDropDown}
                       >
                         <div className={styles.warrantyArrow}>
-                          <Typography sx={{
-                            color: '#000', fontSize: '12px', '&:hover': {
-                              color: '#8A8A8A',
-                            }
-                          }}>
-
+                          <Typography
+                            sx={{
+                              color: "#000",
+                              fontSize: "12px",
+                              "&:hover": {
+                                color: "#8A8A8A",
+                              },
+                            }}
+                          >
                             {warranty?.name?.toUpperCase()}
                           </Typography>
-                          <Typography sx={{
-                            color: '#000', fontSize: '12px', '&:hover': {
-                              color: '#8A8A8A',
-                            },
-                          }}>
+                          <Typography
+                            sx={{
+                              color: "#000",
+                              fontSize: "12px",
+                              "&:hover": {
+                                color: "#8A8A8A",
+                              },
+                            }}
+                          >
                             {warranty?.warrantyList &&
                               warranty?.warrantyList.length > 0 && (
-                                <IoIosArrowForward style={{ marginTop: '1%' }} />
+                                <IoIosArrowForward
+                                  style={{ marginTop: "1%" }}
+                                />
                               )}
                           </Typography>
                         </div>
@@ -299,15 +349,18 @@ function NavBar() {
                               href={`/${element?.key}`}
                               className={styles.insidenesteddropdowns}
                             >
-                              <Typography sx={{
-                                color: '#000', fontSize: '12px', '&:hover': {
-                                  color: '#8A8A8A',
-                                },
-                              }}>
+                              <Typography
+                                sx={{
+                                  color: "#000",
+                                  fontSize: "12px",
+                                  "&:hover": {
+                                    color: "#8A8A8A",
+                                  },
+                                }}
+                              >
                                 {element?.name?.toUpperCase()}
                               </Typography>
                             </Link>
-
                           ))}
                         </div>
                       </div>
@@ -317,12 +370,18 @@ function NavBar() {
               </div>
             </li>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/downloads" >
+              <Link
+                className={`${styles.navLinks} ${styles.navLinksRed}`}
+                href="/downloads"
+              >
                 Downloads
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={`${styles.navLinks} ${styles.navLinksRed}`} href="/contactus" >
+              <Link
+                className={`${styles.navLinks} ${styles.navLinksRed}`}
+                href="/contactus"
+              >
                 Contact Us
               </Link>
             </li>

@@ -43,7 +43,7 @@ function Index() {
                             </Grid>
                             {!isLargeScreen && (
                                 <div style={{ zIndex: 1 }}>
-                                    <Dropdown />
+                                    <Dropdown pageName={"SPARE PARTS"} />
                                 </div>
                             )}
                         </div>

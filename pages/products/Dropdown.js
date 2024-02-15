@@ -6,7 +6,7 @@ import Popper from '@mui/material/Popper';
 import Grow from '@mui/material/Grow';
 import Filters from './Filters';
 
-export default function Dropdown() {
+export default function Dropdown({pageName}) {
     const [open, setOpen] = useState(false);
     const anchorRef = React.useRef(null);
 
@@ -42,7 +42,7 @@ export default function Dropdown() {
                     >
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
-                                <Filters />
+                                <Filters pageName ={pageName} />
                             </ClickAwayListener>
                         </Paper>
                     </Grow>

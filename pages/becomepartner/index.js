@@ -89,8 +89,9 @@ const Index = () => {
                                         fontWeight: '700',
                                         color: '#8a8a8a',
                                         fontSize: '12px',
+                             
                                         paddingLeft: { xs: '6px', sm: '5px', md: '2px' },
-                                        lineHeight: '1.4', textAlign: 'left', fontFamily: 'Arial, sans-serif', pt: '1.2%', alignItems: 'center'
+                                        lineHeight: '1.4', textAlign: 'left', fontFamily: 'Arial, sans-serif', pt: '1.2%'
                                     }}
                                 >
                                     I consent to having this website store my submitted information so they can respond to my inquiry.
@@ -101,8 +102,8 @@ const Index = () => {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 alignItems: 'flex-start',
-                                width: '80%',
-                                ml: '5.8%',
+                                width: {xs:'100%',md:'80%',lg:'80%'},
+                               ml: {xs:'-3%',md:'5.8%',lg:'5.8%'}
                             }}
                         />
 
