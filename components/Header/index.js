@@ -89,13 +89,13 @@ function NavBar() {
 
   const handleDrawerOpen = () => {
     setOpen(true);
-    document.body.style.overflow = "hidden";
-    
+
+
   };
 
   const handleDrawerClose = () => {
     setOpen(false);
-    document.body.style.overflow = "auto";
+
   };
 
   const menuList = [
@@ -139,7 +139,7 @@ function NavBar() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          
+
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
@@ -167,17 +167,17 @@ function NavBar() {
                     {(item?.text === "Partners" ||
                       item?.text === "Warranty" ||
                       item?.key === "products") && (
-                      <IconButton
-                        sx={{ position: "absolute", right: 3 }}
-                        onClick={() => handleSubmenuToggle(item)}
-                      >
-                        {submenuVisibility[item?.text] ? (
-                          <RemoveIcon />
-                        ) : (
-                          <AddIcon />
-                        )}
-                      </IconButton>
-                    )}
+                        <IconButton
+                          sx={{ position: "absolute", right: 3 }}
+                          onClick={() => handleSubmenuToggle(item)}
+                        >
+                          {submenuVisibility[item?.text] ? (
+                            <RemoveIcon />
+                          ) : (
+                            <AddIcon />
+                          )}
+                        </IconButton>
+                      )}
                   </div>
                   {submenuVisibility[item?.text] && (
                     <div>
@@ -194,8 +194,8 @@ function NavBar() {
                               width: "170px",
                               transition: "color 0.3s",
                               "&:hover": {
-                              color: "#8A8A8A",
-                            },
+                                color: "#8A8A8A",
+                              },
                             }}
                           >
                             {item?.name}
