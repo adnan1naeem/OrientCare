@@ -126,9 +126,9 @@ function Index() {
                                 sx={{
                                     display: 'flex',
                                     flexDirection: {
-                                        xs: 'column',
-                                        sm: 'column',
-                                        md: 'column',
+                                        xs: 'row',
+                                        sm: 'row',
+                                        md: 'row',
                                         lg: 'row',
                                     },
                                     alignItems: 'flex-start',

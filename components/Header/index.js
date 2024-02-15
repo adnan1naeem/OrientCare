@@ -190,8 +190,8 @@ function NavBar() {
                               width: "170px",
                               transition: "color 0.3s",
                               "&:hover": {
-                                color: "blue", // Change the color on hover
-                              },
+                              color: "#8A8A8A",
+                            },
                             }}
                           >
                             {item?.name}
