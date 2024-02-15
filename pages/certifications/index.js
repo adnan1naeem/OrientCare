@@ -61,13 +61,13 @@ const Index = () => {
 
   return (
     <>
-      <Layout title={"Certificates"} />
+      <Layout title={"Certifications"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.header}>
           <img className={styles.img} src={'images/logo.avif'} alt="Logo" />
         </div>
-        <ImageText mb={'3.5rem'} top={"-2rem"} image={certificate} text={"Certificates"} />
+        <ImageText mb={'3.5rem'} top={"-2rem"} image={certificate} text={"Certifications"} />
         <div className={styles.cercontainer}>
           {viewMore?.length <= 0 ?
             <>

@@ -13,7 +13,8 @@ const Index = ({ title, type, name }) => {
                     color: '#595959',
                     marginTop: '5px',
                     fontWeight: 'normal',
-                    paddingBottom: '8px'
+                    paddingBottom: '8px',
+                    width: '100%'
                 }}>
                 {title}
             </Typography>
