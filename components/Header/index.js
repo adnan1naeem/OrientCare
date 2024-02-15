@@ -98,6 +98,7 @@ function NavBar() {
 
   };
 
+  console.log("this");
   const menuList = [
     { text: "Home", key: "" },
     { text: "About Us", key: "aboutus" },
