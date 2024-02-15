@@ -168,7 +168,7 @@ function Index() {
                         </Box>
 
                     </Box>
-                    <Box sx={{ marginRight: "60px", marginBottom: "9%" }}>
+                    <Box sx={{ marginRight: { xs: "0px", sm: "60px", md: "60px", lg: "60px" }, marginBottom: "9%", }}>
                         <Grid
                             sx={{
                                 mt: '48px',
@@ -178,14 +178,15 @@ function Index() {
                                 fontSize: '13px',
                                 textAlign: "center",
                                 fontWeight: '600',
-                                marginRight: '8.3rem'
+                                marginRight: { xs: '1rem', sm: '8.3rem', md: '8.3rem', lg: '8.3rem' },
+
                             }}>
                                 OR <br /> REACH US
                             </Typography>
                         </Grid>
                         <Grid
                             sx={{
-                                marginX: 8,
+                                marginX: { xs: 15, sm: 8, md: 8, lg: 8 },
                                 textAlign: 'center',
                                 color: '#8A8A8A',
                                 mt: '48px',
@@ -203,7 +204,7 @@ function Index() {
                             </Typography>
                         </Grid>
                         <Typography sx={{
-                            marginLeft: '20%',
+                            marginLeft: { xs: '34%', sm: '20%', md: '20%', lg: '20%' },
                             marginRight: '10px',
                             color: '#8A8A8A',
                             fontWeight: 'bold',
@@ -215,13 +216,14 @@ function Index() {
                         </Typography>
                         <Grid
                             sx={{
-                                marginRight: '10rem',
+                                marginRight: { xs: '0rem', sm: '10rem', md: '10rem', lg: '10rem' },
                                 textAlign: 'center',
                                 color: '#8A8A8A',
                                 mt: '48px',
                                 display: 'flex',
                                 alignItems: 'center',
-                                marginLeft: '50px'
+                                marginLeft: { xs: '100px', sm: '50px', md: '50px', lg: '50px' },
+
 
                             }}
                         >
@@ -235,7 +237,7 @@ function Index() {
                             </Typography>
                         </Grid>
                         <Typography sx={{
-                            marginLeft: '5rem',
+                            marginLeft: { xs: '7.5rem', sm: '5rem', md: '5rem', lg: '5rem' },
                             color: '#8A8A8A',
                             fontWeight: 'bold',
                             fontSize: '12px',

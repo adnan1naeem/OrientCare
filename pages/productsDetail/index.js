@@ -162,8 +162,9 @@ function Index() {
                                 xs: "100%",
                                 sm: '100%',
                                 md: '44%',
-                                lg: '44%'
+                                lg: '35%'
                             },
+
 
                             paddingRight: '20px',
                             ml: {
@@ -172,13 +173,8 @@ function Index() {
                                 md: '2.3rem',
                                 lg: '2.3rem'
                             },
-                            // paddingLeft: {
-                            //     xs: "1.5em",
-                            //     sm: '2em',
-                            //     md: '4em',
-                            //     lg: '4em'
-                            // },
-                            background: "none",
+
+                            background: 'none',
                             boxShadow: "none",
                         }}>
                             <Typography sx={{
@@ -251,7 +247,7 @@ function Index() {
                                     xs: "100%",
                                     sm: '100%',
                                     md: '44%',
-                                    lg: '50%'
+                                    lg: '42%'
                                 },
                                 ml: {
                                     xs: "2em",
@@ -259,12 +255,7 @@ function Index() {
                                     md: '2.3rem',
                                     lg: '2.3rem'
                                 },
-                                // ml: {
-                                //     xs: "0.1em",
-                                //     sm: '2rem',
-                                //     md: '2.3rem',
-                                //     lg: '3rem'
-                                // },
+
                                 background: "none",
                                 boxShadow: "none",
                             }}>

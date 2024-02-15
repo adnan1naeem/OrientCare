@@ -83,8 +83,8 @@ const Index = () => {
         >
           <Typography
             sx={{
-              fontSize: "34px",
-              fontWeight: "600",
+              fontSize: "35px",
+              fontWeight: "700",
               color: "#343538",
               textAlign: "center",
             }}
