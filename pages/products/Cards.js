@@ -30,12 +30,18 @@ const CardComponent = ({ Array }) => {
                             <Card
                                 sx={{
                                     width: {
-                                        xs: '160px',
+                                        xs: '180px',
                                         sm: '140px',
                                         md: '190px',
                                         lg: '190px'
                                     },
-                                    marginLeft: '5px',
+
+                                    marginLeft: {
+                                        xs: '3rem',
+                                        sm: '5px',
+                                        md: '5px',
+                                        lg: '5px'
+                                    },
                                     marginTop: '3rem',
                                     background: 'none',
                                     boxShadow: 'none',

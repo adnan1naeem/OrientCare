@@ -32,7 +32,7 @@ function Footer() {
           to4={"/contactus"}
           text1="Partners Center"
           text2="Become a Partner"
-          text3="downloads"
+          text3="Downloads"
           text4="Contact Us"
         />
         <FooterCard

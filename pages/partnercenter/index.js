@@ -61,7 +61,6 @@ const Index = () => {
                             mb: 10
                         }}>
                             <ReCAPTCHA
-
                                 sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
                                 onChange={(value) => console.log("Captcha value:", value)}
                             />

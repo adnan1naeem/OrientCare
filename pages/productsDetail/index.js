@@ -73,13 +73,16 @@ function Index() {
                                     lg: '44%'
                                 },
                                 ml: {
-                                    xs: "2em",
+                                    xs: "3em",
                                     sm: '3rem',
                                     md: '2.3rem',
                                     lg: '2.3rem'
                                 },
+
                                 background: "none",
                                 boxShadow: "none",
+
+
 
                             }}>
                             <Typography sx={{
@@ -94,7 +97,8 @@ function Index() {
                                     md: '5em',
                                     lg: '6em'
                                 },
-                                ml: '10px'
+                                ml: '10px',
+
                             }}>
                                 Features
                             </Typography>
@@ -103,7 +107,8 @@ function Index() {
                                     width: '100%',
                                     display: 'flex',
                                     marginBottom: '4em',
-                                    flexWrap: 'wrap'
+                                    flexWrap: 'wrap',
+
                                 }}>
                                 <Card
                                     sx={{
@@ -113,6 +118,7 @@ function Index() {
                                         color: '#000',
                                         background: "none",
                                         boxShadow: "none",
+
 
                                     }}>
                                     ■ Quality & Performance Certified <br />
@@ -160,12 +166,18 @@ function Index() {
                             },
 
                             paddingRight: '20px',
-                            paddingLeft: {
-                                xs: "1.5em",
-                                sm: '2em',
-                                md: '4em',
-                                lg: '4em'
+                            ml: {
+                                xs: "3em",
+                                sm: '3rem',
+                                md: '2.3rem',
+                                lg: '2.3rem'
                             },
+                            // paddingLeft: {
+                            //     xs: "1.5em",
+                            //     sm: '2em',
+                            //     md: '4em',
+                            //     lg: '4em'
+                            // },
                             background: "none",
                             boxShadow: "none",
                         }}>
@@ -242,11 +254,17 @@ function Index() {
                                     lg: '50%'
                                 },
                                 ml: {
-                                    xs: "0.1em",
-                                    sm: '2rem',
+                                    xs: "2em",
+                                    sm: '3rem',
                                     md: '2.3rem',
-                                    lg: '3rem'
+                                    lg: '2.3rem'
                                 },
+                                // ml: {
+                                //     xs: "0.1em",
+                                //     sm: '2rem',
+                                //     md: '2.3rem',
+                                //     lg: '3rem'
+                                // },
                                 background: "none",
                                 boxShadow: "none",
                             }}>
@@ -338,7 +356,21 @@ function Index() {
                         </Grid>
                     ))
                 }
-                <Typography variant='h4' sx={{ fontWeight: '600', fontSize: '24px', marginLeft: '10rem', marginTop: "4%", color: "#343538", lineHeight: '32.4px' }}>Related Products</Typography>
+
+                <Typography variant='h4' sx={{
+                    fontWeight: '600',
+                    fontSize: '24px',
+                    color: "#343538",
+                    lineHeight: '32.4px',
+                    marginTop: "4%",
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    display: 'flex',
+                }}>
+                    Related Products
+                </Typography>
+
+
                 <ProductSlider />
                 <Footer />
 

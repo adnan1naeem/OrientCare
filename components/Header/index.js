@@ -102,7 +102,7 @@ function NavBar() {
     { text: "Partners", key: "becomepartner", subList: partnerArray },
     { text: "Warranty", key: "warrantyregistration", subList: warrantyArray },
     { text: "Downloads", key: "downloads" },
-    { text: "Contact Us", key: "contact" },
+    { text: "Contact Us", key: "contactus" },
   ];
 
   const handleSubmenuToggle = (item) => {

@@ -73,13 +73,13 @@ const Index = () => {
             <>
               {pdfFiles?.map((item, index) => (
                 <div key={index} className={styles.cerwrapper}>
-                  <Link href={`${item?.file}`} target="_blank">
-                    <Image
-                      src={item?.image}
-                      alt="cer Image"
-                      className={styles.cerimage}
-                    />
-                  </Link>
+                  {/* <Link href={`${item?.file}`} target="_blank"> */}
+                  <Image
+                    src={item?.image}
+                    alt="cer Image"
+                    className={styles.cerimage}
+                  />
+                  {/* </Link> */}
                   <Typography className={styles.cername}>{item?.name}</Typography>
                   <button className={styles.viewmorebutton} onClick={() => handleViewMoreClick(item)}>
                     View More

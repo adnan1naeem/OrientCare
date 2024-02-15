@@ -81,7 +81,13 @@ function Index() {
                 alt={`Slider ${index + 1}`}
               />
               <Typography sx={{
-                width: '230px', textAlign: 'center',
+                width: {
+                  xs: "150px",
+                  sm: '230px',
+                  md: '230px',
+                  lg: '230px'
+                },
+                textAlign: 'center',
                 color: '#252614',
                 fontSize: '14px',
                 fontWeight: '700',
