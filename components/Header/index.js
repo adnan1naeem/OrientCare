@@ -10,7 +10,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { styled } from "@mui/material/styles";
 import styles from "../../styles/header.module.css";
 import { useRouter } from "next/router";
@@ -97,8 +97,18 @@ function NavBar() {
     setOpen(false);
 
   };
-
-  console.log("this");
+  const drawerRef = useRef(null); 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (drawerRef.current && !drawerRef.current.contains(event.target)) {
+        handleDrawerClose();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);  
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   const menuList = [
     { text: "Home", key: "" },
     { text: "About Us", key: "aboutus" },
@@ -137,7 +147,9 @@ function NavBar() {
         </Link>
       </div>
       <Drawer
+      ref={drawerRef} 
         sx={{
+
           width: drawerWidth,
           flexShrink: 0,
 
@@ -186,7 +198,7 @@ function NavBar() {
                         <Grid
                           href={`/${item?.key}`}
                           onClick={() => router.push(`/${item?.key}`)}
-                          sx={{ display: "flex", ml: "0.7rem", pt: "10px" }}
+                          sx={{ display: "flex", ml: "1.2rem", pt: "22px",pb:'10px' }}
                         >
                           <MdOutlineKeyboardArrowRight />
                           <Typography

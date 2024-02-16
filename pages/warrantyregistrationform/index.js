@@ -26,7 +26,7 @@ function Index() {
                     <img
                         src={'/images/logo.avif'}
                         alt="orient_logo"
-                        style={{ width: 160, paddingTop: "30px" }}
+                        style={{ width: 160, paddingTop: "30px"}}
                     />
                     <Typography variant='h4' style={{ fontFamily: 'Montserrat', fontWeight: 700, fontSize: '18px' }}>WARRANTY REGISTRATION</Typography>
                     <Typography sx={{ fontSize: "12px", fontFamily: 'Helvetica,Arial,sans-serif,arial,serif', color: "#8A8A8A", pt: '2px' }}>

@@ -9,6 +9,7 @@ import "swiper/css";
 function Slider() {
   const slider = [slider_1, slider_2];
   const [isHovered, setIsHovered] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false); // State to track desktop view
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -22,6 +23,22 @@ function Slider() {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 768); // Adjust the threshold as per your needs
+    };
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +62,7 @@ function Slider() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {isHovered && (
+      {isHovered && isDesktop && (
         <>
           <div
             style={{

@@ -66,7 +66,7 @@ function Footer() {
                 sm: "10%",
                 md: "3%",
                 lg: "9%",
-                xl: "10%",
+                xl: "20%",
               },
               textAlign: "left",
             }}

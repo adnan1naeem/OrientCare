@@ -103,7 +103,7 @@ function Index() {
                             <InputFields required={true} name="subject" title={"Subject"} />
                             <InputFields required={true} name="message" multi title={"Your Message"} />
                             <FormControlLabel
-                                control={<Checkbox />}
+                                control={<Checkbox sx={{mt:{xs:'-1.5%',sm:0}}} />}
                                 name="checkbox"
                                 label={
                                     <Typography

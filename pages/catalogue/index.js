@@ -39,7 +39,7 @@ const Index = () => {
                   className={styles.pdfimage}
                 />
               </Link>
-              <Typography className={styles.pdfname}>{item?.name}</Typography>
+              <Typography   className={styles.pdfname}>{item?.name}</Typography>
             </div>
           ))}
         </div>

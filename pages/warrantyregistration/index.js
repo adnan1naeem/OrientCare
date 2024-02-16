@@ -75,7 +75,8 @@ const Index = () => {
                   textTransform: 'none',
                   fontSize: '16px',
                   mt: '2rem',
-                  mb: { xs: '2rem' }
+                  mb: { xs: '2rem' },
+                  
                 }}
                 variant="contained"
                 type='submit'

@@ -80,7 +80,7 @@ const Index = () => {
                             </div>
                         </div>
                         <FormControlLabel
-                            control={<Checkbox />}
+                            control={<Checkbox sx={{mt:{xs:'-1.5%',sm:0}}} />}
                             name="checkbox"
                             label={
                                 <Typography
@@ -103,7 +103,8 @@ const Index = () => {
                                 flexDirection: 'row',
                                 alignItems: 'flex-start',
                                 width: {xs:'100%',md:'80%',lg:'80%'},
-                               ml: {xs:'-3%',md:'5.8%',lg:'5.8%'}
+                               ml: {xs:'-3%',md:'5.8%',lg:'5.8%'},
+                         
                             }}
                         />
 

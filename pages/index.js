@@ -58,7 +58,7 @@ const Index = () => {
               fontWeight: "400",
               color: "#8a8a8a",
               marginBottom: 3,
-              textAlign: "center",
+              textAlign: {xs:'left',md:'center',lg:"center"},
             }}
           >
             OrientCare is committed to provide its valued customers the ultimate
@@ -129,7 +129,7 @@ const Index = () => {
               fontWeight: "500",
               color: "#8a8a8a",
               marginBottom: 3,
-              textAlign: "center",
+              textAlign: {xs:'left',md:'center',lg:"center"},
               mt: '0.7rem'
             }}
           >

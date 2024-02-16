@@ -160,6 +160,7 @@ const Index = () => {
               color: "#8A8A8A",
               paddingLeft: "1rem",
               paddingRight: "3.5rem",
+        
             }}
           >
             <Typography

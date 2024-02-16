@@ -33,8 +33,8 @@ const Index = () => {
             src="https://www.youtube.com/embed/uETDhITHQJ0?si=No7VDfbGqdD8RmXo"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
           ></iframe>
           <h4 className={styles.texth4}>OrientCare Launch Event in Los Angeles, California</h4>
           <Link href="https://www.youtube.com/watch?v=uETDhITHQJ0">
