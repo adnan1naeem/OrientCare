@@ -85,7 +85,7 @@ const Index = () => {
 
             </div>
             <div className={styles.input_element}>
-             
+
               <div className={styles.form_group}>
                 <label for="Email">Email Address</label>
                 <input
@@ -140,7 +140,7 @@ const Index = () => {
               </div>
             </div>
             <FormControlLabel
-              control={<Checkbox sx={{ mt: { xs: "-1.5%", sm: 0,xl:'0.3%' } }} />}
+              control={<Checkbox sx={{ mt: { xs: "-1.5%", sm: 0, xl: '0.3%' } }} />}
               name="checkbox"
               label={
                 <Typography
