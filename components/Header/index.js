@@ -95,6 +95,7 @@ function NavBar() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+   
 
   };
   const drawerRef = useRef(null); 
@@ -104,9 +105,17 @@ function NavBar() {
         handleDrawerClose();
       }
     }
-    document.addEventListener('mousedown', handleClickOutside);  
+
+    function handleScroll() {
+      handleDrawerClose();
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   const menuList = [
@@ -120,13 +129,14 @@ function NavBar() {
   ];
 
   const handleSubmenuToggle = (item) => {
-    console.log(item?.subList);
+  
     setSubmenuList([...item?.subList]);
     setSubmenuVisibility((prev) => ({
       ...Object.fromEntries(Object.keys(prev).map((key) => [key, false])),
       [item.text]: !prev[item.text],
     }));
   };
+ 
 
   return (
     <div>

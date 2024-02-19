@@ -17,6 +17,7 @@ const CardComponent = ({ Array }) => {
 
     const handlePageChange = (event, value) => {
         setCurrentPage(value);
+        window.scrollTo({top: 20, left: 0, behavior: 'smooth'});
     };
 
     return (
@@ -83,7 +84,7 @@ const CardComponent = ({ Array }) => {
                         count={pageCount}
                         variant="outlined"
                         shape="rounded"
-                        onChange={handlePageChange}
+                        onChange={handlePageChange} 
                     />
                 </Stack>
             }
